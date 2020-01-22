@@ -8,6 +8,8 @@ import Command
 import Keys
 import cv2
 from Keys import Button, Direction, Stick
+import time
+import datetime
 
 # Python command
 class PythonCommand(Command.Command):
@@ -128,17 +130,24 @@ class RankGlitchPythonCommand(PythonCommand):
 
 		# increment and decrement
 		if is_go_back:
+			# TAKE IT BACK NOW YALL
 			self.press(Button.A, wait=0.2)
-			self.press(Direction.UP, wait=0.2) # Increment a year
-			self.press(Direction.RIGHT, duration=1.5)
+			self.press(Direction.RIGHT)
+			self.press(Direction.DOWN, wait=0.2) # DECREMENT a day
+			self.press(Direction.RIGHT, duration=1)
 			self.press(Button.A, wait=0.5)
-			if not self.checkIfAlive(): return
 
-			self.press(Button.A, wait=0.2)
-			self.press(Direction.LEFT, duration=1.5)
-			self.press(Direction.DOWN, wait=0.2) # Decrement a year
-			self.press(Direction.RIGHT, duration=1.5)
-			self.press(Button.A, wait=0.5)
+			# self.press(Button.A, wait=0.2)
+			# self.press(Direction.UP, wait=0.2) # Increment a year
+			# self.press(Direction.RIGHT, duration=1.5)
+			# self.press(Button.A, wait=0.5)
+			# if not self.checkIfAlive(): return
+
+			# self.press(Button.A, wait=0.2)
+			# self.press(Direction.LEFT, duration=1.5)
+			# self.press(Direction.DOWN, wait=0.2) # Decrement a year
+			# self.press(Direction.RIGHT, duration=1.5)
+			# self.press(Button.A, wait=0.5)
 
 		# use only increment
 		# for use of faster time leap
@@ -188,6 +197,26 @@ class ImageProcPythonCommand(PythonCommand):
 			return True
 		else:
 			return False
+
+	# detect number of stars
+	def getStars(self):
+		src = self.camera.readFrame()
+		# crop and gray
+		src = (cv2.cvtColor(src, cv2.COLOR_BGR2GRAY))[1:130, 1:550]
+		_, base_img = cv2.threshold(src, 190, 255, cv2.THRESH_BINARY)
+		contours, _ = cv2.findContours(base_img, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+
+		# draw contours
+		for c in contours:
+			approx = cv2.approxPolyDP(c,0.05*cv2.arcLength(c, True), True)
+			cv2.drawContours(base_img, [approx], 0, (160, 0, 0), 2)
+
+		# save cap
+		dt_now = datetime.datetime.now()
+		fileName = dt_now.strftime('%Y-%m-%d_%H-%M-%S')+".png"
+		cv2.imwrite(fileName, base_img)
+
+		return len(contours)
 
 	# Get interframe difference binarized image
 	# フレーム間差分により2値化された画像を取得
@@ -712,7 +741,7 @@ class InfinityWatt(RankGlitchPythonCommand):
 				self.press(Button.A, duration=0.4, wait=0.1)
 				self.press(Button.A, duration=0.4, wait=0.1) # 2000W
 				self.press(Button.A, wait=1)
-				self.press(Button.A, duration=0.1, wait=2.5)
+				self.press(Button.A, duration=0.1, wait=3)
 				self.press(Button.B, duration=0.3, wait=0.5)
 				self.timeLeap(False)
 				self.press(Button.A, wait=4.1)
@@ -800,7 +829,7 @@ class AdvanceFrame(RankGlitchPythonCommand):
 			self.press(Button.A, duration=0.4, wait=0.1)
 			self.press(Button.A, duration=0.4, wait=0.1) # 2000W
 			self.press(Button.A, wait=1)
-			self.press(Button.A, duration=0.1, wait=2.5)
+			self.press(Button.A, duration=0.1, wait=3)
 			self.press(Button.B, duration=0.3, wait=0.5)
 			self.timeLeap(False)
 			self.press(Button.A, wait=5)
@@ -808,34 +837,108 @@ class AdvanceFrame(RankGlitchPythonCommand):
 		self.finish()
 
 
-# Perform the Day skip glitch three times
-class AdvanceFrameThree(RankGlitchPythonCommand):
+# Perform the Day skip glitch n times
+# must be started on the 1st of a 31-day month
+class AdvanceFrameBy(RankGlitchPythonCommand):
 	def __init__(self, name):
-		super(AdvanceFrameThree, self).__init__(name)
+		super(AdvanceFrameBy, self).__init__(name)
 		self.use_rank = True
+		self.n = 7
 
 	def do(self):
-		for _ in range(3):
+		for i in range(1, self.n):
 			self.wait(1)
+
+			if ((i-1)%30 == 0) and (i != 1):
+				# this skip will put the day back to one
+				print("setting date to beginning of month...")
+				self.timeLeap(False)
+
+			print("advancing frame " + str(i) + "...")
 
 			if self.checkIfAlive():
 				self.press(Button.A, duration=0.4, wait=0.1)
 				self.press(Button.A, duration=0.4, wait=0.1) # 2000W
 				self.press(Button.A, wait=1)
-				self.press(Button.A, duration=0.1, wait=2.5)
+				self.press(Button.A, duration=0.1, wait=3)
 				self.press(Button.B, duration=0.3, wait=0.5)
 				self.timeLeap(False)
 				self.press(Button.A, wait=5)
 			else:
 				break
 
+			print("now on frame: " + str(i+1))
+
 		self.finish()
 
 
+# resets until finding a five star raid on the nth frame
+class FindFiveStar(ImageProcPythonCommand, RankGlitchPythonCommand):
+	def __init__(self, name, cam):
+		super(FindFiveStar, self).__init__(name, cam)
+		self.n = 7
+		self.reset = False
+		self.purple = True
+		self.desired_num_of_stars = 5
+
+	def do(self):
+		while self.checkIfAlive():
+			if self.reset:
+				for i in range(1, self.n):
+					if not self.checkIfAlive(): return
+					self.wait(1)
+
+					print("setting date back...")
+					self.timeLeap(True)
+
+					print("advancing frame " + str(i) + "...")
+
+					self.RaidLeap()
+
+					print("now on frame: " + str(i+1))
+
+			# enter the raid screen
+			self.press(Button.A, duration=0.4, wait=3)
+			print("in raid den?")
+			if not self.isContainTemplate('raid_den_options.png'):
+				print("not in raid den. entering")
+				self.press(Button.A, duration=0.4, wait=0.1) # 2000W
+				self.press(Button.A, wait=3)
+			print("checking for five stars...")
+
+			
+			stars = self.getStars()
+			print("stars: "+str(stars))
+			if stars == self.desired_num_of_stars:
+				self.finish()
+			if self.reset:
+				self.Reset()
+			else:
+				self.RaidLeap(True)
+
+	def Reset(self):
+		print("resetting...")
+		self.press(Button.HOME, wait=1)
+		self.press(Button.X, wait=1)
+		self.press(Button.A, wait=5)
+		self.press(Button.A, wait=2)
+		self.press(Button.A, wait=18)
+		self.press(Button.A, wait=1)
+	def RaidLeap(self, den_is_open=False):
+		if not den_is_open:
+			self.press(Button.A, duration=0.4, wait=0.1)
+			self.press(Button.A, duration=0.4, wait=0.1) # 2000W
+			self.press(Button.A, wait=1)
+		self.press(Button.A, duration=0.1, wait=3) # start looking for trainers
+		self.press(Button.B, duration=0.3, wait=0.5)
+		self.timeLeap(False)
+		self.press(Button.A, wait=5)
+
+
 # reset the game
-class Reset(PythonCommand):
+class ResetGame(PythonCommand):
 	def __init__(self, name):
-		super(Reset, self).__init__(name)
+		super(ResetGame, self).__init__(name)
 
 	def do(self):
 		self.wait(1)
@@ -845,6 +948,20 @@ class Reset(PythonCommand):
 		self.press(Button.A, wait=2)
 		self.press(Button.A, wait=18)
 		self.press(Button.A, wait=1)
+
+		self.finish()
+
+
+# Dynamax and spam first move on first pokemon
+class AutoMaxRaid(ImageProcPythonCommand):
+	def __init__(self, name, cam):
+		super(AutoMaxRaid, self).__init__(name, cam)
+
+	def do(self):
+
+		while not self.isContainTemplate('egg_notice.png'):
+			self.wait(1)
+			if not self.checkIfAlive(): return
 
 		self.finish()
 
@@ -863,8 +980,9 @@ commands = {
 	'InfinityCafe - 無限カフェ(ランクマ)': InfinityCafe,
 	'Debug - デバグ': Debug,
 	'Advance Frame - Seed Search': AdvanceFrame,
-	'Advance Frame By 3 - Seed Search': AdvanceFrameThree,
-	'Reset': Reset,
+	'Advance Frame By n - Seed Search': AdvanceFrameBy,
+	'Reset Game': ResetGame,
+	'Find Five Star Battle': FindFiveStar,
 }
 
 # Add commands as utility you want to use
