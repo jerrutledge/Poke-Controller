@@ -199,22 +199,21 @@ class ImageProcPythonCommand(PythonCommand):
 			return False
 
 	# detect number of stars
-	def getStars(self):
+	def getStars(self, output_photo=False):
 		src = self.camera.readFrame()
 		# crop and gray
-		src = (cv2.cvtColor(src, cv2.COLOR_BGR2GRAY))[1:130, 1:550]
+		src = (cv2.cvtColor(src, cv2.COLOR_BGR2GRAY))[1:100, 1:550]
 		_, base_img = cv2.threshold(src, 190, 255, cv2.THRESH_BINARY)
 		contours, _ = cv2.findContours(base_img, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
-		# draw contours
-		for c in contours:
-			approx = cv2.approxPolyDP(c,0.05*cv2.arcLength(c, True), True)
-			cv2.drawContours(base_img, [approx], 0, (160, 0, 0), 2)
-
-		# save cap
-		dt_now = datetime.datetime.now()
-		fileName = dt_now.strftime('%Y-%m-%d_%H-%M-%S')+".png"
-		cv2.imwrite(fileName, base_img)
+		# draw contours & print, if enabled
+		if output_photo:
+			for c in contours:
+				approx = cv2.approxPolyDP(c,0.05*cv2.arcLength(c, True), True)
+				cv2.drawContours(base_img, [approx], 0, (160, 0, 0), 2)
+			dt_now = datetime.datetime.now()
+			fileName = dt_now.strftime('%Y-%m-%d_%H-%M-%S')+".png"
+			cv2.imwrite(fileName, base_img)
 
 		return len(contours)
 
