@@ -10,6 +10,7 @@ import cv2
 from Keys import Button, Direction, Stick
 import time
 import datetime
+import pytesseract
 
 # Python command
 class PythonCommand(Command.Command):
@@ -35,7 +36,7 @@ class PythonCommand(Command.Command):
 		except:
 			if self.keys is None:
 				self.keys = Keys.KeyPress(ser)
-			print('interruppt')
+			print('interrupt')
 			import traceback
 			traceback.print_exc()
 			self.keys.end()
@@ -216,6 +217,22 @@ class ImageProcPythonCommand(PythonCommand):
 			cv2.imwrite(fileName, base_img)
 
 		return len(contours)
+
+	# read text from the specified part of the screen
+	def getTopText(self, start_x=1, end_x=-1, start_y=1, end_y=-1):
+		src = self.camera.readFrame()
+		# crop and gray
+		src = (cv2.cvtColor(src, cv2.COLOR_BGR2GRAY))[start_x:end_x, start_y:end_y]
+		print("get OCR")
+
+		# Output OCR of selected area
+		# Define config parameters.
+		# '-l eng'  for using the English language
+		# '--oem 1' for using LSTM OCR Engine
+		config = ('-l deu --oem 1 --psm 3')
+		text = pytesseract.image_to_string(frame, config=config)
+		print(text)
+		return text
 
 	# Get interframe difference binarized image
 	# フレーム間差分により2値化された画像を取得
@@ -848,32 +865,13 @@ class Sample(PythonCommand):
 		self.wait(1)
 
 
-# Perform the Day skip glitch once
-class AdvanceFrame(RankGlitchPythonCommand):
-	def __init__(self, name):
-		super(AdvanceFrame, self).__init__(name)
-		self.use_rank = True
-
-	def do(self):
-		if self.checkIfAlive():
-			self.press(Button.A, duration=0.4, wait=0.1)
-			self.press(Button.A, duration=0.4, wait=0.1) # 2000W
-			self.press(Button.A, wait=1)
-			self.press(Button.A, duration=0.1, wait=3)
-			self.press(Button.B, duration=0.3, wait=0.5)
-			self.timeLeap(False)
-			self.press(Button.A, wait=5)
-
-		self.finish()
-
-
 # Perform the Day skip glitch n times
 # must be started on the 1st of a 31-day month
 class AdvanceFrameBy(RankGlitchPythonCommand):
 	def __init__(self, name):
 		super(AdvanceFrameBy, self).__init__(name)
 		self.use_rank = True
-		self.n = 7
+		self.n = 5
 
 	def do(self):
 		for i in range(1, self.n):
@@ -889,7 +887,7 @@ class AdvanceFrameBy(RankGlitchPythonCommand):
 			if self.checkIfAlive():
 				self.press(Button.A, duration=0.4, wait=0.1)
 				self.press(Button.A, duration=0.4, wait=0.1) # 2000W
-				self.press(Button.A, wait=1)
+				self.press(Button.A, wait=0.8)
 				self.press(Button.A, duration=0.1, wait=3)
 				self.press(Button.B, duration=0.3, wait=0.5)
 				self.timeLeap(False)
@@ -902,82 +900,116 @@ class AdvanceFrameBy(RankGlitchPythonCommand):
 		self.finish()
 
 
-# resets until finding a five star raid on the nth frame
-class FindFiveStar(ImageProcPythonCommand, RankGlitchPythonCommand):
+# resets until finding a n star raid on the nth frame
+class FindNStar(ImageProcPythonCommand, RankGlitchPythonCommand):
 	def __init__(self, name, cam):
-		super(FindFiveStar, self).__init__(name, cam)
-		self.n = 7
-		self.reset = False
+		super(FindNStar, self).__init__(name, cam)
+		self.n = 4
+		self.reset = True
 		self.purple = True
-		self.desired_num_of_stars = 5
+		self.desired_num_of_stars = 3
 
 	def do(self):
+		if self.reset:
+			self.resetGame()
+		else:
+			# assume that the current raid is not the desired raid and begin by advancing the date
+			in_raid_den = self.isContainTemplate('raid_den_options.png')
+			print("beginning... in raid den = "+str(in_raid_den))
+			self.RaidLeap(in_raid_den)
 		while self.checkIfAlive():
 			if self.reset:
 				for i in range(1, self.n):
 					if not self.checkIfAlive(): return
-					self.wait(1)
-
-					print("setting date back...")
-					self.timeLeap(True)
+					self.wait(0.5)
 
 					print("advancing frame " + str(i) + "...")
+					self.advanceFrame(check_den_entrance=False)
 
-					self.RaidLeap()
-
-					print("now on frame: " + str(i+1))
-
-			# enter the raid screen
-			self.press(Button.A, duration=0.4, wait=3)
-			print("in raid den?")
-			if not self.isContainTemplate('raid_den_options.png'):
-				print("not in raid den. entering")
-				self.press(Button.A, duration=0.4, wait=0.1) # 2000W
-				self.press(Button.A, wait=3)
-			print("checking for five stars...")
-
-			
+			self.enterRaidDen()
+			self.wait(2)
+			print("checking stars (want:"+str(self.desired_num_of_stars)+")...")
 			stars = self.getStars()
 			print("stars: "+str(stars))
 			if stars == self.desired_num_of_stars:
 				self.finish()
-			if self.reset:
-				self.Reset()
-			else:
-				self.RaidLeap(True)
 
-	def Reset(self):
+			if not self.checkIfAlive(): return
+			if self.reset:
+				self.resetGame()
+			else:
+				self.RaidLeap(den_is_open=True)
+
+	def resetGame(self):
 		print("resetting...")
 		self.press(Button.HOME, wait=1)
-		self.press(Button.X, wait=1)
+		self.press(Button.X, wait=0.8)
 		self.press(Button.A, wait=5)
 		self.press(Button.A, wait=2)
-		self.press(Button.A, wait=18)
+		self.press(Button.A, wait=17)
 		self.press(Button.A, wait=1)
+		if not self.checkIfAlive(): return
+		self.wait(12)
+
 	def RaidLeap(self, den_is_open=False):
 		if not den_is_open:
-			self.press(Button.A, duration=0.4, wait=0.1)
-			self.press(Button.A, duration=0.4, wait=0.1) # 2000W
-			self.press(Button.A, wait=1)
+			self.enterRaidDen()
 		self.press(Button.A, duration=0.1, wait=3) # start looking for trainers
 		self.press(Button.B, duration=0.3, wait=0.5)
+		if not self.checkIfAlive(): return
 		self.timeLeap(False)
-		self.press(Button.A, wait=5)
+		self.press(Button.A, wait=4.5)
+
+	def enterRaidDen(self):
+		# enter the raid screen
+		self.press(Button.A, duration=0.4, wait=3)
+		# this button press either leaves you at: 
+		# 1. "energy flowing out of the den"
+		# 2. inside the first screen of the den
+		print("in raid den?")
+		if not self.isContainTemplate('raid_den_options.png'):
+			print("not in raid den. entering")
+			self.press(Button.A, duration=0.4, wait=0.1) # 2000W
+			self.press(Button.A, wait=1)
+
+	def save(self):
+		print("saving...")
+		self.press(Button.X, wait=1)
+		self.press(Button.R, wait=2)
+		self.press(Button.A, wait=4)
+
+	def advanceFrame(self, reset_and_save_game=False, check_den_entrance=True):
+		if reset_and_save_game:
+			self.resetGame()
+		elif check_den_entrance:
+			if not self.isContainTemplate('raid_den_options.png'):
+				self.enterRaidDen()
+		print("setting date back...")
+		self.timeLeap(True)
+		self.RaidLeap()
+		if reset_and_save_game:
+			self.save()
 
 
-# reset the game
-class ResetGame(PythonCommand):
+# Reset Perform the Day skip glitch once & Save
+class AdvanceBaseFrame(FindNStar):
 	def __init__(self, name):
-		super(ResetGame, self).__init__(name)
+		super(AdvanceBaseFrame, self).__init__(name)
+		self.use_rank = True
 
 	def do(self):
-		self.wait(1)
-		self.press(Button.HOME, wait=1)
-		self.press(Button.X, wait=1)
-		self.press(Button.A, wait=5)
-		self.press(Button.A, wait=2)
-		self.press(Button.A, wait=18)
-		self.press(Button.A, wait=1)
+		if self.checkIfAlive():
+			self.advanceFrame(reset_game=True, save_game=True)
+
+		self.finish()
+
+# reset the game
+class RestartGame(FindNStar):
+	def __init__(self, name):
+		super(RestartGame, self).__init__(name)
+
+	def do(self):
+		self.resetGame()
 
 		self.finish()
 
@@ -986,11 +1018,25 @@ class ResetGame(PythonCommand):
 class AutoMaxRaid(ImageProcPythonCommand):
 	def __init__(self, name, cam):
 		super(AutoMaxRaid, self).__init__(name, cam)
+		self.dynamax = False
 
 	def do(self):
+		# enter the battle
+		self.press(Direction.DOWN)
+		self.press(Button.A, duration=0.5)
+		self.press(Button.A, wait=18)
+		# choose a move
+		self.press(Button.A, wait=0.5)
+		if self.dynamax:
+			self.press(Direction.LEFT)
+			self.press(Button.A, wait=0.5)
+		self.press(Button.A, wait=0.5)
 
 		while not self.isContainTemplate('egg_notice.png'):
-			self.wait(1)
+			self.press(Button.A, wait=0.5)
+			self.press(Button.A, wait=0.5)
+			self.press(Button.A, wait=0.5)
+			self.wait(3)
 			if not self.checkIfAlive(): return
 
 		self.finish()
@@ -1010,10 +1056,10 @@ commands = {
 	'InfinityCafe - 無限カフェ(ランクマ)': InfinityCafe,
 	'??? - 無限羽回収(ランクマ)': InfinityFeather,
 	'Debug - デバグ': Debug,
-	'Advance Frame - Seed Search': AdvanceFrame,
+	'Advance Frame By One - Seed Search': AdvanceBaseFrame,
 	'Advance Frame By n - Seed Search': AdvanceFrameBy,
-	'Reset Game': ResetGame,
-	'Find Five Star Battle': FindFiveStar,
+	'Reset Game': RestartGame,
+	'Find N-Star Battle': FindNStar,
 }
 
 # Add commands as utility you want to use
