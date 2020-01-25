@@ -227,7 +227,7 @@ class ImageProcPythonCommand(PythonCommand):
 		return len(contours)
 
 	# read text from the specified part of the screen
-	def getTopText(self, start_x=1, end_x=-1, start_y=1, end_y=-1):
+	def getText(self, start_x=1, end_x=-1, start_y=1, end_y=-1):
 		src = self.camera.readFrame()
 		# crop and gray
 		src = (cv2.cvtColor(src, cv2.COLOR_BGR2GRAY))[start_x:end_x, start_y:end_y]
@@ -1061,16 +1061,16 @@ class FindNStar(ImageProcPythonCommand, RankGlitchPythonCommand):
 
 # Reset Perform the Day skip glitch once & Save
 class AdvanceBaseFrame(FindNStar):
-	def __init__(self, name):
-		super(AdvanceBaseFrame, self).__init__(name)
+	def __init__(self, name, cam):
+		super(AdvanceBaseFrame, self).__init__(name, cam)
 
 	def do(self):
 		self.advanceFrame(reset_game=True, save_game=True)
 
 # reset the game
 class RestartGame(FindNStar):
-	def __init__(self, name):
-		super(RestartGame, self).__init__(name)
+	def __init__(self, name, cam):
+		super(RestartGame, self).__init__(name, cam)
 
 	def do(self):
 		self.resetGame()
