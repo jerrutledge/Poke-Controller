@@ -960,16 +960,13 @@ class AdvanceFrameBy(RankGlitchPythonCommand):
 
 			print("advancing frame " + str(i) + "...")
 
-			if self.checkIfAlive():
-				self.press(Button.A, duration=0.4, wait=0.1)
-				self.press(Button.A, duration=0.4, wait=0.1) # 2000W
-				self.press(Button.A, wait=0.8)
-				self.press(Button.A, duration=0.1, wait=3)
-				self.press(Button.B, duration=0.3, wait=0.5)
-				self.timeLeap(False)
-				self.press(Button.A, wait=5)
-			else:
-				break
+			self.press(Button.A, duration=0.4, wait=0.1)
+			self.press(Button.A, duration=0.4, wait=0.1) # 2000W
+			self.press(Button.A, wait=0.8)
+			self.press(Button.A, duration=0.1, wait=3)
+			self.press(Button.B, duration=0.3, wait=0.5)
+			self.timeLeap(False)
+			self.press(Button.A, wait=5)
 
 			print("now on frame: " + str(i+1))
 
@@ -993,10 +990,9 @@ class FindNStar(ImageProcPythonCommand, RankGlitchPythonCommand):
 			in_raid_den = self.isContainTemplate('raid_den_options.png')
 			print("beginning... in raid den = "+str(in_raid_den))
 			self.RaidLeap(in_raid_den)
-		while self.checkIfAlive():
+		while True:
 			if self.reset:
 				for i in range(1, self.n):
-					if not self.checkIfAlive(): return
 					self.wait(0.5)
 
 					print("advancing frame " + str(i) + "...")
@@ -1010,7 +1006,6 @@ class FindNStar(ImageProcPythonCommand, RankGlitchPythonCommand):
 			if stars == self.desired_num_of_stars:
 				self.finish()
 
-			if not self.checkIfAlive(): return
 			if self.reset:
 				self.resetGame()
 			else:
@@ -1023,16 +1018,13 @@ class FindNStar(ImageProcPythonCommand, RankGlitchPythonCommand):
 		self.press(Button.A, wait=5)
 		self.press(Button.A, wait=2)
 		self.press(Button.A, wait=17)
-		self.press(Button.A, wait=1)
-		if not self.checkIfAlive(): return
-		self.wait(12)
+		self.press(Button.A, wait=13)
 
 	def RaidLeap(self, den_is_open=False):
 		if not den_is_open:
 			self.enterRaidDen()
 		self.press(Button.A, duration=0.1, wait=3) # start looking for trainers
 		self.press(Button.B, duration=0.3, wait=0.5)
-		if not self.checkIfAlive(): return
 		self.timeLeap(False)
 		self.press(Button.A, wait=4.5)
 
@@ -1071,13 +1063,9 @@ class FindNStar(ImageProcPythonCommand, RankGlitchPythonCommand):
 class AdvanceBaseFrame(FindNStar):
 	def __init__(self, name):
 		super(AdvanceBaseFrame, self).__init__(name)
-		self.use_rank = True
 
 	def do(self):
-		if self.checkIfAlive():
-			self.advanceFrame(reset_game=True, save_game=True)
-
-		self.finish()
+		self.advanceFrame(reset_game=True, save_game=True)
 
 # reset the game
 class RestartGame(FindNStar):
@@ -1086,8 +1074,6 @@ class RestartGame(FindNStar):
 
 	def do(self):
 		self.resetGame()
-
-		self.finish()
 
 
 # Dynamax and spam first move on first pokemon
@@ -1113,9 +1099,6 @@ class AutoMaxRaid(ImageProcPythonCommand):
 			self.press(Button.A, wait=0.5)
 			self.press(Button.A, wait=0.5)
 			self.wait(3)
-			if not self.checkIfAlive(): return
-
-		self.finish()
 
 
 # Add commands you want to use
