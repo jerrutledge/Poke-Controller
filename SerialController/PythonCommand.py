@@ -227,18 +227,22 @@ class ImageProcPythonCommand(PythonCommand):
 		return len(contours)
 
 	# read text from the specified part of the screen
-	def getText(self, start_x=1, end_x=-1, start_y=1, end_y=-1):
+	def getText(self, left=1, top=1, right=1, bottom=1, inverse=False):
 		src = self.camera.readFrame()
 		# crop and gray
-		src = (cv2.cvtColor(src, cv2.COLOR_BGR2GRAY))[start_x:end_x, start_y:end_y]
-		print("get OCR")
+		src = cv2.cvtColor(src, cv2.COLOR_BGR2GRAY)
+		# src = src[left:-right, top:-bottom]
+		# if inverse:
+		src = cv2.bitwise_not(src)
+		src = cv2.threshold(src, 225, 255, cv2.THRESH_OTSU)[1]
+		print("OCR Reading:")
 
 		# Output OCR of selected area
 		# Define config parameters.
 		# '-l eng'  for using the English language
 		# '--oem 1' for using LSTM OCR Engine
-		config = ('-l deu --oem 1 --psm 3')
-		text = pytesseract.image_to_string(frame, config=config)
+		config = ('-l eng --oem 1 --psm 3')
+		text = pytesseract.image_to_string(src, config=config)
 		print(text)
 		return text
 
@@ -336,7 +340,7 @@ class InfinityLottery(RankGlitchPythonCommand):
 				self.press(Button.B, wait=0.5)
 
 			# Time glitch
-			self.timeLeap()
+			self.timeLeap(is_go_back=False)
 
 # using RankBattle glitch
 # Infinity getting berries
@@ -978,25 +982,24 @@ class FindNStar(ImageProcPythonCommand, RankGlitchPythonCommand):
 	def __init__(self, name, cam):
 		super(FindNStar, self).__init__(name, cam)
 		self.n = 4
-		self.reset = True
+		self.reset = False
 		self.purple = True
-		self.desired_num_of_stars = 3
+		self.desired_num_of_stars = 5
+		self.desired_pokemon = "Vespiquen"
 
 	def do(self):
 		if self.reset:
 			self.resetGame()
 		else:
 			# assume that the current raid is not the desired raid and begin by advancing the date
-			in_raid_den = self.isContainTemplate('raid_den_options.png')
-			print("beginning... in raid den = "+str(in_raid_den))
-			self.RaidLeap(in_raid_den)
+			self.raidLeap()
 		while True:
 			if self.reset:
 				for i in range(1, self.n):
 					self.wait(0.5)
 
 					print("advancing frame " + str(i) + "...")
-					self.advanceFrame(check_den_entrance=False)
+					self.advanceFrame()
 
 			self.enterRaidDen()
 			self.wait(2)
@@ -1004,41 +1007,29 @@ class FindNStar(ImageProcPythonCommand, RankGlitchPythonCommand):
 			stars = self.getStars()
 			print("stars: "+str(stars))
 			if stars == self.desired_num_of_stars:
-				self.finish()
+				if not self.reset:
+					self.press(Button.B, wait=2)
+					self.save()
+					result = self.battle(True, self.desired_pokemon)
+					if not result:
+						self.advanceFrame(reset_and_save_game=True)
+						continue
+				return
 
 			if self.reset:
 				self.resetGame()
 			else:
-				self.RaidLeap(den_is_open=True)
+				self.raidLeap()
 
 	def resetGame(self):
 		print("resetting...")
 		self.press(Button.HOME, wait=1)
-		self.press(Button.X, wait=0.8)
+		self.press(Button.X, wait=1)
 		self.press(Button.A, wait=5)
 		self.press(Button.A, wait=2)
-		self.press(Button.A, wait=17)
-		self.press(Button.A, wait=13)
-
-	def RaidLeap(self, den_is_open=False):
-		if not den_is_open:
-			self.enterRaidDen()
-		self.press(Button.A, duration=0.1, wait=3) # start looking for trainers
-		self.press(Button.B, duration=0.3, wait=0.5)
-		self.timeLeap(False)
-		self.press(Button.A, wait=4.5)
-
-	def enterRaidDen(self):
-		# enter the raid screen
-		self.press(Button.A, duration=0.4, wait=3)
-		# this button press either leaves you at: 
-		# 1. "energy flowing out of the den"
-		# 2. inside the first screen of the den
-		print("in raid den?")
-		if not self.isContainTemplate('raid_den_options.png'):
-			print("not in raid den. entering")
-			self.press(Button.A, duration=0.4, wait=0.1) # 2000W
-			self.press(Button.A, wait=1)
+		self.press(Button.A, wait=18)
+		self.press(Button.A, wait=1)
+		self.wait(12)
 
 	def save(self):
 		print("saving...")
@@ -1046,17 +1037,82 @@ class FindNStar(ImageProcPythonCommand, RankGlitchPythonCommand):
 		self.press(Button.R, wait=2)
 		self.press(Button.A, wait=4)
 
-	def advanceFrame(self, reset_and_save_game=False, check_den_entrance=True):
+	def enterRaidDen(self):
+		if self.isContainTemplate('raid_den_options.png'):
+			print("already in den")
+			return
+		# enter the raid screen
+		self.press(Button.A, duration=0.4, wait=3)
+		# this button press either leaves you at: 
+		# 1. "energy flowing out of the den"
+		# 2. inside the first screen of the den
+		print("in raid den yet?")
+		if not self.isContainTemplate('raid_den_options.png'):
+			print("not in raid den. entering")
+			self.press(Button.A, duration=0.4, wait=0.1) # 2000W
+			self.press(Button.A, wait=1)
+
+	def raidLeap(self):
+		self.enterRaidDen()
+		self.press(Button.A, duration=0.1, wait=3) # start looking for trainers
+		self.press(Button.B, duration=0.3, wait=0.5)
+		self.timeLeap(False)
+		self.press(Button.A, wait=4.5)
+
+	def advanceFrame(self, reset_and_save_game=False):
 		if reset_and_save_game:
 			self.resetGame()
-		elif check_den_entrance:
-			if not self.isContainTemplate('raid_den_options.png'):
-				self.enterRaidDen()
 		print("setting date back...")
 		self.timeLeap(True)
-		self.RaidLeap()
+		self.wait(2)
+		self.raidLeap()
 		if reset_and_save_game:
 			self.save()
+
+	def battle(self, check_pokemon=False, desired_pokemon="", dynamax=False):
+		# enter the raid den, if necessary 
+		self.enterRaidDen()
+		# enter the battle
+		self.press(Direction.DOWN)
+		self.press(Button.A, duration=0.5)
+		self.press(Button.A, duration=0.5)
+		self.press(Button.A, wait=11)
+		# check pokemon
+		if check_pokemon:
+			found = False
+			print("get top text:")
+			for i in range(1, 40):
+				print("getting text, attempt #"+str(i))
+				top_text = self.getText(0, 0, 0, 500, inverse=True)
+				if desired_pokemon in top_text:
+					print("FOUND "+desired_pokemon+" on #"+str(i)+" TRY")
+					found = True
+					break
+			if not found:
+				print("did not find "+desired_pokemon+", resetting...")
+				return False
+		# choose a move
+		self.press(Button.A, wait=0.5)
+		if dynamax:
+			self.press(Direction.LEFT)
+			self.press(Button.A, wait=0.5)
+		self.press(Button.A, wait=0.5)
+		self.press(Button.A, wait=0.5)
+		self.wait(3)
+
+		while True:
+			if self.isContainTemplate('run_icon.png'):
+				print("run_icon.png detected, making move")
+				self.press(Button.A, wait=0.5)
+				self.press(Button.A, wait=0.5)
+				self.press(Button.A, wait=0.5)
+			elif self.isContainTemplate('fangen.png'):
+				print("found fangen, catching")
+				self.press(Button.A, wait=0.5)
+				self.press(Button.A, wait=0.5)
+			self.wait(3)
+
+		return True
 
 
 # Reset Perform the Day skip glitch once & Save
@@ -1065,7 +1121,7 @@ class AdvanceBaseFrame(FindNStar):
 		super(AdvanceBaseFrame, self).__init__(name, cam)
 
 	def do(self):
-		self.advanceFrame(reset_game=True, save_game=True)
+		self.advanceFrame(reset_and_save_game=True)
 
 # reset the game
 class RestartGame(FindNStar):
@@ -1077,28 +1133,13 @@ class RestartGame(FindNStar):
 
 
 # Dynamax and spam first move on first pokemon
-class AutoMaxRaid(ImageProcPythonCommand):
+class AutoMaxRaid(FindNStar):
 	def __init__(self, name, cam):
 		super(AutoMaxRaid, self).__init__(name, cam)
 		self.dynamax = False
 
 	def do(self):
-		# enter the battle
-		self.press(Direction.DOWN)
-		self.press(Button.A, duration=0.5)
-		self.press(Button.A, wait=18)
-		# choose a move
-		self.press(Button.A, wait=0.5)
-		if self.dynamax:
-			self.press(Direction.LEFT)
-			self.press(Button.A, wait=0.5)
-		self.press(Button.A, wait=0.5)
-
-		while not self.isContainTemplate('egg_notice.png'):
-			self.press(Button.A, wait=0.5)
-			self.press(Button.A, wait=0.5)
-			self.press(Button.A, wait=0.5)
-			self.wait(3)
+		self.battle(dynamax = self.dynamax)
 
 
 # Add commands you want to use
@@ -1123,6 +1164,7 @@ commands = {
 	'Advance Frame By n - Seed Search': AdvanceFrameBy,
 	'Reset Game': RestartGame,
 	'Find N-Star Battle': FindNStar,
+	'Auto Max Raid Battle': AutoMaxRaid,
 }
 
 # Add commands as utility you want to use
