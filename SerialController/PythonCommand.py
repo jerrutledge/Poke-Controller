@@ -487,6 +487,7 @@ class AutoRelease(ImageProcPythonCommand):
 					self.Release()
 				else:
 					# if shiny, then skip
+					self.wait(2)
 					if not self.isContainTemplate('shiny_mark.png', threshold=0.9):
 						if self.isContainTemplate('status.png', threshold=0.7): # Maybe this threshold works for only Japanese version.
 							# Release a pokemon
@@ -499,10 +500,15 @@ class AutoRelease(ImageProcPythonCommand):
 
 			self.press(Direction.DOWN, wait=0.2)
 
-		# Return from pokemon box
+		# Go to next Box
 		self.press(Button.B, wait=2)
-		self.press(Button.B, wait=2)
-		self.press(Button.B, wait=1.5)
+		self.press(Button.R, wait=3)
+		self.press(Button.R, wait=0.2)
+
+		# # Return from pokemon box
+		# self.press(Button.B, wait=2)
+		# self.press(Button.B, wait=2)
+		# self.press(Button.B, wait=1.5)
 
 	def Release(self):
 		self.press(Button.A, wait=0.5)
