@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from Commands.PythonCommandBase import PythonCommand, ImageProcPythonCommand
+from Commands.PythonCommandBase import PythonCommand
 from Commands.Keys import KeyPress, Button, Direction, Stick
 
 # reset the game
@@ -12,12 +12,19 @@ class Reset(PythonCommand):
 		super().__init__()
 
 	def do(self):
-		self.wait(1)
+		# we're resetting manually, finish the program after pressing A on title
+		self.resetGame(wait_for_load=False)
+
+	def resetGame(self, wait_for_load=True):
+		self.wait(0.3)
 		self.press(Button.HOME, wait=1)
-		self.press(Button.X, wait=1)
-		self.press(Button.A, wait=5)
-		self.press(Button.A, wait=1.2)
+		self.press(Button.X, wait=0.5)
+		for _ in range(8):
+			self.press(Button.A, wait=0.5)
 		self.press(Button.A, wait=16)
-		self.press(Button.A, wait=0.5)
-		self.press(Button.A, wait=0.5)
-		self.press(Button.A, wait=0.5)
+		for _ in range(8):
+			self.press(Button.A, wait=0.5)
+		# wait extra time for the game to load in and take control of the character
+		# if executing this before taking some other action, set to True
+		if wait_for_load:
+			self.wait(5)
