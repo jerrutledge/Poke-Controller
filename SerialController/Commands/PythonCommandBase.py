@@ -7,6 +7,8 @@ import threading
 import cv2
 from .Keys import KeyPress, Button, Direction, Stick
 from . import CommandBase
+import pytesseract
+from pprint import pprint
 
 # the class For notifying stop signal is sent from Main window
 class StopThread(Exception):
@@ -188,6 +190,38 @@ class ImageProcPythonCommand(PythonCommand):
 			return True
 		else:
 			return False
+
+	# read text (from the specified part of the screen)
+	# debug = True will print the text and save a screenshot
+	def getText(self, top=1, bottom=1, left=1, right=1, digits=False, 
+			inverse=False, threshold = 0, debug=False):
+		frame = self.camera.readFrame()
+		# gray and apply crop/threshold/inverse
+		src = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+		crop = not (left==1 and top==1 and right==1 and bottom==1)
+		if crop:
+			src = src[top:-bottom, left:-right]
+		if inverse:
+			src = cv2.bitwise_not(src)
+		if threshold > 1:
+			src = cv2.threshold(src, threshold, 255, cv2.THRESH_OTSU)[1]
+
+
+		# Output OCR of selected area
+		# Define config parameters.
+		# '-l eng'  for using the English language
+		# '--oem 1' for using LSTM OCR Engine
+		if digits:
+			config = ('-l eng digits')
+		else:
+			config = ('-l eng --oem 1 --psm 3')
+		text = pytesseract.image_to_string(src, config=config)
+
+		if debug:
+			print("OCR Reading:")
+			print(text)
+			self.camera.saveCapture(top, bottom, left, right)
+		return text
 
 	# Get interframe difference binarized image
 	# フレーム間差分により2値化された画像を取得

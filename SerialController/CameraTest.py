@@ -5,6 +5,7 @@ from pytesseract import Output
 from pprint import pprint
 
 cap = cv2.VideoCapture(0)
+digits = False
 
 while(True):
 	# Capture frame-by-frame
@@ -12,7 +13,8 @@ while(True):
 
 	# Our operations on the frame come here
 	bw = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-	bw = bw[70:250, 430:-1]
+	pprint(bw)
+	bw = bw[90:245, 495:-1]
 	# bw = cv2.threshold(bw, 250, 255, cv2.THRESH_OTSU)[1]
 	# bw = cv2.bitwise_not(bw)
 
@@ -20,7 +22,10 @@ while(True):
 	# Define config parameters.
 	# '-l eng'  for using the English language
 	# '--oem 1' for using LSTM OCR Engine
-	config = ('-l eng digits')
+	if digits:
+		config = ('-l eng digits')
+	else:
+		config = ('-l eng --oem 1 --psm 3')
 	
 	# Run tesseract OCR on image
 	data = pytesseract.image_to_data(bw, config=config, output_type=Output.DICT)
