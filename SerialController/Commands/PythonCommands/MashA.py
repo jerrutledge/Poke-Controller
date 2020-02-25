@@ -14,5 +14,4 @@ class Mash_A(PythonCommand):
 
 	def do(self):
 		while True:
-			self.wait(0.5)
-			self.press(Button.A)
+			self.press(Button.A, wait=0.1)
