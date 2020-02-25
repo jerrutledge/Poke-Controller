@@ -38,7 +38,7 @@ class PythonCommand(CommandBase.Command):
 		except:
 			if self.keys is None:
 				self.keys = KeyPress(ser)
-			print('interruppt')
+			print('-- ERROR - please check log --')
 			import traceback
 			traceback.print_exc()
 			self.keys.end()
