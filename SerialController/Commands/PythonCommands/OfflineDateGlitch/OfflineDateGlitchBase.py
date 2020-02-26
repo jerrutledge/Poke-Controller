@@ -120,7 +120,7 @@ class OfflineDateGlitchCommand(ImageProcPythonCommand, ResetGame):
 				self.press(Button.A, wait=0.5)
 				self.press(Button.A, wait=0.5)
 				self.press(Button.A, wait=0.5)
-			elif "catch" in self.getText(debug=True):
+			elif "Catch" in self.getText(debug=True):
 				print("catching...")
 				self.press(Button.A, wait=0.5)
 				self.press(Button.A, wait=0.5)

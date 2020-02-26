@@ -13,7 +13,7 @@ class AllHatching(ImageProcPythonCommand):
 	def __init__(self, cam):
 		super().__init__(cam)
 		self.hatched_num = 0
-		self.count = 5
+		self.count = 2
 		self.place = 'wild_area'
 
 	def do(self):
@@ -24,14 +24,13 @@ class AllHatching(ImageProcPythonCommand):
 			self.hold([Direction.RIGHT, Direction.R_LEFT])
 
 			# turn round and round
-			while not self.isContainTemplate('egg_notice.png'):
+			while not "Oh?" in self.getText(top=-130, bottom=30, left=250, right=250, 
+					inverse=False, debug=True):
 				self.wait(1)
 
 			print('egg hatching')
 			self.holdEnd([Direction.RIGHT, Direction.R_LEFT])
-			self.press(Button.A)
-			self.wait(15)
-			for i in range(0, 5):
-				self.press(Button.A, wait=1)
+			self.press(Button.B, wait=14) # "Oh?"
+			self.pressRep(Button.B, 10, wait=1)
 			self.hatched_num += 1
 			print('hatched_num: ' + str(self.hatched_num))
