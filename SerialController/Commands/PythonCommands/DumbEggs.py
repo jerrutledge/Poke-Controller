@@ -8,7 +8,7 @@ from Commands.Keys import KeyPress, Button, Direction, Stick
 # start in the bridge field 
 # on your bike
 # with a full party (the pokemon in the second slot will be replaced)
-# with the default menu option being the map
+# with the map being in the bottom left corner of the menu
 # choose where new pokemon go *manually* in game settings 
 class DumbEggHatcher(PythonCommand):
 	NAME = "Dumb Egg Hatcher"
@@ -17,19 +17,23 @@ class DumbEggHatcher(PythonCommand):
 		super().__init__()
 
 	def do(self):
+		# select the map
+		self.press(Button.X, wait=1) # open menu
+		self.press(Direction.LEFT, duration=1)
+		self.press(Direction.DOWN, duration=0.5)
+
 		while True:
-			self.press(Button.X, wait=1) # open menu
-			self.pressRep(Button.A, 20, wait=3) # fly to bridge field
+			self.pressRep(Button.A, 20, wait=2) # fly to bridge field
 
 			# walk to daycare and get an egg
 			self.press(Direction.DOWN, duration=0.05, wait=0.5)
 			self.press(Direction.DOWN, duration=0.8)
 			self.press(Direction.LEFT, duration=0.2)
 			
-			self.pressRep(Button.A, 18, duration=0.3, wait=0.8) # Put egg on your team
+			self.pressRep(Button.A, 18, duration=0.3, wait=1.7) # Put egg on your team
 			self.press(Direction.DOWN) # select correct pokemon slot
 			self.press(Button.A)
-			self.pressRep(Button.B, 10)
+			self.pressRep(Button.B, 15)
 
 			# begin the spin
 			self.press(Direction.RIGHT, duration=1)
@@ -42,3 +46,6 @@ class DumbEggHatcher(PythonCommand):
 			self.holdEnd([Direction.RIGHT, Direction.R_LEFT])
 			self.press(Button.B, wait=14) # "Oh?"
 			self.pressRep(Button.B, 10, wait=1)
+
+			# open the menu to start again
+			self.press(Button.X, wait=1)
