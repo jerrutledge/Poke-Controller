@@ -90,8 +90,8 @@ class FindNStar(OfflineDateGlitchCommand):
 class AdvanceBaseFrame(OfflineDateGlitchCommand):
 	NAME = "Advance Base Frame"
 
-	def __init__(self, name, cam):
-		super(AdvanceBaseFrame, self).__init__(name, cam)
+	def __init__(self, cam):
+		super().__init__(cam)
 
 	def do(self):
 		self.advanceFrame(reset_and_save_game=True)
@@ -101,8 +101,8 @@ class AdvanceBaseFrame(OfflineDateGlitchCommand):
 class AutoMaxRaid(OfflineDateGlitchCommand):
 	NAME = "Auto Max Raid Battle"
 
-	def __init__(self, name, cam):
-		super(AutoMaxRaid, self).__init__(name, cam)
+	def __init__(self, cam):
+		super().__init__(cam)
 		self.dynamax = False
 
 	def do(self):
