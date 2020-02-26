@@ -14,11 +14,8 @@ class ResetGame(PythonCommand):
 		self.wait(0.3)
 		self.press(Button.HOME, wait=1)
 		self.press(Button.X, wait=0.5)
-		for _ in range(8):
-			self.press(Button.A, wait=0.5)
-		self.press(Button.A, wait=16)
-		for _ in range(8):
-			self.press(Button.A, wait=0.5)
+		self.pressRep(Button.A, 15, wait=16)
+		self.pressRep(Button.A, 5, interval=0.5)
 		# wait extra time for the game to load in and take control of the character
 		# if executing this before taking some other action, set to True
 		if wait_for_load:
