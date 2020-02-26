@@ -116,15 +116,17 @@ class OfflineDateGlitchCommand(ImageProcPythonCommand, ResetGame):
 			self.press(Button.Y, wait=1)
 			self.press(Button.A, wait=1)
 			self.wait(self.stream_delay)
-			for _ in range(3):
+			for i in range(3):
 				ability_text = self.getText(40, -120, 600, 1, inverse=True)
 				print("ability_text: " + ability_text)
 				if desired_ability in ability_text:
 					print("found ability: " + desired_ability)
 					break
-				self.wait(1)
-			print("could not find ability: " + desired_ability + " :(")
-			return False
+				if i == 2:
+					print("could not find ability: " + desired_ability + " :(")
+					return False
+				else:
+					self.wait(1)
 
 		# choose a move
 		self.press(Button.A, wait=0.5)
