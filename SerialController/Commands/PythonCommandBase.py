@@ -221,7 +221,7 @@ class ImageProcPythonCommand(PythonCommand):
 		if debug:
 			print("OCR Reading:")
 			print(text)
-			self.camera.saveCapture(top, bottom, left, right)
+			# self.camera.saveCapture(top, bottom, left, right)
 		return text
 
 	# Get interframe difference binarized image
