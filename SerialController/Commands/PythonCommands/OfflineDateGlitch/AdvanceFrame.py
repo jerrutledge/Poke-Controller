@@ -49,11 +49,13 @@ class FindNStar(OfflineDateGlitchCommand):
 		self.reset = False
 		self.purple = True
 		self.desired_num_of_stars = 5
-		self.desired_pokemon = "Vespiquen"
+		self.desired_pokemon = "Gardevoir"
+		# desired ability function assumes your lead has trace
+		self.desired_ability = "Telepathy"
 
 	def do(self):
 		if self.reset:
-			self.resetGame()
+			self.resetGame(wait_for_load=True)
 		else:
 			# assume that the current raid is not the desired raid and begin by advancing the date
 			self.raidLeap()
@@ -74,14 +76,15 @@ class FindNStar(OfflineDateGlitchCommand):
 				if not self.reset:
 					self.press(Button.B, wait=2)
 					self.save()
-					result = self.battle(True, self.desired_pokemon)
+					result = self.battle(True, self.desired_pokemon, 
+							desired_ability=self.desired_ability)
 					if not result:
 						self.advanceFrame(reset_and_save_game=True)
 						continue
 				return
 
 			if self.reset:
-				self.resetGame()
+				self.resetGame(wait_for_load=True)
 			else:
 				self.raidLeap()
 

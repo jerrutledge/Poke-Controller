@@ -83,7 +83,8 @@ class OfflineDateGlitchCommand(ImageProcPythonCommand, ResetGame):
 		if reset_and_save_game:
 			self.save()
 
-	def battle(self, check_pokemon=False, desired_pokemon="", dynamax=False):
+	def battle(self, check_pokemon=False, desired_pokemon="", dynamax=False, 
+			move_num=1, desired_ability=""):
 		# enter the raid den, if necessary 
 		self.enterRaidDen()
 		# enter the battle
@@ -103,13 +104,35 @@ class OfflineDateGlitchCommand(ImageProcPythonCommand, ResetGame):
 					found = True
 					break
 			if not found:
-				print("did not find "+desired_pokemon+", resetting...")
+				print("did not find "+desired_pokemon+" :(")
 				return False
+		# wait for battle screen to appear
+		while not self.isContainTemplate('battle_icon.png'):
+			print("no battle icon...")
+			self.wait(3)
+
+		# check for desired ability by checking lead's ability after trace
+		if desired_ability != "":
+			self.press(Button.Y, wait=1)
+			self.press(Button.A, wait=1)
+			self.wait(self.stream_delay)
+			for _ in range(3):
+				ability_text = self.getText(40, -120, 600, 1, inverse=True)
+				print("ability_text: " + ability_text)
+				if desired_ability in ability_text:
+					print("found ability: " + desired_ability)
+					break
+				self.wait(1)
+			print("could not find ability: " + desired_ability + " :(")
+			return False
+
 		# choose a move
 		self.press(Button.A, wait=0.5)
 		if dynamax:
 			self.press(Direction.LEFT)
 			self.press(Button.A, wait=0.5)
+		for _ in range(move_num-1):
+			self.press(Direction.DOWN)
 		self.press(Button.A, wait=0.5)
 		self.press(Button.A, wait=0.5)
 		self.wait(3)
@@ -117,14 +140,20 @@ class OfflineDateGlitchCommand(ImageProcPythonCommand, ResetGame):
 		while True:
 			if self.isContainTemplate('battle_icon.png'):
 				print("battle icon detected, making move")
-				self.press(Button.A, wait=0.5)
-				self.press(Button.A, wait=0.5)
-				self.press(Button.A, wait=0.5)
+				self.pressRep(Button.A, 4, interval=0.5, wait=0.5)
 			elif "Catch" in self.getText(debug=True):
 				print("catching...")
 				self.press(Button.A, wait=0.5)
 				self.press(Button.A, wait=0.5)
 				break
 			self.wait(3)
+
+		# make sure that the pokemon is caught
+		for _ in range(40):
+			if "caught" in self.getText(40, -120, 600, 1, inverse=True):
+				print("Pokemon caught!")
+				break
+			else:
+				self.wait(3)
 
 		return True

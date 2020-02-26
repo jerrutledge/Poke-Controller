@@ -19,7 +19,7 @@ class ResetGame(PythonCommand):
 		# wait extra time for the game to load in and take control of the character
 		# if executing this before taking some other action, set to True
 		if wait_for_load:
-			self.wait(5)
+			self.wait(8)
 
 # reset the game
 class Reset(ResetGame):
