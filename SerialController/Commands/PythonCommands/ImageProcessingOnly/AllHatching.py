@@ -13,7 +13,7 @@ class AllHatching(ImageProcPythonCommand):
 	def __init__(self, cam):
 		super().__init__(cam)
 		self.hatched_num = 0
-		self.count = 2
+		self.count = 1
 		self.place = 'wild_area'
 
 	def do(self):
@@ -25,7 +25,7 @@ class AllHatching(ImageProcPythonCommand):
 
 			# turn round and round
 			while not "Oh?" in self.getText(top=-130, bottom=30, left=250, right=250, 
-					inverse=False, debug=True):
+					inverse=False, debug=False):
 				self.wait(1)
 
 			print('egg hatching')
