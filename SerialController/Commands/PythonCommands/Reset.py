@@ -5,15 +5,10 @@ from Commands.PythonCommandBase import PythonCommand
 from Commands.Keys import KeyPress, Button, Direction, Stick
 
 # reset the game
-class Reset(PythonCommand):
-	NAME = "Reset"
+class ResetGame(PythonCommand):
 
 	def __init__(self):
 		super().__init__()
-
-	def do(self):
-		# we're resetting manually, finish the program after pressing A on title
-		self.resetGame(wait_for_load=False)
 
 	def resetGame(self, wait_for_load=True):
 		self.wait(0.3)
@@ -28,3 +23,14 @@ class Reset(PythonCommand):
 		# if executing this before taking some other action, set to True
 		if wait_for_load:
 			self.wait(5)
+
+# reset the game
+class Reset(ResetGame):
+	NAME = "Reset"
+
+	def __init__(self):
+		super().__init__()
+
+	def do(self):
+		# we're resetting manually, finish the program after pressing A on title
+		self.resetGame(wait_for_load=False)

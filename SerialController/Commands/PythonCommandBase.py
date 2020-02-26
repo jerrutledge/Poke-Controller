@@ -161,6 +161,7 @@ class ImageProcPythonCommand(PythonCommand):
 	def __init__(self, cam):
 		super(ImageProcPythonCommand, self).__init__()
 		self.camera = cam
+		self.stream_delay = 1.4
 
 	# Judge if current screenshot contains an image using template matching
 	# It's recommended that you use gray_scale option unless the template color wouldn't be cared for performace
@@ -237,3 +238,22 @@ class ImageProcPythonCommand(PythonCommand):
 		# remove noise
 		mask = cv2.medianBlur(img_th, 3)
 		return mask
+
+	# detect number of stars
+	def getStars(self, output_photo=False):
+		src = self.camera.readFrame()
+		# crop and gray
+		src = (cv2.cvtColor(src, cv2.COLOR_BGR2GRAY))[1:100, 1:550]
+		_, base_img = cv2.threshold(src, 190, 255, cv2.THRESH_BINARY)
+		contours, _ = cv2.findContours(base_img, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+
+		# draw contours & print, if enabled
+		if output_photo:
+			for c in contours:
+				approx = cv2.approxPolyDP(c,0.05*cv2.arcLength(c, True), True)
+				cv2.drawContours(base_img, [approx], 0, (160, 0, 0), 2)
+			dt_now = datetime.datetime.now()
+			fileName = dt_now.strftime('%Y-%m-%d_%H-%M-%S')+".png"
+			cv2.imwrite(fileName, base_img)
+
+		return len(contours)

@@ -33,7 +33,7 @@ class AutoRelease(ImageProcPythonCommand):
 						self.Release()
 					else:
 						# delay for video feed to update
-						self.wait(1.4)
+						self.wait(self.stream_delay)
 						if self.isContainTemplate('status.png', threshold=0.7):
 							shiny = self.isContainTemplate('shiny_mark.png', threshold=0.9)
 							if shiny:
