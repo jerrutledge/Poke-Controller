@@ -135,14 +135,12 @@ class OfflineDateGlitchCommand(ImageProcPythonCommand, ResetGame):
 			self.press(Button.A, wait=0.5)
 		for _ in range(move_num-1):
 			self.press(Direction.DOWN)
-		self.press(Button.A, wait=0.5)
-		self.press(Button.A, wait=0.5)
-		self.wait(3)
+		self.pressRep(Button.A, 4, interval=0.5, wait=4)
 
 		while True:
 			if self.isContainTemplate('battle_icon.png'):
 				print("battle icon detected, making move")
-				self.pressRep(Button.A, 4, interval=0.5, wait=0.5)
+				self.pressRep(Button.A, 5, interval=0.5, wait=0.5)
 			elif "Catch" in self.getText(debug=True):
 				print("catching...")
 				self.press(Button.A, wait=0.5)

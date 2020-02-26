@@ -33,7 +33,7 @@ class DumbEggHatcher(PythonCommand):
 			self.pressRep(Button.A, 18, duration=0.3, wait=1.7) # Put egg on your team
 			self.press(Direction.DOWN) # select correct pokemon slot
 			self.press(Button.A)
-			self.pressRep(Button.B, 15)
+			self.pressRep(Button.B, 20)
 
 			# begin the spin
 			self.press(Direction.RIGHT, duration=1)
