@@ -29,7 +29,7 @@ class DumbEggHatcher(PythonCommand):
 			self.press(Direction.LEFT, duration=0.2)
 			self.press(Button.A, duration=1) # talk to her "I have an egg for you, do you want it?"
 			self.press(Button.A, wait=4) # yes I do
-			self.press(Button.A, wait=3) # you got it
+			self.press(Button.A, wait=3) # you recieved an egg
 			self.press(Button.A, duration=1) # Put egg on your team
 			self.press(Button.A, wait=2) # please select the slot!
 			self.press(Direction.DOWN) # select correct pokemon slot
@@ -47,5 +47,5 @@ class DumbEggHatcher(PythonCommand):
 			self.holdEnd([Direction.RIGHT, Direction.R_LEFT])
 
 			# egg hatched?
-			self.press(Button.A, wait=16) # Oh
-			self.press(Button.A, wait=4) # "Pokemon" hatched from the egg
+			self.press(Button.B, wait=15) # "Oh?"
+			self.pressRep(Button.B, 6, duration=0.5, interval=0.5, wait=1)
