@@ -84,7 +84,7 @@ class OfflineDateGlitchCommand(ImageProcPythonCommand, ResetGame):
 			self.save()
 
 	def battle(self, check_pokemon=False, desired_pokemon="", dynamax=False, 
-			move_num=1, desired_ability=""):
+			move_num=1, desired_ability="", catch=True):
 		# enter the raid den, if necessary 
 		self.enterRaidDen()
 		# enter the battle
@@ -142,18 +142,32 @@ class OfflineDateGlitchCommand(ImageProcPythonCommand, ResetGame):
 				print("battle icon detected, making move")
 				self.pressRep(Button.A, 5, interval=0.5, wait=0.5)
 			elif "Catch" in self.getText(debug=True):
-				print("catching...")
-				self.press(Button.A, wait=0.5)
-				self.press(Button.A, wait=0.5)
+				if catch:
+					print("catching...")
+					self.press(Button.A, wait=0.5)
+					self.press(Button.A, wait=0.5)
+				else:
+					print("not catching...")
+					self.press(Direction.DOWN)
+					self.press(Button.A, wait=0.5)
+					self.press(Button.A, wait=0.5)
 				break
 			self.wait(3)
 
-		# make sure that the pokemon is caught
+		# exit when the pokemon is caught
 		for _ in range(40):
-			if "caught" in self.getText(40, -120, 600, 1, inverse=True):
-				print("Pokemon caught!")
-				break
+			if catch:
+				if "caught" in self.getText(40, -120, 600, 1, inverse=True):
+					print("Pokemon caught!")
+					break
+				else:
+					self.wait(3)
 			else:
-				self.wait(3)
+				if "defeated" in self.getText(40, -120, 600, 1, inverse=True):
+					print("Pokemon defeated!")
+					break
+				else:
+					self.wait(3)
+
 
 		return True

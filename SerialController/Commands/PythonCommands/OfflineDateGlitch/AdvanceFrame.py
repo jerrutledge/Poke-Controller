@@ -141,6 +141,7 @@ class AutoMaxRaid(OfflineDateGlitchCommand):
 		super().__init__(cam)
 		self.dynamax = False
 		self.move_num = 3
+		self.catch = False
 
 	def do(self):
-		self.battle(dynamax = self.dynamax, move_num=self.move_num)
+		self.battle(dynamax = self.dynamax, move_num=self.move_num, catch=self.catch)
