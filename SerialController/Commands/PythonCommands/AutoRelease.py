@@ -78,6 +78,10 @@ class AutoRelease(ImageProcPythonCommand):
 						if shiny:
 							print("SHINY !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 							shiny_count += 1
+						# make sure the judge view is open
+						text = self.getText(400, -440, 880, -990)
+						if "Ability" in text:
+							self.press(Button.PLUS, wait=self.stream_delay)
 						# use OCR to check for perfect ivs
 						stats = []
 						judgements = ["No good", "Decent", "Pretty good", \

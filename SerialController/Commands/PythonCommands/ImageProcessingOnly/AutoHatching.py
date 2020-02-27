@@ -21,11 +21,15 @@ class AutoHatching(AutoRelease):
 		super().__init__(cam)
 		self.cam = cam
 		self.party_num = 6
-		self.hatched_num = 14
-		self.hatched_box_num = 9
-		self.max_boxes = 18
+		self.hatched_num = 3
+		self.hatched_box_num = 0
+		self.max_boxes = 16
 
 	def do(self):
+		print("party_num: " + str(self.party_num))
+		print("hatched_num: " + str(self.hatched_num))
+		print("hatched_box_num: " + str(self.hatched_box_num))
+		
 		# set menu cursor to map
 		self.press(Button.X, wait=1) # open menu
 		self.press(Direction.LEFT, duration=1)
