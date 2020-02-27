@@ -49,9 +49,12 @@ class FindNStar(OfflineDateGlitchCommand):
 		self.reset = False
 		self.purple = True
 		self.desired_num_of_stars = 5
-		self.desired_pokemon = "Gardevoir"
+		self.desired_pokemon = "Sirfetch'd"
 		# desired ability function assumes your lead has trace
-		self.desired_ability = "Telepathy"
+		self.desired_ability = "Scrappy"
+		self.desired_first_type = "FIGHTING"
+		self.desired_second_type = "None"
+		self.debug = True
 
 	def do(self):
 		if self.reset:
@@ -69,10 +72,40 @@ class FindNStar(OfflineDateGlitchCommand):
 
 			self.enterRaidDen()
 			self.wait(self.stream_delay)
+
+			#check stars
 			print("checking stars (want:"+str(self.desired_num_of_stars)+")...")
 			stars = self.getStars()
 			print("stars: "+str(stars))
-			if stars == self.desired_num_of_stars:
+
+			#check type
+			pokemon_types = ["BUG", "DARK", "DRAGON", "ELECTRIC", "FAIRY", \
+					"FIGHTING", "FIRE", "FLYING", "GHOST", "GRASS", "GROUND", \
+					"ICE", "NORMAL", "POISON", "PSYCHIC", "ROCK", "STEEL", "WATER"]
+			first_type = self.getText(100, -140, 75, -180, inverse=True)
+			# there must be a first type
+			for _ in range(3):
+				if first_type in pokemon_types:
+					break
+				else:
+					first_type = self.getText(100, -140, 75, -180, inverse=True)
+				for current_type in pokemon_types:
+					if current_type in first_type:
+						first_type = current_type
+						break
+			print("first type: " + first_type)
+			second_type = self.getText(100, -140, 217, -330, inverse=True)
+			for current_type in pokemon_types:
+				if current_type in second_type:
+					second_type = current_type
+					break
+			if not second_type in pokemon_types:
+				second_type = "None"
+			print("second type: " + second_type)
+
+			if stars == self.desired_num_of_stars and \
+					first_type == self.desired_first_type and \
+					second_type == self.desired_second_type:
 				if not self.reset:
 					self.press(Button.B, wait=2)
 					self.save()
@@ -107,6 +140,7 @@ class AutoMaxRaid(OfflineDateGlitchCommand):
 	def __init__(self, cam):
 		super().__init__(cam)
 		self.dynamax = False
+		self.move_num = 3
 
 	def do(self):
-		self.battle(dynamax = self.dynamax)
+		self.battle(dynamax = self.dynamax, move_num=self.move_num)
