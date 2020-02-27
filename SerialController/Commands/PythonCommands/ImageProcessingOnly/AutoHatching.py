@@ -73,7 +73,7 @@ class AutoHatching(AutoRelease):
 						self.wait(1)
 					self.holdEnd([Direction.RIGHT, Direction.R_LEFT])
 
-			wait(self.stream_delay)
+			self.wait(self.stream_delay)
 			self.hatchEgg()
 			print("Box full, releasing...")
 			# release current box
