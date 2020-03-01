@@ -20,7 +20,7 @@ class AutoHatching(AutoRelease):
 	def __init__(self, cam):
 		super().__init__(cam)
 		self.cam = cam
-		self.party_num = 1
+		self.party_num = 5
 		self.hatched_num = 0
 		self.hatched_box_num = 0
 		self.max_boxes = 16
@@ -49,9 +49,9 @@ class AutoHatching(AutoRelease):
 					self.press(Direction.RIGHT, duration=1)
 					self.hold([Direction.RIGHT, Direction.R_LEFT])
 					# turn round and round
-					for time in range(15):
+					for time in range(24):
 						print('wait for ' + str(time))
-						self.wait(1)
+						self.wait(0.5)
 						self.hatchEgg()
 					self.holdEnd([Direction.RIGHT, Direction.R_LEFT])
 
@@ -62,9 +62,9 @@ class AutoHatching(AutoRelease):
 					self.getNewEgg()
 					self.press(Direction.RIGHT, duration=1)
 					self.hold([Direction.RIGHT, Direction.R_LEFT])
-					for time in range(15):
+					for time in range(24):
 						print('wait for ' + str(time))
-						self.wait(1)
+						self.wait(0.5)
 						if self.hatchEgg() or time == 14:
 							self.holdEnd([Direction.RIGHT, Direction.R_LEFT])
 							break
@@ -145,7 +145,7 @@ class AutoHatching(AutoRelease):
 		if "Oh?" in message:
 			print('egg hatching')
 			self.press(Button.B, wait=14)
-			self.pressRep(Button.B, 15, wait=2)
+			self.pressRep(Button.B, 12, wait=2)
 			self.hatched_num += 1
 			return True
 		elif "encountered" in message or "appeared" in message \
