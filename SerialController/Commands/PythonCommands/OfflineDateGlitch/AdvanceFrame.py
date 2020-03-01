@@ -10,10 +10,10 @@ from Commands.Keys import KeyPress, Button, Direction, Stick
 class AdvanceFrameBy(OfflineDateGlitchCommand):
 	NAME = 'Advance Frame By N'
 
-	def __init__(self):
-		super().__init__()
+	def __init__(self, cam):
+		super().__init__(cam)
 		self.use_rank = True
-		self.n = 5
+		self.n = 639
 
 	def do(self):
 		for i in range(1, self.n):
@@ -26,13 +26,11 @@ class AdvanceFrameBy(OfflineDateGlitchCommand):
 
 			print("advancing frame " + str(i) + "...")
 
-			self.press(Button.A, duration=0.4, wait=0.1)
-			self.press(Button.A, duration=0.4, wait=0.1) # 2000W
-			self.press(Button.A, wait=0.8)
-			self.press(Button.A, duration=0.1, wait=3)
+			self.enterRaidDen()
+			self.pressRep(Button.A, 2, duration=0.5, interval=0.5, wait=2.6)
 			self.press(Button.B, duration=0.3, wait=0.5)
 			self.changeDay(False)
-			self.press(Button.A, wait=5)
+			self.press(Button.A, wait=3.5)
 
 			print("now on frame: " + str(i+1))
 
@@ -49,9 +47,9 @@ class FindNStar(OfflineDateGlitchCommand):
 		self.reset = False
 		self.purple = True
 		self.desired_num_of_stars = 5
-		self.desired_pokemon = "Sirfetch'd"
+		self.desired_pokemon = "Machamp"
 		# desired ability function assumes your lead has trace
-		self.desired_ability = "Scrappy"
+		self.desired_ability = ""
 		self.desired_first_type = "FIGHTING"
 		self.desired_second_type = "None"
 		self.debug = True
@@ -139,9 +137,9 @@ class AutoMaxRaid(OfflineDateGlitchCommand):
 
 	def __init__(self, cam):
 		super().__init__(cam)
-		self.dynamax = False
-		self.move_num = 3
-		self.catch = False
+		self.dynamax = True
+		self.move_num = 1
+		self.catch = True
 
 	def do(self):
 		self.battle(dynamax = self.dynamax, move_num=self.move_num, catch=self.catch)

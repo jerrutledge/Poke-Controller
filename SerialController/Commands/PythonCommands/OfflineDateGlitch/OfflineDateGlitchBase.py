@@ -160,6 +160,9 @@ class OfflineDateGlitchCommand(ImageProcPythonCommand, ResetGame):
 				if "caught" in self.getText(40, -120, 600, 1, inverse=True):
 					print("Pokemon caught!")
 					break
+				elif "defeated" in self.getText(40, -120, 600, 1, inverse=True):
+					print("could not catch pokemon!")
+					break
 				else:
 					self.wait(3)
 			else:
