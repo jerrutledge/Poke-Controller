@@ -20,11 +20,11 @@ class AutoHatching(AutoRelease):
 	def __init__(self, cam):
 		super().__init__(cam)
 		self.cam = cam
-		self.party_num = 5
-		self.hatched_num = 0
-		self.hatched_box_num = 0
+		self.party_num = 6
+		self.hatched_num = 13
+		self.hatched_box_num = 12
 		self.max_boxes = 16
-		self.release_boxes = False
+		self.release_boxes = True
 
 	def do(self):
 		print("party_num: " + str(self.party_num))
@@ -62,9 +62,9 @@ class AutoHatching(AutoRelease):
 					self.getNewEgg()
 					self.press(Direction.RIGHT, duration=1)
 					self.hold([Direction.RIGHT, Direction.R_LEFT])
-					for time in range(24):
+					for time in range(28):
 						print('wait for ' + str(time))
-						self.wait(0.5)
+						self.wait(0.3)
 						if self.hatchEgg() or time == 14:
 							self.holdEnd([Direction.RIGHT, Direction.R_LEFT])
 							break
@@ -145,16 +145,16 @@ class AutoHatching(AutoRelease):
 		if "Oh?" in message:
 			print('egg hatching')
 			self.press(Button.B, wait=14)
-			self.pressRep(Button.B, 12, wait=2)
+			self.pressRep(Button.B, 12, wait=1.2)
 			self.hatched_num += 1
 			return True
 		elif "encountered" in message or "appeared" in message \
 				or "Go" in message or "wild" in message:
 			self.battle()
 			return True
-		elif self.isContainTemplate('battle_icon.png'):
-			self.battle()
-			return True
+		# elif self.isContainTemplate('battle_icon.png'):
+		# 	self.battle()
+		# 	return True
 		else:
 			return False
 

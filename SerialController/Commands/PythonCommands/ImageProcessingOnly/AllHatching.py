@@ -13,7 +13,7 @@ class AllHatching(ImageProcPythonCommand):
 	def __init__(self, cam):
 		super().__init__(cam)
 		self.hatched_num = 0
-		self.count = 1
+		self.count = 3
 		self.place = 'wild_area'
 
 	def do(self):
