@@ -14,7 +14,7 @@ class OfflineDateGlitchCommand(ImageProcPythonCommand, ResetGame):
 		# set to true if North America
 		self.day_in_second_position = True
 
-	def changeDay(self, go_back=False):
+	def changeDay(self, go_back=False, to_date=0):
 		self.press(Button.HOME, wait=1)
 		self.press(Direction.DOWN)
 		self.press(Direction.RIGHT)
@@ -68,18 +68,21 @@ class OfflineDateGlitchCommand(ImageProcPythonCommand, ResetGame):
 
 	def raidLeap(self):
 		self.enterRaidDen()
-		self.press(Button.A, duration=0.1, wait=3) # start looking for trainers
+		self.pressRep(Button.A, 2, duration=0.5, interval=0.5, wait=2.6) # start looking for trainers
 		self.press(Button.B, duration=0.4, wait=0.5)
 		self.changeDay(go_back=False)
 		self.press(Button.A, wait=4.5)
 
-	def advanceFrame(self, reset_and_save_game=False):
+	def advanceFrame(self, reset_and_save_game=False, num_frames=1):
 		if reset_and_save_game:
 			self.resetGame()
-		print("setting date back...")
-		self.changeDay(go_back=True)
-		self.wait(self.stream_delay)
-		self.raidLeap()
+		if num_frames <= 1:
+			print("setting date back by one...")
+			self.changeDay(go_back=True)
+			self.wait(self.stream_delay)
+			self.raidLeap()
+		else:
+			print("setting date to beginning of month...")
 		if reset_and_save_game:
 			self.save()
 
@@ -155,8 +158,8 @@ class OfflineDateGlitchCommand(ImageProcPythonCommand, ResetGame):
 			self.wait(3)
 
 		# exit when the pokemon is caught
-		for _ in range(40):
-			if catch:
+		if catch:
+			for _ in range(40):
 				if "caught" in self.getText(40, -120, 600, 1, inverse=True):
 					print("Pokemon caught!")
 					break
@@ -165,12 +168,21 @@ class OfflineDateGlitchCommand(ImageProcPythonCommand, ResetGame):
 					break
 				else:
 					self.wait(3)
-			else:
-				if "defeated" in self.getText(40, -120, 600, 1, inverse=True):
-					print("Pokemon defeated!")
-					break
-				else:
-					self.wait(3)
-
 
 		return True
+
+	# assuming the set date option of the switch is already open
+	# this function will read the number of the date and 
+	# execute the correct number of up / down presses to set the date to "day"
+	def setDay(self, day=1):
+		self.wait(self.stream_delay)
+		date = self.getText(-300, 200, 250, -350, digits=True, inverse=True, debug=True)
+		while not date.strip().isdigit():
+			print("date is not digit, checking again...")
+			date = self.getText(-300, 200, 250, -350, digits=True, inverse=True, debug=True)
+		print("date is "+date+", desired date is "+str(day))
+		date = int(date)
+		if day < date:
+			self.pressRep(Direction.DOWN, date - day)
+		elif day > date:
+			self.pressRep(Direction.UP, day - date)

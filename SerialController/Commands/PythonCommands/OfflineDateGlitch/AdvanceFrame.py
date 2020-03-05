@@ -13,7 +13,7 @@ class AdvanceFrameBy(OfflineDateGlitchCommand):
 	def __init__(self, cam):
 		super().__init__(cam)
 		self.use_rank = True
-		self.n = 639
+		self.n = 9
 
 	def do(self):
 		for i in range(1, self.n):
@@ -43,26 +43,33 @@ class FindNStar(OfflineDateGlitchCommand):
 
 	def __init__(self, cam):
 		super().__init__(cam)
-		self.n = 4
-		self.reset = False
-		self.purple = True
-		self.desired_num_of_stars = 5
-		self.desired_pokemon = "Machamp"
+		self.n = 7
+		self.reset = True
+		self.desired_num_of_stars = 3
+		self.desired_pokemon = ""
 		# desired ability function assumes your lead has trace
 		self.desired_ability = ""
-		self.desired_first_type = "FIGHTING"
-		self.desired_second_type = "None"
+		self.match_type = False
+		self.desired_first_type = ""
+		self.desired_second_type = ""
 		self.debug = True
 
 	def do(self):
+		self.FindRaid(reset=self.reset, num_stars=self.desired_num_of_stars,
+				ability=self.desired_ability, match_type=self.match_type,
+				desired_first_type=self.desired_first_type,
+				desired_second_type=self.desired_second_type, skip_num=self.n)
+
+	def FindRaid(self, reset=False, num_stars=5, ability="", match_type=False, 
+				desired_first_type="", desired_second_type="", skip_num=4):
 		if self.reset:
 			self.resetGame(wait_for_load=True)
 		else:
 			# assume that the current raid is not the desired raid and begin by advancing the date
 			self.raidLeap()
 		while True:
-			if self.reset:
-				for i in range(1, self.n):
+			if reset:
+				for i in range(1, skip_num):
 					self.wait(0.5)
 
 					print("advancing frame " + str(i) + "...")
@@ -72,7 +79,7 @@ class FindNStar(OfflineDateGlitchCommand):
 			self.wait(self.stream_delay)
 
 			#check stars
-			print("checking stars (want:"+str(self.desired_num_of_stars)+")...")
+			print("checking stars (don't want:"+str(num_stars)+")...")
 			stars = self.getStars()
 			print("stars: "+str(stars))
 
@@ -97,14 +104,17 @@ class FindNStar(OfflineDateGlitchCommand):
 				if current_type in second_type:
 					second_type = current_type
 					break
+			# there might not be a second type, in which case, the value is "None"
 			if not second_type in pokemon_types:
 				second_type = "None"
 			print("second type: " + second_type)
+			# sum up whether this is a deal breaker in one variable
+			correct_type = (first_type == desired_first_type and \
+					second_type == desired_second_type) or not match_type
 
-			if stars == self.desired_num_of_stars and \
-					first_type == self.desired_first_type and \
-					second_type == self.desired_second_type:
-				if not self.reset:
+			if stars != num_stars and \
+					correct_type:
+				if not reset:
 					self.press(Button.B, wait=2)
 					self.save()
 					result = self.battle(True, self.desired_pokemon, 
@@ -112,12 +122,67 @@ class FindNStar(OfflineDateGlitchCommand):
 					if not result:
 						self.advanceFrame(reset_and_save_game=True)
 						continue
-				return
+				print("Pokemon found!!")
+				return True
 
-			if self.reset:
+			if reset:
 				self.resetGame(wait_for_load=True)
 			else:
 				self.raidLeap()
+
+
+class HostMaxRaidBattles(FindNStar):
+	NAME = 'HOST MAX RAID'
+
+	def __init__(self, cam):
+		super().__init__(cam)
+		self.n = 7
+		self.reset = True
+		self.desired_num_of_stars = 3
+		self.desired_pokemon = ""
+		# desired ability function assumes your lead has trace
+		self.desired_ability = ""
+		self.match_type = False
+		self.desired_first_type = ""
+		self.desired_second_type = ""
+		self.debug = True
+
+	def do(self):
+		while True:
+			self.FindRaid(reset=True, num_stars=self.desired_num_of_stars,
+				ability=self.desired_ability, match_type=self.match_type,
+				desired_first_type=self.desired_first_type,
+				desired_second_type=self.desired_second_type, skip_num=self.n)
+			# after finding the raid, go online
+			self.press(Button.B, wait=2)
+			self.press(Button.Y, wait=2)
+			self.press(Button.PLUS, wait=10)
+			self.pressRep(Button.B, 2, interval=0.5, wait=3)
+			text = self.getText()
+			num_players = 1
+			while num_players < 4:
+				# enter the raid den and invite others
+				print("beginning search for players...")
+				self.enterRaidDen()
+				self.press(Button.A)
+				for i in range(180):
+					if "Searching..." in text:
+						self.wait(1)
+					else:
+						# no "Searching...", 4 players found
+						num_players = 4
+						break
+					if i > 160:
+						print("could not find 4 players. exiting...")
+						self.press(Button.B, duration=0.5, wait=0.5)
+						self.press(Button.A, wait=3)
+						break
+					text = self.getText(debug=self.debug)
+			print("found a full party. entering raid")
+			self.press(Direction.UP)
+			self.pressRep(Button.A, 3, interval=0.5)
+			self.battle(catch=False)
+
 
 
 # Reset Perform the Day skip glitch once & Save
@@ -137,7 +202,7 @@ class AutoMaxRaid(OfflineDateGlitchCommand):
 
 	def __init__(self, cam):
 		super().__init__(cam)
-		self.dynamax = True
+		self.dynamax = False
 		self.move_num = 1
 		self.catch = True
 
