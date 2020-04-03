@@ -74,9 +74,9 @@ class AutoHatching(AutoRelease):
 					self.hold([Direction.RIGHT, Direction.R_LEFT])
 					time = 0
 					while not self.hatchEgg():
-						print('wait for hatch... (' + str(time) + ')')
-						time += 1
-						self.wait(1)
+						print('wait for hatch... (' + str(time) + 's)')
+						time += 0.3
+						self.wait(0.3)
 					self.holdEnd([Direction.RIGHT, Direction.R_LEFT])
 
 			self.wait(self.stream_delay)
@@ -148,10 +148,11 @@ class AutoHatching(AutoRelease):
 			self.pressRep(Button.B, 12, wait=1.2)
 			self.hatched_num += 1
 			return True
-		elif "encountered" in message or "appeared" in message \
-				or "Go" in message or "wild" in message:
-			self.battle()
-			return True
+		# elif "encountered" in message or "appeared" in message \
+		# 		or "Go" in message or "wild" in message:
+		# 	print("IN BATTLE: " + message)
+		# 	self.battle()
+		# 	return True
 		# elif self.isContainTemplate('battle_icon.png'):
 		# 	self.battle()
 		# 	return True
@@ -192,7 +193,6 @@ class AutoHatching(AutoRelease):
 		self.finish()
 
 	def battle(self):
-		print("IN BATTLE")
 		text = self.getText()
 		while True:
 			if self.isContainTemplate('battle_icon.png'):

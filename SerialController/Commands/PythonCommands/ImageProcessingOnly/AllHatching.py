@@ -13,10 +13,11 @@ class AllHatching(ImageProcPythonCommand):
 	def __init__(self, cam):
 		super().__init__(cam)
 		self.hatched_num = 0
-		self.count = 3
+		self.count = 5
 		self.place = 'wild_area'
 
 	def do(self):
+		print('hatch '+str(self.count)+' eggs')
 		while self.hatched_num < self.count:
 			if self.hatched_num == 0:
 				self.press(Direction.RIGHT, duration=1)
