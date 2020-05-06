@@ -4,6 +4,7 @@
 from Commands.PythonCommandBase import PythonCommand, ImageProcPythonCommand
 from Commands.PythonCommands.Reset import ResetGame
 from Commands.Keys import KeyPress, Button, Direction, Stick
+from datetime import datetime
 
 # Provides common functions between 
 class OfflineDateGlitchCommand(ImageProcPythonCommand, ResetGame):
@@ -14,15 +15,89 @@ class OfflineDateGlitchCommand(ImageProcPythonCommand, ResetGame):
 		# set to true if North America
 		self.day_in_second_position = True
 
-	def changeDay(self, go_back=False, to_date=0):
+	def changeDay(self, go_back=False, to_date=datetime(1,1,1)):
+		self.open_date_time_settings()
+
+		if to_date.year < 5:
+			# just advance one day
+			self.press(Button.A, wait=0.2) # > Set Date and Time
+			if self.day_in_second_position:
+				self.press(Direction.RIGHT)
+			if go_back:
+				self.press(Direction.DOWN, wait=0.2) # DECREMENT a day
+			else:
+				self.press(Direction.UP, wait=0.2) # increment a day
+			self.press(Direction.RIGHT, duration=1)
+			self.press(Button.A, wait=0.5)
+		else:
+			# change to a particular date and time
+			# first, make sure the stream has time to catch up 
+			catch_up_duration = self.stream_delay - 0.9
+			if catch_up_duration > 0:
+				self.wait(catch_up_duration)
+			# try to read the initial date and time with OCR
+			attempts = 30
+			for i in range(attempts):
+				# this should return something like: "5/20/2020 4:16 p.m."
+				date_string = self.getText(360, -425, 810, -1050, inverse=True, debug=i>=4)
+				# we want the format "5/20/2020 4:16 PM"
+				date_format = "%m/%d/%Y %I:%M %p"
+				# these replacements make the python datetime.strptime format happy
+				date_string = date_string.replace(".", "")
+				date_string = date_string.replace("am", "AM")
+				date_string = date_string.replace("pm", "PM")
+				try:
+					initial_datetime = datetime.strptime(date_string, date_format)
+				except ValueError:
+					if i == attempts - 1:
+						# last attempt, set the datetime to 1,1,1
+						initial_datetime = datetime(1,1,1)
+						print("ERROR: Time could not be determined from: " + date_string)
+						break
+					else:
+						# just wait for a sec and try again
+						self.wait(1)
+						print("could not interpret date from: " + date_string)
+						continue
+				print("current time: " + initial_datetime.strftime(date_format))
+				break
+			self.press(Button.A, wait=0.2) # > Set Date and Time
+			if self.day_in_second_position:
+				# month then day
+				self.change_time_value(to_date.month-initial_datetime.month)
+				self.change_time_value(to_date.day-initial_datetime.day)
+			else:
+				self.change_time_value(to_date.day-initial_datetime.day)
+				self.change_time_value(to_date.month-initial_datetime.month)
+			# year
+			self.change_time_value(to_date.year-initial_datetime.year)
+			# hour
+			self.change_time_value(to_date.hour % 12 - initial_datetime.hour % 12)
+			# minute
+			self.change_time_value(to_date.minute-initial_datetime.minute)
+			# AM/PM will be the end of me
+			initial_ampm = initial_datetime.strftime("%p")
+			desired_ampm = to_date.strftime("%p")
+			if initial_ampm != desired_ampm:
+				self.change_time_value(1)
+			else:
+				self.press(Direction.RIGHT, duration=0.4)
+			self.press(Button.A)
+
+			
+
+		self.press(Button.HOME, wait=1)
+		self.press(Button.HOME, wait=1)
+
+	def open_date_time_settings(self):
 		self.press(Button.HOME, wait=1)
 		self.press(Direction.DOWN)
 		self.press(Direction.RIGHT)
 		self.press(Direction.RIGHT)
 		self.press(Direction.RIGHT)
 		self.press(Direction.RIGHT)
-		self.press(Button.A, wait=1.5) # System Settings
-		self.press(Direction.DOWN, duration=2, wait=0.5)
+		self.press(Button.A, wait=1) # System Settings
+		self.press(Direction.DOWN, duration=2.3, wait=0.2)
 
 		self.press(Button.A, wait=0.3) # System Settings > System
 		self.press(Direction.DOWN)
@@ -32,18 +107,12 @@ class OfflineDateGlitchCommand(ImageProcPythonCommand, ResetGame):
 		self.press(Button.A, wait=0.2) # Date and Time
 		self.press(Direction.DOWN, duration=0.7, wait=0.2)
 
-		self.press(Button.A, wait=0.2) # > Set Date and Time
-		if self.day_in_second_position:
-			self.press(Direction.RIGHT)
-		if go_back:
-			self.press(Direction.DOWN, wait=0.2) # DECREMENT a day
-		else:
-			self.press(Direction.UP, wait=0.2) # increment a day
-		self.press(Direction.RIGHT, duration=1)
-		self.press(Button.A, wait=0.5)
-
-		self.press(Button.HOME, wait=1)
-		self.press(Button.HOME, wait=1)
+	def change_time_value(self, value):
+		if value < 0:
+			self.pressRep(Direction.DOWN, abs(value))
+		elif value > 0:
+			self.pressRep(Direction.UP, abs(value))
+		self.press(Direction.RIGHT)
 
 	def save(self):
 		print("saving...")
