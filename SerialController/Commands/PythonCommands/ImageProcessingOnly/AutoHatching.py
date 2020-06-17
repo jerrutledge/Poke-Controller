@@ -68,7 +68,7 @@ class AutoHatching(AutoRelease):
 					for time in range(28):
 						print('wait for ' + str(time))
 						self.wait(0.3)
-						if self.hatchEgg() or time == 14:
+						if self.hatchEgg(holdEnd=True) or time == 14:
 							self.holdEnd([Direction.RIGHT, Direction.R_LEFT])
 							break
 
@@ -142,23 +142,17 @@ class AutoHatching(AutoRelease):
 
 	# check if an egg was hatched or if a battle has started
 	# return true if there has been some interruption 
-	def hatchEgg(self):
+	def hatchEgg(self, holdEnd=False):
 		message = self.getText(top=-130, bottom=30, left=250, right=250, 
 				inverse=False, debug=False)
 		if "Oh?" in message:
 			print('egg hatching')
+			if holdEnd:
+				self.holdEnd([Direction.RIGHT, Direction.R_LEFT])
 			self.press(Button.B, wait=14)
 			self.pressRep(Button.B, 12, wait=1.2)
 			self.hatched_num += 1
 			return True
-		# elif "encountered" in message or "appeared" in message \
-		# 		or "Go" in message or "wild" in message:
-		# 	print("IN BATTLE: " + message)
-		# 	self.battle()
-		# 	return True
-		# elif self.isContainTemplate('battle_icon.png'):
-		# 	self.battle()
-		# 	return True
 		else:
 			return False
 
