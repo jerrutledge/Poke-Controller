@@ -40,13 +40,17 @@ class AutoHatching(AutoRelease):
 		self.press(Direction.DOWN, duration=0.5)
 		self.press(Button.B, wait=1)
 
+		shiny_num = 0
+
 		for i in range(0, self.max_boxes):
 			while self.hatched_box_num < 30:
-				print('hatched box num : ' + str(self.hatched_box_num))
+				print(' -- box#' + str(i+1) + ', hatched_box_num = ' + str(self.hatched_box_num))
+				if shiny_num > 0:
+					print('SHINY='+str(shiny_num))
 
 				# step one: fill up the party
 				if self.party_num < 6:
-					print('mode: fill party')
+					print('mode: fill party ('+str(self.party_num)+'/6)')
 					self.getNewEgg()
 
 					self.press(Direction.RIGHT, duration=1)
@@ -61,7 +65,8 @@ class AutoHatching(AutoRelease):
 				# if there's hatched pokemon in your party, 
 				# check if there's a new egg
 				elif self.hatched_num > self.hatched_box_num:
-					print('mode: add to full party')
+					print('mode: add to full party - space for ' + 
+						str(self.hatched_num - self.hatched_box_num) + ' more')
 					self.getNewEgg()
 					self.press(Direction.RIGHT, duration=1)
 					self.hold([Direction.RIGHT, Direction.R_LEFT])
@@ -76,8 +81,8 @@ class AutoHatching(AutoRelease):
 				else:
 					self.hold([Direction.RIGHT, Direction.R_LEFT])
 					time = 0
-					while not self.hatchEgg():
-						print('wait for hatch... (' + str(time) + 's)')
+					while not self.hatchEgg(holdEnd=True):
+						print('wait for hatch... (' + format(time, '.1f') + 's)')
 						time += 0.3
 						self.wait(0.3)
 					self.holdEnd([Direction.RIGHT, Direction.R_LEFT])
@@ -175,6 +180,9 @@ class AutoHatching(AutoRelease):
 							self.pressRep(Button.B, 3, interval=0.5, wait=0.5)
 							self.battle()
 							return
+						if "hatched from the Egg!" in text:
+							print("stuck in hatch screen for some reason?")
+							self.pressRep(Button.B, 3, interval=0.5, wait=2)
 						continue
 			self.pressRep(Button.A, 20, wait=2) # fly to bridge field
 
