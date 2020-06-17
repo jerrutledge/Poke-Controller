@@ -91,7 +91,7 @@ class AutoHatching(AutoRelease):
 			self.press(Button.A, wait=2)
 			self.press(Button.R, wait=3)
 			if self.release_boxes:
-				self.ReleaseBox()
+				shiny_num += self.ReleaseBox(accepted_ivs=self.perfect_ivs)
 			self.hatched_box_num = 0;
 			self.hatched_num -= 30;
 
