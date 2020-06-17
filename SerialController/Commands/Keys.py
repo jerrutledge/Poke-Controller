@@ -289,7 +289,8 @@ class KeyPress:
 			btns = [btns]
 		
 		for btn in btns:
-			self.holdButton.remove(btn)
+			if btn in self.holdButton:
+				self.holdButton.remove(btn)
 
 		self.inputEnd(btns)
 	
