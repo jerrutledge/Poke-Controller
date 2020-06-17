@@ -20,11 +20,14 @@ class AutoHatching(AutoRelease):
 	def __init__(self, cam):
 		super().__init__(cam)
 		self.cam = cam
-		self.party_num = 6
-		self.hatched_num = 13
-		self.hatched_box_num = 12
-		self.max_boxes = 16
+		self.party_num = 2
+		self.hatched_num = 0
+		self.hatched_box_num = 0
+		self.max_boxes = 21
 		self.release_boxes = True
+		self.perfect_ivs = [['Best', 'Best', 'Best', 'Best', 'Best', 'Best'], \
+				['Best', 'Best', 'Best', 'Best', 'Best', 'No good']]
+		# self.perfect_ivs = []
 
 	def do(self):
 		print("party_num: " + str(self.party_num))
