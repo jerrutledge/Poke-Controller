@@ -1,0 +1,2256 @@
+Camera ID 0 opened successfully
+connecting to COM4
+COM Port 4 connected successfully
+Start ACNH Turnip Price Seeker
+current time: 05/05/2020 08:03 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+91 Bells per turnip!
+Monday AM price: 91
+could not interpret date from: VU PLOV AOR HOV ar Kia
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+87 Bells per turnip!
+Monday PM price: 87
+From histogram, theoretical max price is: 642
+max price for Tuesday AM is only 191 skipping time check...
+From histogram, theoretical max price is: 642
+max price for Tuesday PM is only 214 skipping time check...
+From histogram, theoretical max price is: 642
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: 
+try #5 text: 
+try #6 text: n
+try #7 text: Go
+Isabelle's greeting detected!
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+158 Bells per turnip
+-- ERROR - please check log --
+Stop ACNH Turnip Price Seeker
+Finished reloading command modules.
+Finished reloading command modules.
+Start ACNH Turnip Price Seeker
+changing time to Monday AM
+{2: datetime.datetime(2020, 5, 4, 8, 1), 3: datetime.datetime(2020, 5, 4, 12, 1), 4: datetime.datetime(2020, 5, 5, 8, 1), 5: datetime.datetime(2020, 5, 5, 12, 1), 6: datetime.datetime(2020, 5, 6, 8, 1), 7: datetime.datetime(2020, 5, 6, 12, 1), 8: datetime.datetime(2020, 5, 7, 8, 1), 9: datetime.datetime(2020, 5, 7, 12, 1), 10: datetime.datetime(2020, 5, 8, 8, 1), 11: datetime.datetime(2020, 5, 8, 12, 1), 12: datetime.datetime(2020, 5, 9, 8, 1), 13: datetime.datetime(2020, 5, 9, 12, 1)}
+current time: 05/06/2020 08:05 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+111 Bells per turnip!
+Monday AM price: 111
+changing time to Monday PM
+{2: datetime.datetime(2020, 5, 4, 8, 1), 3: datetime.datetime(2020, 5, 4, 12, 1), 4: datetime.datetime(2020, 5, 5, 8, 1), 5: datetime.datetime(2020, 5, 5, 12, 1), 6: datetime.datetime(2020, 5, 6, 8, 1), 7: datetime.datetime(2020, 5, 6, 12, 1), 8: datetime.datetime(2020, 5, 7, 8, 1), 9: datetime.datetime(2020, 5, 7, 12, 1), 10: datetime.datetime(2020, 5, 8, 8, 1), 11: datetime.datetime(2020, 5, 8, 12, 1), 12: datetime.datetime(2020, 5, 9, 8, 1), 13: datetime.datetime(2020, 5, 9, 12, 1)}
+Stop ACNH Turnip Price Seeker
+-- sent a stop request. --
+-- finished successfully. --
+Finished reloading command modules.
+Start ACNH Turnip Price Seeker
+changing time to Monday AM(2)
+2020-05-04 08:01:00
+current time: 05/04/2020 08:03 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+92 Bells per turnip!
+Monday AM price: 92
+changing time to Monday PM(3)
+2020-05-04 12:01:00
+could not interpret date from: VLU PLOV AOR HOV a-ha
+could not interpret date from: VU PLOV AOR KO Var Kaa
+could not interpret date from: VU PLOV AOR KO Var Kaa
+could not interpret date from: TU PLOV LOR KO Var Nii
+OCR Reading:
+5/4/2020 8:02 a.m.
+capture succeeded: Captures\2020-04-26_15-17-31T360B-420L810R-1050.png
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+88 Bells per turnip!
+Monday PM price: 88
+From histogram, theoretical max price is: 648
+max price for Tuesday AM is only 193. skipping...
+From histogram, theoretical max price is: 648
+max price for Tuesday PM is only 216. skipping...
+From histogram, theoretical max price is: 648
+changing time to Wednesday AM(6)
+2020-05-06 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: 
+try #5 text: n
+try #6 text: AS
+try #7 text: Go
+Isabelle's greeting detected!
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+75 Bells per turnip!
+-- ERROR - please check log --
+Stop ACNH Turnip Price Seeker
+Finished reloading command modules.
+Start ACNH Turnip Price Seeker
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/06/2020 08:11 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+97 Bells per turnip!
+Monday AM price: 97
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+93 Bells per turnip!
+Monday PM price: 93
+From histogram, theoretical max price is: 660
+max price for Tuesday AM is only 205. skipping...
+From histogram, theoretical max price is: 660
+max price for Tuesday PM is only 220. skipping...
+From histogram, theoretical max price is: 660
+changing time to Wednesday AM (6)
+2020-05-06 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: 
+try #5 text: 
+try #6 text: 
+try #7 text: n
+try #8 text: IU
+try #9 text: 
+try #10 text: Good morning, everyon
+Isabelle's greeting detected!
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+129 Bells per turnip!
+Wednesday AM price: 129
+From histogram, theoretical max price is: 660
+max price for Wednesday PM is only 220. skipping...
+From histogram, theoretical max price is: 660
+changing time to Thursday AM (8)
+2020-05-07 08:01:00
+current time: 05/06/2020 08:03 AM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: 
+try #5 text: 
+try #6 text: 
+try #7 text: 
+try #8 text: Good morning, eve
+Isabelle's greeting detected!
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+385 Bells per turnip!
+Thursday AM price: 385
+From histogram, theoretical max price is: 385
+max predicted price is not high enough: [97, 93, 90, 87, 129, 220, 385, 220, 154, 99, 99, 99]
+restarting week... week prices listed below:
+{2: 97, 3: 93, 6: 129, 8: 385}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+Stop ACNH Turnip Price Seeker
+-- sent a stop request. --
+-- finished successfully. --
+Finished reloading command modules.
+Start ACNH Turnip Price Seeker
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/07/2020 08:31 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+79 Bells per turnip!
+Monday AM price: 79
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+105 Bells per turnip!
+Monday PM price: 105
+From histogram, theoretical max price is: 552
+max price for Tuesday AM is only 184. skipping...
+From histogram, theoretical max price is: 552
+changing time to Tuesday PM (5)
+2020-05-05 12:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+walking to shop...
+Store was not reached. resetting...
+error text: Hmmm... There really isn't any news
+to speak of today... But...
+waiting for title screen to load...
+walking to shop...
+Store was not reached. resetting...
+error text: 
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+474 Bells per turnip!
+Tuesday PM price: 474
+price larger than 450 was found! LARGE PRICE: 474
+current time: 05/05/2020 12:05 PM
+prices: {2: 79, 3: 105, 5: 474}
+-- finished successfully. --
+Finished reloading command modules.
+Start ACNH Turnip Price Seeker
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/05/2020 08:04 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+72 Bells per turnip!
+Monday AM price: 72
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+could not interpret date from: TEU PLOV AOR KO Var Kaa
+could not interpret date from: VLU PLOy AOR KO Var Kai
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+66 Bells per turnip!
+Monday PM price: 66
+From histogram, theoretical max price is: 220
+max predicted price is not high enough: [72, 66, 154, 154, 219, 220, 220, 220, 220, 220, 220, 219]
+restarting week... week prices listed below:
+{2: 72, 3: 66}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+walking to shop...
+Store was not reached. resetting...
+error text: 
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+93 Bells per turnip!
+Monday AM price: 93
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+could not interpret date from: VU PLOy AOR K0L- Sth
+could not interpret date from: TV PLey AOR X0L- St Kaa
+could not interpret date from: VV PLey eR = x0L S-Ni
+could not interpret date from: VU PLOyA0R KOLB
+OCR Reading:
+VU PLOy AOR x0. S-Ni
+capture succeeded: Captures\2020-04-26_16-26-09T360B-420L810R-1050.png
+could not interpret date from: VU PLOy AOR x0 S-Ni
+OCR Reading:
+VV Ley eR -x0L- St Kaa
+capture succeeded: Captures\2020-04-26_16-26-10T360B-420L810R-1050.png
+could not interpret date from: VV Ley eR -x0L- St Kaa
+OCR Reading:
+VV PLey eR = x0L S-Ni
+capture succeeded: Captures\2020-04-26_16-26-11T360B-420L810R-1050.png
+could not interpret date from: VV PLey eR = x0L S-Ni
+OCR Reading:
+VU PLOy AOR x0. S-Ni
+capture succeeded: Captures\2020-04-26_16-26-12T360B-420L810R-1050.png
+could not interpret date from: VU PLOy AOR x0 S-Ni
+OCR Reading:
+VU PLOV AOR KOLB
+capture succeeded: Captures\2020-04-26_16-26-14T360B-420L810R-1050.png
+could not interpret date from: VU PLOV AOR KOLB
+OCR Reading:
+VV PLey eR = x0L S-Ni
+capture succeeded: Captures\2020-04-26_16-26-15T360B-420L810R-1050.png
+ERROR: Time could not be determined from: VV PLey eR = x0L S-Ni
+Stop ACNH Turnip Price Seeker
+-- sent a stop request. --
+-- finished successfully. --
+Start ACNH Turnip Price Seeker
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 09/07/2060 08:06 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+136 Bells per turnip!
+Monday AM price: 136
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+125 Bells per turnip!
+Monday PM price: 125
+From histogram, theoretical max price is: 220
+max predicted price is not high enough: [136, 125, 219, 220, 219, 154, 154, 154, 154, 154, 154, 154]
+restarting week... week prices listed below:
+{2: 136, 3: 125}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+91 Bells per turnip!
+Monday AM price: 91
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+86 Bells per turnip!
+Monday PM price: 86
+From histogram, theoretical max price is: 642
+max price for Tuesday AM is only 189. skipping...
+From histogram, theoretical max price is: 642
+max price for Tuesday PM is only 214. skipping...
+From histogram, theoretical max price is: 642
+changing time to Wednesday AM (6)
+2020-05-06 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: 
+try #5 text: 
+try #6 text: 
+try #7 text: 
+try #8 text: 
+try #9 text: 
+try #10 text: 
+try #11 text: 
+try #12 text: 
+try #13 text: n
+try #14 text: S
+try #15 text: 
+try #16 text: Good morn
+Isabelle's greeting detected!
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+198 Bells per turnip!
+Wednesday AM price: 198
+From histogram, theoretical max price is: 642
+changing time to Wednesday PM (7)
+2020-05-06 12:01:00
+current time: 05/06/2020 08:03 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+395 Bells per turnip!
+Wednesday PM price: 395
+From histogram, theoretical max price is: 395
+max predicted price is not high enough: [91, 86, 83, 150, 198, 395, 214, 150, 97, 97, 97, 97]
+restarting week... week prices listed below:
+{2: 91, 3: 86, 6: 198, 7: 395}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/06/2020 12:02 PM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+100 Bells per turnip!
+Monday AM price: 100
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+could not interpret date from: VEU PLOy AOR HOV ar Kaa
+could not interpret date from: VLU PLOy AOR KO Var Kai
+could not interpret date from: VLU PLOV AOR HOV ar Kaa
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+123 Bells per turnip!
+Monday PM price: 123
+From histogram, theoretical max price is: 220
+max predicted price is not high enough: [100, 123, 219, 220, 219, 154, 154, 154, 154, 154, 154, 154]
+restarting week... week prices listed below:
+{2: 100, 3: 123}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+79 Bells per turnip!
+Monday AM price: 79
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+could not interpret date from: VU PLOVA0R KO Var Bais
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+75 Bells per turnip!
+Monday PM price: 75
+From histogram, theoretical max price is: 552
+max price for Tuesday AM is only 154. skipping...
+From histogram, theoretical max price is: 552
+max price for Tuesday PM is only 184. skipping...
+From histogram, theoretical max price is: 552
+changing time to Wednesday AM (6)
+2020-05-06 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: IU
+try #5 text: 
+try #6 text: 
+try #7 text: Good morning
+Isabelle's greeting detected!
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+63 Bells per turnip!
+Wednesday AM price: 63
+From histogram, theoretical max price is: 552
+max price for Wednesday PM is only 154. skipping...
+From histogram, theoretical max price is: 552
+max price for Thursday AM is only 184. skipping...
+From histogram, theoretical max price is: 552
+changing time to Thursday PM (9)
+2020-05-07 12:01:00
+current time: 05/06/2020 08:03 AM
+waiting for title screen to load...
+walking to shop...
+Store was not reached. resetting...
+error text: No news to report today!
+waiting for title screen to load...
+walking to shop...
+Store was not reached. resetting...
+error text: 
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+53 Bells per turnip!
+Thursday PM price: 53
+From histogram, theoretical max price is: 79
+max predicted price is not high enough: [79, 75, 73, 70, 63, 61, 58, 53, 51, 48, 45, 43]
+restarting week... week prices listed below:
+{2: 79, 3: 75, 6: 63, 9: 53}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/07/2020 12:05 PM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+95 Bells per turnip!
+Monday AM price: 95
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+could not interpret date from: VU PLey AOR KO a-ha
+current time: 05/04/2020 08:03 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+92 Bells per turnip!
+Monday PM price: 92
+From histogram, theoretical max price is: 660
+max price for Tuesday AM is only 203. skipping...
+From histogram, theoretical max price is: 660
+max price for Tuesday PM is only 220. skipping...
+From histogram, theoretical max price is: 660
+changing time to Wednesday AM (6)
+2020-05-06 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: 
+try #5 text: 
+try #6 text: 
+try #7 text: 
+try #8 text: Good morn
+Isabelle's greeting detected!
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+78 Bells per turnip!
+Wednesday AM price: 78
+From histogram, theoretical max price is: 660
+max price for Wednesday PM is only 154. skipping...
+From histogram, theoretical max price is: 660
+max price for Thursday AM is only 220. skipping...
+From histogram, theoretical max price is: 660
+changing time to Thursday PM (9)
+2020-05-07 12:01:00
+current time: 05/06/2020 08:03 AM
+waiting for title screen to load...
+walking to shop...
+Store was not reached. resetting...
+error text: No news to report today!
+waiting for title screen to load...
+walking to shop...
+Store was not reached. resetting...
+error text: 
+waiting for title screen to load...
+walking to shop...
+Store was not reached. resetting...
+error text: 
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+208 Bells per turnip!
+Thursday PM price: 208
+From histogram, theoretical max price is: 660
+changing time to Friday AM (10)
+2020-05-08 08:01:00
+current time: 05/07/2020 12:07 PM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: 
+try #5 text: IU
+try #6 text: Goo
+Isabelle's greeting detected!
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+271 Bells per turnip!
+Friday AM price: 271
+From histogram, theoretical max price is: 271
+max predicted price is not high enough: [95, 92, 89, 86, 78, 75, 154, 208, 271, 220, 154, 99]
+restarting week... week prices listed below:
+{2: 95, 3: 92, 6: 78, 9: 208, 10: 271}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/08/2020 08:03 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+66 Bells per turnip!
+Monday AM price: 66
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+101 Bells per turnip!
+Monday PM price: 101
+From histogram, theoretical max price is: 220
+max predicted price is not high enough: [66, 101, 154, 219, 220, 219, 99, 96, 93, 90, 86, 83]
+restarting week... week prices listed below:
+{2: 66, 3: 101}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+91 Bells per turnip!
+Monday AM price: 91
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+124 Bells per turnip!
+Monday PM price: 124
+From histogram, theoretical max price is: 642
+max price for Tuesday AM is only 214. skipping...
+From histogram, theoretical max price is: 642
+changing time to Tuesday PM (5)
+2020-05-05 12:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+walking to shop...
+Store was not reached. resetting...
+error text: Hmmm... There really isn't any news
+to speak of today... But...
+waiting for title screen to load...
+walking to shop...
+Store was not reached. resetting...
+error text: 
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+54 Bells per turnip!
+Tuesday PM price: 54
+From histogram, theoretical max price is: 142
+max predicted price is not high enough: [91, 124, 126, 54, 142, 142, 142, 142, 142, 142, 142, 142]
+restarting week... week prices listed below:
+{2: 91, 3: 124, 5: 54}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/05/2020 12:05 PM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+97 Bells per turnip!
+Monday AM price: 97
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:03 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+93 Bells per turnip!
+Monday PM price: 93
+From histogram, theoretical max price is: 660
+max price for Tuesday AM is only 205. skipping...
+From histogram, theoretical max price is: 660
+max price for Tuesday PM is only 220. skipping...
+From histogram, theoretical max price is: 660
+changing time to Wednesday AM (6)
+2020-05-06 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: 
+try #5 text: 
+try #6 text: 
+try #7 text: 
+try #8 text: 
+try #9 text: 
+try #10 text: 
+try #11 text: 
+try #12 text: S
+try #13 text: 
+try #14 text: 
+try #15 text: Good
+Isabelle's greeting detected!
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+135 Bells per turnip!
+Wednesday AM price: 135
+From histogram, theoretical max price is: 660
+max price for Wednesday PM is only 220. skipping...
+From histogram, theoretical max price is: 660
+changing time to Thursday AM (8)
+2020-05-07 08:01:00
+current time: 05/06/2020 08:03 AM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: 
+try #5 text: 
+try #6 text: 
+try #7 text: 
+try #8 text: 
+try #9 text: 
+try #10 text: 
+try #11 text: 
+try #12 text: IU
+try #13 text: S
+try #14 text: 
+try #15 text: Good mor
+Isabelle's greeting detected!
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+202 Bells per turnip!
+Thursday AM price: 202
+From histogram, theoretical max price is: 220
+max predicted price is not high enough: [97, 93, 90, 154, 135, 201, 202, 220, 219, 99, 96, 93]
+restarting week... week prices listed below:
+{2: 97, 3: 93, 6: 135, 8: 202}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/07/2020 08:03 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+83 Bells per turnip!
+Monday AM price: 83
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+could not interpret date from: VU PLOV AOR HOV Kii
+could not interpret date from: VLU PLOV AOR KO Var Nai
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+80 Bells per turnip!
+Monday PM price: 80
+From histogram, theoretical max price is: 582
+max price for Tuesday AM is only 154. skipping...
+From histogram, theoretical max price is: 582
+max price for Tuesday PM is only 194. skipping...
+From histogram, theoretical max price is: 582
+changing time to Wednesday AM (6)
+2020-05-06 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: 
+try #5 text: 
+try #6 text: 
+try #7 text: 
+try #8 text: 
+try #9 text: 
+try #10 text: 
+try #11 text: 
+try #12 text: 
+try #13 text: AS
+try #14 text: 
+try #15 text: n
+try #16 text: Good
+Isabelle's greeting detected!
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+110 Bells per turnip!
+Wednesday AM price: 110
+From histogram, theoretical max price is: 582
+max price for Wednesday PM is only 219. skipping...
+From histogram, theoretical max price is: 582
+changing time to Thursday AM (8)
+2020-05-07 08:01:00
+current time: 05/06/2020 08:03 AM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: 
+try #5 text: i
+try #6 text: 
+try #7 text: 
+try #8 text: Good morning
+Isabelle's greeting detected!
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+469 Bells per turnip!
+Thursday AM price: 469
+From histogram, theoretical max price is: 469
+max predicted price is not high enough: [83, 80, 78, 75, 110, 194, 469, 194, 136, 88, 88, 88]
+restarting week... week prices listed below:
+{2: 83, 3: 80, 6: 110, 8: 469}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/07/2020 08:03 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+101 Bells per turnip!
+Monday AM price: 101
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+could not interpret date from: VU PLOV AOR KO Var Kaa
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+111 Bells per turnip!
+Monday PM price: 111
+From histogram, theoretical max price is: 220
+max predicted price is not high enough: [101, 111, 219, 220, 219, 154, 154, 154, 154, 154, 154, 154]
+restarting week... week prices listed below:
+{2: 101, 3: 111}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+94 Bells per turnip!
+Monday AM price: 94
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+could not interpret date from: VU PLOV AOR HOV a-ha
+could not interpret date from: VLU PLOV AOR KO Var Naa
+could not interpret date from: VU PLOV AOR KO Var Bai
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+Store was not reached. resetting...
+error text: 
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+108 Bells per turnip!
+Monday PM price: 108
+From histogram, theoretical max price is: 660
+max price for Tuesday AM is only 220. skipping...
+From histogram, theoretical max price is: 660
+changing time to Tuesday PM (5)
+2020-05-05 12:01:00
+current time: 05/04/2020 12:04 PM
+waiting for title screen to load...
+walking to shop...
+Store was not reached. resetting...
+error text: There's no news that | can think of...
+waiting for title screen to load...
+Stop ACNH Turnip Price Seeker
+-- sent a stop request. --
+-- finished successfully. --
+Start ACNH Turnip Price Seeker
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+Stop ACNH Turnip Price Seeker
+-- sent a stop request. --
+-- finished successfully. --
+Finished reloading command modules.
+Start ACNH Turnip Price Seeker
+Beginning to search for a turnip buying price larger than 550
+-- ERROR - please check log --
+Stop ACNH Turnip Price Seeker
+Finished reloading command modules.
+Start ACNH Turnip Price Seeker
+Beginning to search for a turnip buying price larger than 550
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/05/2020 12:15 PM
+waiting for title screen to load...
+walking to shop...
+Stop ACNH Turnip Price Seeker
+-- sent a stop request. --
+-- finished successfully. --
+Finished reloading command modules.
+Start ACNH Turnip Price Seeker
+Beginning to search for a turnip buying price larger than 550
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+49 Bells per turnip!
+Monday AM price: 49
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+103 Bells per turnip
+Monday PM price: 103
+max predicted price ([49, 103, 154, 219, 220, 219, 99, 96, 93, 90, 86, 83]) is less than desired price (549)
+restarting week... week prices listed below:
+{2: 49, 3: 103}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+81 Bells per turnip!
+Monday AM price: 81
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+77 Bells per turnip!
+Monday PM price: 77
+max price for Tuesday AM is only 154, but the theoretical max is 570. skipping...
+max price for Tuesday PM is only 190, but the theoretical max is 570. skipping...
+From histogram, theoretical max price is: 570
+changing time to Wednesday AM (6)
+2020-05-06 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: 
+try #5 text: IU
+try #6 text: 
+try #7 text: 
+try #8 text: 
+try #9 text: IU
+try #10 text: 
+Isabelle's greeting detected!
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+67 Bells per turnip!
+Wednesday AM price: 67
+max price for Wednesday PM is only 154, but the theoretical max is 570. skipping...
+max price for Thursday AM is only 190, but the theoretical max is 570. skipping...
+From histogram, theoretical max price is: 570
+changing time to Thursday PM (9)
+2020-05-07 12:01:00
+current time: 05/06/2020 08:03 AM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: 
+try #5 text: 
+try #6 text: 
+try #7 text: 
+try #8 text: 
+try #9 text: 
+try #10 text: 
+try #11 text: 
+try #12 text: 
+try #13 text: A
+try #14 text: 
+try #15 text: Ie
+try #16 text: 
+Isabelle's greeting detected!
+walking to shop...
+Store was not reached. resetting...
+error text: 
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+155 Bells per turnip!
+Thursday PM price: 155
+From histogram, theoretical max price is: 570
+changing time to Friday AM (10)
+2020-05-08 08:01:00
+current time: 05/07/2020 12:04 PM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: 
+try #5 text: a
+try #6 text: 
+try #7 text: 
+try #8 text: Good morni
+Isabelle's greeting detected!
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+285 Bells per turnip!
+Friday AM price: 285
+max predicted price ([81, 77, 75, 72, 67, 65, 133, 155, 285, 190, 133, 86]) is less than desired price (548)
+restarting week... week prices listed below:
+{2: 81, 3: 77, 6: 67, 9: 155, 10: 285}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+Stop ACNH Turnip Price Seeker
+-- sent a stop request. --
+-- finished successfully. --
+Start ACNH Turnip Price Seeker
+Beginning to search for a turnip buying price larger than 550
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+Stop ACNH Turnip Price Seeker
+-- sent a stop request. --
+-- finished successfully. --
+Finished reloading command modules.
+Start ACNH Turnip Price Seeker
+Beginning to search for a turnip buying price larger than 550
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/08/2020 08:05 AM
+waiting for title screen to load...
+walking to shop...
+Store was not reached. resetting...
+error text: 
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+119 Bells per turnip!
+Monday AM price: 119
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:04 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+69 Bells per turnip!
+Monday PM price: 69
+max predicted price ([119, 69, 66, 154, 154, 154, 154, 154, 154, 154, 154, 154]) is less than desired price (550)
+restarting week... week prices listed below:
+lowering minimum acceptable price to: 547
+{2: 119, 3: 69}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+83 Bells per turnip!
+Monday AM price: 83
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+79 Bells per turnip!
+Monday PM price: 79
+max price for Tuesday AM is only 154, but the theoretical max is 582. skipping...
+max price for Tuesday PM is only 194, but the theoretical max is 582. skipping...
+From histogram, theoretical max price is: 582
+changing time to Wednesday AM (6)
+2020-05-06 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: 
+try #5 text: 
+try #6 text: 
+try #7 text: 
+try #8 text: 
+try #9 text: 
+try #10 text: 
+try #11 text: 
+try #12 text: 
+try #13 text: 
+try #14 text: 
+try #15 text: 
+try #16 text: S
+try #17 text: 
+try #18 text: 
+try #19 text: Go
+Isabelle's greeting detected!
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+66 Bells per turnip!
+Wednesday AM price: 66
+max price for Wednesday PM is only 154, but the theoretical max is 582. skipping...
+max price for Thursday AM is only 194, but the theoretical max is 582. skipping...
+From histogram, theoretical max price is: 582
+changing time to Thursday PM (9)
+2020-05-07 12:01:00
+current time: 05/06/2020 08:03 AM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: 
+try #5 text: 
+try #6 text: 
+try #7 text: 
+try #8 text: 
+try #9 text: 
+try #10 text: 
+try #11 text: 
+try #12 text: 
+try #13 text: 
+try #14 text: 
+try #15 text: IU
+try #16 text: 
+Isabelle's greeting detected!
+walking to shop...
+Store was not reached. resetting...
+error text: 
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+131 Bells per turnip!
+Thursday PM price: 131
+From histogram, theoretical max price is: 582
+changing time to Friday AM (10)
+2020-05-08 08:01:00
+current time: 05/07/2020 12:04 PM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: 
+try #5 text: 
+try #6 text: -
+try #7 text: 
+try #8 text: 
+try #9 text: Good morning
+Isabelle's greeting detected!
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+97 Bells per turnip!
+Friday AM price: 97
+max predicted price ([83, 79, 150, 150, 66, 64, 150, 131, 97, 213, 214, 213]) is less than desired price (547)
+restarting week... week prices listed below:
+lowering minimum acceptable price to: 544
+{2: 83, 3: 79, 6: 66, 9: 131, 10: 97}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/08/2020 08:04 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+74 Bells per turnip!
+Monday AM price: 74
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+139 Bells per turnip!
+Monday PM price: 139
+max predicted price ([74, 139, 154, 219, 220, 219, 99, 96, 93, 90, 86, 83]) is less than desired price (544)
+restarting week... week prices listed below:
+lowering minimum acceptable price to: 541
+{2: 74, 3: 139}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+100 Bells per turnip!
+Monday AM price: 100
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+115 Bells per turnip!
+Monday PM price: 115
+max predicted price ([100, 115, 219, 220, 219, 154, 154, 154, 154, 154, 154, 154]) is less than desired price (541)
+restarting week... week prices listed below:
+lowering minimum acceptable price to: 538
+{2: 100, 3: 115}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+94 Bells per turnip!
+Monday AM price: 94
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+88 Bells per turnip!
+Monday PM price: 88
+max price for Tuesday AM is only 193, but the theoretical max is 660. skipping...
+max price for Tuesday PM is only 220, but the theoretical max is 660. skipping...
+From histogram, theoretical max price is: 660
+changing time to Wednesday AM (6)
+2020-05-06 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: 
+try #5 text: 
+try #6 text: 
+try #7 text: 
+try #8 text: 
+try #9 text: 
+try #10 text: S
+try #11 text: 
+try #12 text: Goo
+Isabelle's greeting detected!
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+76 Bells per turnip!
+Wednesday AM price: 76
+max price for Wednesday PM is only 154, but the theoretical max is 660. skipping...
+max price for Thursday AM is only 220, but the theoretical max is 660. skipping...
+From histogram, theoretical max price is: 660
+changing time to Thursday PM (9)
+2020-05-07 12:01:00
+current time: 05/06/2020 08:03 AM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: 
+try #5 text: 
+try #6 text: 
+try #7 text: 
+try #8 text: 
+try #9 text: n
+try #10 text: 
+try #11 text: 
+Isabelle's greeting detected!
+walking to shop...
+Store was not reached. resetting...
+error text: 
+waiting for title screen to load...
+walking to shop...
+Store was not reached. resetting...
+error text: 
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+63 Bells per turnip!
+Thursday PM price: 63
+max predicted price ([94, 88, 136, 136, 76, 73, 136, 63, 60, 57, 136, 136]) is less than desired price (538)
+restarting week... week prices listed below:
+lowering minimum acceptable price to: 535
+{2: 94, 3: 88, 6: 76, 9: 63}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/07/2020 12:06 PM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+124 Bells per turnip!
+Monday AM price: 124
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+120 Bells per turnip!
+Monday PM price: 120
+max predicted price ([124, 120, 219, 220, 219, 154, 154, 154, 154, 154, 154, 154]) is less than desired price (535)
+restarting week... week prices listed below:
+lowering minimum acceptable price to: 532
+{2: 124, 3: 120}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+walking to shop...
+Store was not reached. resetting...
+error text: 
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+46 Bells per turn
+Monday AM price: 46
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:04 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+42 Bells per turnip!
+Monday PM price: 42
+max predicted price ([46, 42, 154, 154, 219, 220, 220, 220, 220, 220, 220, 219]) is less than desired price (532)
+restarting week... week prices listed below:
+lowering minimum acceptable price to: 529
+{2: 46, 3: 42}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+121 Bells per turnip!
+Monday AM price: 121
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+126 Bells per turnip!
+Monday PM price: 126
+max predicted price ([121, 126, 219, 220, 219, 154, 154, 154, 154, 154, 154, 154]) is less than desired price (529)
+restarting week... week prices listed below:
+lowering minimum acceptable price to: 526
+{2: 121, 3: 126}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+126 Bells per turnip!
+Monday AM price: 126
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+100 Bells per turnip
+Monday PM price: 100
+max predicted price ([126, 100, 219, 220, 219, 154, 154, 154, 154, 154, 154, 154]) is less than desired price (526)
+restarting week... week prices listed below:
+lowering minimum acceptable price to: 523
+{2: 126, 3: 100}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+133 Bells per turnip!
+Monday AM price: 133
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+150 Bells per turnip!
+Monday PM price: 150
+max predicted price ([133, 150, 219, 220, 219, 154, 154, 154, 154, 154, 154, 154]) is less than desired price (523)
+restarting week... week prices listed below:
+lowering minimum acceptable price to: 520
+{2: 133, 3: 150}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+94 Bells per turnip!
+Monday AM price: 94
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+89 Bells per turnip!
+Monday PM price: 89
+max price for Tuesday AM is only 195, but the theoretical max is 660. skipping...
+max price for Tuesday PM is only 220, but the theoretical max is 660. skipping...
+From histogram, theoretical max price is: 660
+changing time to Wednesday AM (6)
+2020-05-06 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: 
+try #5 text: 
+try #6 text: 
+try #7 text: 
+try #8 text: 
+try #9 text: 
+try #10 text: 
+try #11 text: AS
+try #12 text: 
+try #13 text: n
+try #14 text: Good mornin
+Isabelle's greeting detected!
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+76 Bells per turn
+Wednesday AM price: 76
+max price for Wednesday PM is only 154, but the theoretical max is 660. skipping...
+max price for Thursday AM is only 220, but the theoretical max is 660. skipping...
+From histogram, theoretical max price is: 660
+changing time to Thursday PM (9)
+2020-05-07 12:01:00
+current time: 05/06/2020 08:03 AM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: 
+try #5 text: 
+try #6 text: 
+try #7 text: 
+try #8 text: 
+try #9 text: 
+try #10 text: S
+try #11 text: 
+try #12 text: 
+Isabelle's greeting detected!
+walking to shop...
+Store was not reached. resetting...
+error text: 
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+63 Bells per turnip!
+Thursday PM price: 63
+max predicted price ([94, 89, 138, 138, 76, 73, 138, 63, 60, 57, 138, 138]) is less than desired price (520)
+restarting week... week prices listed below:
+lowering minimum acceptable price to: 517
+{2: 94, 3: 89, 6: 76, 9: 63}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/07/2020 12:05 PM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+103 Bells per turnip
+Monday AM price: 103
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+140 Bells per turnip!
+Monday PM price: 140
+max predicted price ([103, 140, 219, 220, 219, 154, 154, 154, 154, 154, 154, 154]) is less than desired price (517)
+restarting week... week prices listed below:
+lowering minimum acceptable price to: 514
+{2: 103, 3: 140}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+66 Bells per turnip!
+Monday AM price: 66
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+63 Bells per turnip!
+Monday PM price: 63
+max predicted price ([66, 63, 154, 154, 219, 220, 220, 220, 220, 220, 220, 219]) is less than desired price (514)
+restarting week... week prices listed below:
+lowering minimum acceptable price to: 511
+{2: 66, 3: 63}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+95 Bells per turnip!
+Monday AM price: 95
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+91 Bells per turnip!
+Monday PM price: 91
+max price for Tuesday AM is only 201, but the theoretical max is 660. skipping...
+max price for Tuesday PM is only 220, but the theoretical max is 660. skipping...
+From histogram, theoretical max price is: 660
+changing time to Wednesday AM (6)
+2020-05-06 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: AS
+try #5 text: 
+try #6 text: n
+try #7 text: Good
+Isabelle's greeting detected!
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+78 Bells per turnip!
+Wednesday AM price: 78
+max price for Wednesday PM is only 154, but the theoretical max is 660. skipping...
+max price for Thursday AM is only 220, but the theoretical max is 660. skipping...
+From histogram, theoretical max price is: 660
+changing time to Thursday PM (9)
+2020-05-07 12:01:00
+current time: 05/06/2020 08:03 AM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: 
+try #5 text: AS
+try #6 text: 
+try #7 text: Ie
+try #8 text: -
+try #9 text: S
+try #10 text: 
+try #11 text: Hello there, ever
+Isabelle's greeting detected!
+walking to shop...
+Store was not reached. resetting...
+error text: 
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+66 Bells per turnip!
+Thursday PM price: 66
+max predicted price ([95, 91, 142, 142, 78, 75, 142, 66, 63, 60, 142, 142]) is less than desired price (511)
+restarting week... week prices listed below:
+lowering minimum acceptable price to: 508
+{2: 95, 3: 91, 6: 78, 9: 66}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/07/2020 12:04 PM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+88 Bells per turnip!
+Monday AM price: 88
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+Store was not reached. resetting...
+error text: 
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+84 Bells per turnip!
+Monday PM price: 84
+max price for Tuesday AM is only 185, but the theoretical max is 618. skipping...
+max price for Tuesday PM is only 206, but the theoretical max is 618. skipping...
+From histogram, theoretical max price is: 618
+changing time to Wednesday AM (6)
+2020-05-06 08:01:00
+current time: 05/04/2020 12:04 PM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: 
+try #5 text: 
+try #6 text: IU
+try #7 text: 
+try #8 text: Good morn
+Isabelle's greeting detected!
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+72 Bells per turnip!
+Wednesday AM price: 72
+max price for Wednesday PM is only 154, but the theoretical max is 618. skipping...
+max price for Thursday AM is only 206, but the theoretical max is 618. skipping...
+From histogram, theoretical max price is: 618
+changing time to Thursday PM (9)
+2020-05-07 12:01:00
+current time: 05/06/2020 08:03 AM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: 
+try #5 text: S
+try #6 text: IU
+try #7 text: 
+try #8 text: Hello there, ever
+Isabelle's greeting detected!
+walking to shop...
+Store was not reached. resetting...
+error text: 
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+141 Bells per turnip!
+Thursday PM price: 141
+From histogram, theoretical max price is: 618
+changing time to Friday AM (10)
+2020-05-08 08:01:00
+current time: 05/07/2020 12:04 PM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: 
+try #5 text: 
+try #6 text: 
+try #7 text: 
+try #8 text: Good morni
+Isabelle's greeting detected!
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+147 Bells per turnip!
+Friday AM price: 147
+From histogram, theoretical max price is: 618
+changing time to Friday PM (11)
+2020-05-08 12:01:00
+current time: 05/08/2020 08:03 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+242 Bells per turnip!
+Friday PM price: 242
+max predicted price ([88, 84, 81, 78, 72, 69, 66, 141, 147, 242, 206, 145]) is less than desired price (508)
+restarting week... week prices listed below:
+lowering minimum acceptable price to: 505
+{2: 88, 3: 84, 6: 72, 9: 141, 10: 147, 11: 242}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/08/2020 12:02 PM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+97 Bells per turnip!
+Monday AM price: 97
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+94 Bells per turnip!
+Monday PM price: 94
+max price for Tuesday AM is only 207, but the theoretical max is 660. skipping...
+max price for Tuesday PM is only 220, but the theoretical max is 660. skipping...
+From histogram, theoretical max price is: 660
+changing time to Wednesday AM (6)
+2020-05-06 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: aN
+try #5 text: 
+try #6 text: 
+try #7 text: Good mornin
+Isabelle's greeting detected!
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+81 Bells per turnip!
+Wednesday AM price: 81
+max price for Wednesday PM is only 154, but the theoretical max is 660. skipping...
+max price for Thursday AM is only 220, but the theoretical max is 660. skipping...
+From histogram, theoretical max price is: 660
+changing time to Thursday PM (9)
+2020-05-07 12:01:00
+current time: 05/06/2020 08:03 AM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: 
+try #5 text: S
+try #6 text: 
+try #7 text: 
+try #8 text: Hello there, ever
+Isabelle's greeting detected!
+walking to shop...
+Store was not reached. resetting...
+error text: 
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+155 Bells per turnip!
+Thursday PM price: 155
+From histogram, theoretical max price is: 660
+changing time to Friday AM (10)
+2020-05-08 08:01:00
+current time: 05/07/2020 12:04 PM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: 
+try #5 text: Ie
+try #6 text: 
+try #7 text: 
+try #8 text: Goo
+Isabelle's greeting detected!
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+200 Bells per turnip!
+Friday AM price: 200
+max predicted price ([97, 94, 91, 88, 81, 154, 154, 155, 200, 199, 99, 96]) is less than desired price (505)
+restarting week... week prices listed below:
+lowering minimum acceptable price to: 502
+{2: 97, 3: 94, 6: 81, 9: 155, 10: 200}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/08/2020 08:03 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+90 Bells per turnip!
+Monday AM price: 90
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+94 Bells per turnip!
+Monday PM price: 94
+max price for Tuesday AM is only 208, but the theoretical max is 624. skipping...
+From histogram, theoretical max price is: 624
+changing time to Tuesday PM (5)
+2020-05-05 12:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: 
+try #5 text: 
+try #6 text: 
+try #7 text: 
+try #8 text: 
+try #9 text: 
+try #10 text: 
+try #11 text: 
+try #12 text: 
+try #13 text: 
+try #14 text: 
+try #15 text: Hello the
+Isabelle's greeting detected!
+walking to shop...
+Store was not reached. resetting...
+error text: 
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+119 Bells per turnip!
+Tuesday PM price: 119
+max predicted price ([90, 94, 140, 119, 140, 140, 140, 140, 140, 140, 140, 140]) is less than desired price (502)
+restarting week... week prices listed below:
+lowering minimum acceptable price to: 499
+{2: 90, 3: 94, 5: 119}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/05/2020 12:04 PM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+53 Bells per turnip!
+Monday AM price: 53
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:03 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+49 Bells per turnip!
+Monday PM price: 49
+max predicted price ([53, 49, 154, 154, 219, 220, 220, 220, 220, 220, 220, 219]) is less than desired price (499)
+restarting week... week prices listed below:
+lowering minimum acceptable price to: 496
+{2: 53, 3: 49}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+79 Bells per turnip!
+Monday AM price: 79
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+76 Bells per turnip!
+Monday PM price: 76
+max price for Tuesday AM is only 154, but the theoretical max is 552. skipping...
+max price for Tuesday PM is only 184, but the theoretical max is 552. skipping...
+From histogram, theoretical max price is: 552
+changing time to Wednesday AM (6)
+2020-05-06 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: 
+try #5 text: I
+try #6 text: 
+try #7 text: S
+try #8 text: S
+try #9 text: 
+try #10 text: Good morning, ev
+Isabelle's greeting detected!
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+65 Bells per turnip!
+Wednesday AM price: 65
+max price for Wednesday PM is only 154, but the theoretical max is 552. skipping...
+max price for Thursday AM is only 184, but the theoretical max is 552. skipping...
+From histogram, theoretical max price is: 552
+changing time to Thursday PM (9)
+2020-05-07 12:01:00
+current time: 05/06/2020 08:03 AM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: 
+try #5 text: 
+try #6 text: 
+try #7 text: 
+try #8 text: 
+try #9 text: 
+try #10 text: 
+try #11 text: 
+try #12 text: ie
+try #13 text: IU
+try #14 text: S
+try #15 text: 
+try #16 text: IU
+try #17 text: Hello ther
+Isabelle's greeting detected!
+walking to shop...
+Store was not reached. resetting...
+error text: 
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+54 Bells per turnip!
+Thursday PM price: 54
+max predicted price ([79, 76, 74, 71, 65, 63, 60, 54, 52, 49, 46, 44]) is less than desired price (496)
+restarting week... week prices listed below:
+lowering minimum acceptable price to: 493
+{2: 79, 3: 76, 6: 65, 9: 54}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/07/2020 12:05 PM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+104 Bells per turnip!
+Monday AM price: 104
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+88 Bells per turnip!
+Monday PM price: 88
+max predicted price ([104, 88, 193, 194, 193, 154, 154, 154, 154, 154, 154, 154]) is less than desired price (493)
+restarting week... week prices listed below:
+lowering minimum acceptable price to: 490
+{2: 104, 3: 88}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+97 Bells per turnip!
+Monday AM price: 97
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+Store was not reached. resetting...
+error text: 
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+92 Bells per turnip!
+Monday PM price: 92
+max price for Tuesday AM is only 203, but the theoretical max is 660. skipping...
+max price for Tuesday PM is only 220, but the theoretical max is 660. skipping...
+From histogram, theoretical max price is: 660
+changing time to Wednesday AM (6)
+2020-05-06 08:01:00
+current time: 05/04/2020 12:04 PM
+waiting for title screen to load...
+waiting for Isabelle to start htalking...
+try #0 text: 
+traay #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: 
+try #5 text: IU
+try #6 text: n
+try #7 text: 
+try #8 text: Good morning, e
+Isabelle's greeting detected!
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+78 Bells per turnip!
+Wednesday AM price: 78
+max price for Wednesday PM is only 154, but the theoretical max is 660. skipping...
+max price for Thursday AM is only 220, but the theoretical max is 660. skipping...
+From histogram, theoretical max price is: 660
+changing time to Thursday PM (9)
+2020-05-07 12:01:00
+current time: 05/06/2020 08:03 AM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: 
+try #5 text: 
+try #6 text: 
+try #7 text: i
+try #8 text: 
+Isabelle's greeting detected!
+walking to shop...
+Store was not reached. resetting...
+error text: 
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+65 Bells per turnip!
+Thursday PM price: 65
+max predicted price ([97, 92, 143, 143, 78, 143, 143, 65, 62, 143, 143, 143]) is less than desired price (490)
+restarting week... week prices listed below:
+lowering minimum acceptable price to: 487
+{2: 97, 3: 92, 6: 78, 9: 65}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/07/2020 12:04 PM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+126 Bells per turnip!
+Monday AM price: 126
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+124 Bells per turnip!
+Monday PM price: 124
+max predicted price ([126, 124, 219, 220, 219, 154, 154, 154, 154, 154, 154, 154]) is less than desired price (487)
+restarting week... week prices listed below:
+lowering minimum acceptable price to: 484
+{2: 126, 3: 124}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+walking to shop...
+Store was not reached. resetting...
+error text: 
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+64 Bells per turnip!
+Monday AM price: 64
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:04 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+60 Bells per turnip!
+Monday PM price: 60
+max predicted price ([64, 60, 154, 154, 219, 220, 220, 220, 220, 220, 220, 219]) is less than desired price (484)
+restarting week... week prices listed below:
+lowering minimum acceptable price to: 481
+{2: 64, 3: 60}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+135 Bells per turnip!
+Monday AM price: 135
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:02 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+137 Bells per turnip!
+Monday PM price: 137
+max predicted price ([135, 137, 219, 220, 219, 154, 154, 154, 154, 154, 154, 154]) is less than desired price (481)
+restarting week... week prices listed below:
+lowering minimum acceptable price to: 478
+{2: 135, 3: 137}
+changing time to Monday AM (2)
+2020-05-04 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+walking to shop...
+Store was not reached. resetting...
+error text: 
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+82 Bells per turnip!
+Monday AM price: 82
+changing time to Monday PM (3)
+2020-05-04 12:01:00
+current time: 05/04/2020 08:04 AM
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+79 Bells per turnip!
+Monday PM price: 79
+max price for Tuesday AM is only 154, but the theoretical max is 576. skipping...
+max price for Tuesday PM is only 192, but the theoretical max is 576. skipping...
+From histogram, theoretical max price is: 576
+changing time to Wednesday AM (6)
+2020-05-06 08:01:00
+current time: 05/04/2020 12:02 PM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: tu
+try #5 text: 
+try #6 text: 
+try #7 text: Good
+Isabelle's greeting detected!
+walking to shop...
+Store was not reached. resetting...
+error text: 
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+69 Bells per turnip!
+Wednesday AM price: 69
+max price for Wednesday PM is only 154, but the theoretical max is 576. skipping...
+max price for Thursday AM is only 192, but the theoretical max is 576. skipping...
+From histogram, theoretical max price is: 576
+changing time to Thursday PM (9)
+2020-05-07 12:01:00
+current time: 05/06/2020 08:04 AM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: S
+try #5 text: IU
+try #6 text: Hel
+Isabelle's greeting detected!
+walking to shop...
+Store was not reached. resetting...
+error text: 
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+109 Bells per turnip!
+Thursday PM price: 109
+max price for Friday AM is only 219, but the theoretical max is 576. skipping...
+From histogram, theoretical max price is: 576
+changing time to Friday PM (11)
+2020-05-08 12:01:00
+current time: 05/07/2020 12:05 PM
+waiting for title screen to load...
+waiting for Isabelle to start talking...
+try #0 text: 
+try #1 text: 
+try #2 text: 
+try #3 text: 
+try #4 text: 
+try #5 text: 
+try #6 text: 
+try #7 text: 
+try #8 text: 
+try #9 text: 
+try #10 text: 
+try #11 text: 
+try #12 text: 
+try #13 text: 
+try #14 text: It
+try #15 text: 
+try #16 text: 
+try #17 text: Hello th
+Isabelle's greeting detected!
+walking to shop...
+Store was not reached. resetting...
+error text: 
+waiting for title screen to load...
+walking to shop...
+entered store. getting turnip price... 
+TEXT: The current price for turnips is
+551 Bells per turnip!
+Friday PM price: 551
+price larger than 478 was found! LARGE PRICE: 551
+current time: 05/08/2020 12:05 PM
+prices: {2: 82, 3: 79, 6: 69, 9: 109, 11: 551}
+-- finished successfully. --
+
