@@ -63,6 +63,8 @@ class SwitchKeyboardController(Keyboard):
 			print('unknown key has input')
 
 		try:
+			if not key.char in self.key_map.keys():
+				return
 			if self.key_map[key.char] in self.holding:
 				return
 
@@ -91,6 +93,8 @@ class SwitchKeyboardController(Keyboard):
 			print('unknown key has released')
 
 		try:
+			if not key.char in self.key_map.keys():
+				return
 			if self.key_map[key.char] in self.holding:
 				self.holding.remove(self.key_map[key.char])
 				self.key.inputEnd(self.key_map[key.char])
