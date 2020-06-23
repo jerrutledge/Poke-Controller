@@ -15,7 +15,7 @@ class AutoRelease(ImageProcPythonCommand):
 		self.cam = cam
 
 		# release a number of boxes in a row
-		self.boxes = 2
+		self.boxes = 3
 		self.ocr_fails = 0
 		self.shinies = 0
 		self.accepted_ivs = [['Best', 'Best', 'Best', 'Best', 'Best', 'Best'], \
@@ -35,7 +35,7 @@ class AutoRelease(ImageProcPythonCommand):
 			if box < (self.boxes - 1):
 				self.press(Button.B, wait=2)
 				self.press(Button.R, wait=3)
-				self.press(Button.R, wait=0.2)
+				self.press(Button.R, wait=0.2+self.stream_delay)
 
 		# Return from pokemon box
 		print("Released all boxes. OCR Fails: "+str(self.ocr_fails))
@@ -67,6 +67,14 @@ class AutoRelease(ImageProcPythonCommand):
 		self.press(Button.B, wait=0.2)
 
 	def ReleaseBox(self, accepted_ivs=[['Best', 'Best', 'Best', 'Best', 'Best', 'Best']]):
+		if self.cam.isOpened():
+			# make sure we are viewing stats and not the pokemon model
+			# usually the box automatically opens to the stats unless the top left 
+			# Pokemon in the open box is an Egg?
+			text = self.getText(1, -70, 870, 1)
+			if not ("lv." in text or "Lv." in text or "Egg" in text):
+				print('no lv. or egg in top: '+text)
+				self.press(Button.PLUS, wait=self.stream_delay)
 		shiny_count = 0
 		for i in range(self.row):
 			for j in range(self.col):
@@ -93,8 +101,8 @@ class AutoRelease(ImageProcPythonCommand):
 			if shiny:
 				print("SHINY !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 			# make sure the judge view is open
-			text = self.getText(400, -440, 880, -990)
-			if "Ability" in text:
+			text = self.getText(-30, 1, -300, 1)
+			if "Judge" in text:
 				self.press(Button.PLUS, wait=self.stream_delay)
 			# use OCR to check for perfect ivs
 			stats = []
@@ -130,5 +138,11 @@ class AutoRelease(ImageProcPythonCommand):
 			elif not shiny:
 				# Release a pokemon
 				self.Release()
+		else:
+			text = self.getText(1, -70, 870, 1)
+			if "Egg" in text:
+				print("This is an Egg, skipping...")
+			else:
+				print("No Pokemon, skipping...")
 
 		return 1 if shiny else 0
