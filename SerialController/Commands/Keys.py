@@ -163,7 +163,7 @@ class SendFormat:
 # This class handle L stick and R stick at any angles
 class Direction:
 	def __init__(self, stick, angle, isDegree=True, showName=None):
-		self.stick = stick	
+		self.stick = stick
 		self.angle_for_show = angle
 		self.showName = showName
 
@@ -276,8 +276,15 @@ class KeyPress:
 			btns = [btns]
 
 		for btn in btns:
+			# only hold one direction per stick at a time
+			if isinstance(btn, Direction):
+				new_stick = btn.stick
+				for held_button in self.holdButton:
+					if isinstance(held_button, Direction) and \
+							held_button.stick == new_stick:
+						self.holdButton.remove(held_button)
 			if btn in self.holdButton:
-				print('Warning: ' + btn.name + ' is already in holding state')
+				print('Warning: ' + str(btn) + ' is already in holding state')
 				return
 			
 			self.holdButton.append(btn)
