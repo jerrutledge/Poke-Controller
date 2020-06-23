@@ -10,7 +10,7 @@ from Commands.Keys import KeyPress, Button, Direction, Stick
 # 自動卵孵化(キャプボあり)
 # assumptions:
 # 1. In bridge field
-# 2. Your party contains only one pokemon
+# 2. Your party contains only one hatched pokemon in the first slot
 # 3. Nickname choosing is turned off
 # 4. Send pokemon to box is manual
 # 5. The current and next (max_box) boxes are empty
@@ -20,10 +20,10 @@ class AutoHatching(AutoRelease):
 	def __init__(self, cam):
 		super().__init__(cam)
 		self.cam = cam
-		self.party_num = 2
+		self.party_num = 1
 		self.hatched_num = 0
 		self.hatched_box_num = 0
-		self.max_boxes = 21
+		self.max_boxes = 18
 		self.release_boxes = True
 		self.perfect_ivs = [['Best', 'Best', 'Best', 'Best', 'Best', 'Best'], \
 				['Best', 'Best', 'Best', 'Best', 'Best', 'No good']]
@@ -94,7 +94,7 @@ class AutoHatching(AutoRelease):
 			self.press(Button.X, wait=1)
 			self.press(Direction.UP) # set cursor to party
 			self.press(Button.A, wait=2)
-			self.press(Button.R, wait=3)
+			self.press(Button.R, wait=3+self.stream_delay)
 			if self.release_boxes:
 				shiny_num += self.ReleaseBox(accepted_ivs=self.perfect_ivs)
 			self.hatched_box_num = 0;
@@ -136,8 +136,8 @@ class AutoHatching(AutoRelease):
 			pokemon_to_replace = 2 + (self.hatched_box_num % 5)
 			print('replacing pokemon in position '+str(pokemon_to_replace))
 			self.press(Button.A, wait=3)
-			self.press(Button.A, wait=2)
-			self.press(Button.A, duration=1, wait=0.3)
+			self.press(Button.A, wait=2.3)
+			self.press(Button.A, duration=1, wait=0.4)
 			self.press(Button.A, wait=2.5)
 			self.pressRep(Direction.DOWN, pokemon_to_replace - 1) # select correct slot
 			self.press(Button.A)
