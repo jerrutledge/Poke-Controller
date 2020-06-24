@@ -8,6 +8,8 @@ from pprint import pprint
 capture_size = (1280, 720)
 digits = False
 
+crop_top, crop_bottom, crop_left, crop_right = 1, -70, 870, 1
+
 cap = cv2.VideoCapture(0)
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, capture_size[0])
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, capture_size[1])
@@ -20,7 +22,7 @@ while(True):
 	bw = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 	# pprint(bw)
 	# [top:bottom, left:right]
-	bw = bw[-248:-70, 258:-258]
+	bw = bw[crop_top:-crop_bottom, crop_left:-crop_right]
 	# bw = cv2.threshold(bw, 40, 255, cv2.THRESH_OTSU)[1]
 	# bw = cv2.bitwise_not(bw)
 
