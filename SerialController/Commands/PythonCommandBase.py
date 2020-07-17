@@ -10,6 +10,11 @@ from . import CommandBase
 import pytesseract
 from pprint import pprint
 
+# constant, hopefully
+pokemonTypes = ["BUG", "DARK", "DRAGON", "ELECTRIC", "FAIRY", \
+		"FIGHTING", "FIRE", "FLYING", "GHOST", "GRASS", "GROUND", \
+		"ICE", "NORMAL", "POISON", "PSYCHIC", "ROCK", "STEEL", "WATER"]
+
 # the class For notifying stop signal is sent from Main window
 class StopThread(Exception):
 	pass
@@ -258,3 +263,31 @@ class ImageProcPythonCommand(PythonCommand):
 			cv2.imwrite(fileName, base_img)
 
 		return len(contours)
+
+	# this function takes in a set of coordinates on the screen to OCR for types
+	# and returns a list of the two types e.g. ["NORMAL", "FLYING"] or ["WATER", "None"]
+	def getTypes(self, top=1, left=1):
+		first_type = "None"
+		# there must be a first type
+		for _ in range(4):
+			first_type = self.getText(top, -(top+40), left, -(left+105), inverse=True)
+			if first_type in pokemonTypes:
+				break
+			for current_type in pokemonTypes:
+				if current_type in first_type:
+					first_type = current_type
+					break
+		if first_type not in pokemonTypes:
+			print("ERROR: could not find first type. text="+str(first_type))
+			return []
+
+		second_type = self.getText(top, -(top+40), left+142, -(left+255), inverse=True)
+		for current_type in pokemonTypes:
+			if current_type in second_type:
+				second_type = current_type
+				break
+		# there might not be a second type, in which case, the value is "None"
+		if not second_type in pokemonTypes:
+			second_type = "None"
+
+		return [first_type, second_type]
