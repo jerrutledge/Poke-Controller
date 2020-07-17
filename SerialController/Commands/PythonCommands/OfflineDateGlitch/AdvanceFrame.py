@@ -43,26 +43,29 @@ class FindNStar(OfflineDateGlitchCommand):
 
 	def __init__(self, cam):
 		super().__init__(cam)
-		self.n = 7
-		self.reset = True
-		self.desired_num_of_stars = 3
-		self.desired_pokemon = ""
-		# desired ability function assumes your lead has trace
-		self.desired_ability = ""
-		self.match_type = False
-		self.desired_first_type = ""
-		self.desired_second_type = ""
+		# reset and n are intended for finding shiny pokemon on particular frames:
+		# 1. save on n frames before our intended shiny frame
+		# 2. advance n frames to our shiny frame
+		# 3. check if the pokemon is the right pokemon (e.g. is it G-Max Charizard?)
+		# 4. reset - taking us back n frames to try again
+		self.reset = False
+		self.n = 0
+		# a list of acceptable pokemon (as there may be more than one)
+		self.combinations = [
+		{
+			"stars": 5,
+			"name": "Alakazam",
+			"ability": "Magic Guard",
+			"types": ["PSYCHIC", "None"],
+		},
+		]
 		self.debug = True
 
 	def do(self):
-		self.FindRaid(reset=self.reset, num_stars=self.desired_num_of_stars,
-				ability=self.desired_ability, match_type=self.match_type,
-				desired_first_type=self.desired_first_type,
-				desired_second_type=self.desired_second_type, skip_num=self.n)
+		self.FindRaid(reset=self.reset, skip_num=self.n, combinations=self.combinations)
 
-	def FindRaid(self, reset=False, num_stars=5, ability="", match_type=False, 
-				desired_first_type="", desired_second_type="", skip_num=4):
-		if self.reset:
+	def FindRaid(self, reset=False, skip_num=4, combinations=[]):
+		if reset:
 			self.resetGame(wait_for_load=True)
 		else:
 			# assume that the current raid is not the desired raid and begin by advancing the date
@@ -75,56 +78,42 @@ class FindNStar(OfflineDateGlitchCommand):
 					print("advancing frame " + str(i) + "...")
 					self.advanceFrame()
 
+			self.wait(0.2)
 			self.enterRaidDen()
 			self.wait(self.stream_delay)
 
 			#check stars
-			print("checking stars (don't want:"+str(num_stars)+")...")
 			stars = self.getStars()
 			print("stars: "+str(stars))
 
 			#check type
-			pokemon_types = ["BUG", "DARK", "DRAGON", "ELECTRIC", "FAIRY", \
-					"FIGHTING", "FIRE", "FLYING", "GHOST", "GRASS", "GROUND", \
-					"ICE", "NORMAL", "POISON", "PSYCHIC", "ROCK", "STEEL", "WATER"]
-			first_type = self.getText(100, -140, 75, -180, inverse=True)
-			# there must be a first type
-			for _ in range(3):
-				if first_type in pokemon_types:
-					break
-				else:
-					first_type = self.getText(100, -140, 75, -180, inverse=True)
-				for current_type in pokemon_types:
-					if current_type in first_type:
-						first_type = current_type
-						break
-			print("first type: " + first_type)
-			second_type = self.getText(100, -140, 217, -330, inverse=True)
-			for current_type in pokemon_types:
-				if current_type in second_type:
-					second_type = current_type
-					break
-			# there might not be a second type, in which case, the value is "None"
-			if not second_type in pokemon_types:
-				second_type = "None"
-			print("second type: " + second_type)
-			# sum up whether this is a deal breaker in one variable
-			correct_type = (first_type == desired_first_type and \
-					second_type == desired_second_type) or not match_type
+			types = self.getTypes(100, 75)
+			print("types: " + str(types))
+			if (types == [] or stars > 5 or stars < 1):
+				# we probably failed to enter the den in time for the stream delay
+				# just try again
+				if reset:
+					self.resetGame(wait_for_load=True)
+				continue
 
-			if stars != num_stars and \
-					correct_type:
-				if not reset:
-					self.press(Button.B, wait=2)
-					self.save()
-					result = self.battle(True, self.desired_pokemon, 
-							desired_ability=self.desired_ability)
-					if not result:
-						self.advanceFrame(reset_and_save_game=True)
-						continue
-				print("Pokemon found!!")
-				return True
+			for combo in combinations:
+				if combo["types"] == types and combo["stars"] == stars:
+					# we don't need to check name and ability if we aren't resetting
+					if not reset:
+						print("Found a potential match for:" )
+						self.press(Button.B, wait=2)
+						self.save()
+						result = self.battle(True, combo["name"],
+								desired_ability=combo["ability"])
+						if not result:
+							# if we've entered the battle, we need to reset 
+							# and also make sure we don't check the same frame twice
+							self.resetGame(wait_for_load=True)
+							break
+					print("Pokemon found!! "+str(combo))
+					return True
 
+			print("not a match...")
 			if reset:
 				self.resetGame(wait_for_load=True)
 			else:
