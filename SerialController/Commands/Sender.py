@@ -5,9 +5,10 @@ import os
 import serial
 
 class Sender:
-	def __init__(self, is_show_serial):
+	def __init__(self, is_show_serial, osx_prefix="/dev/tty.usbserial-000"):
 		self.ser = None
 		self.is_show_serial = is_show_serial
+		self.osx_prefix = "/dev/tty.usbserial-000"
 
 	def openSerial(self, portNum):
 		try:
@@ -16,8 +17,8 @@ class Sender:
 				self.ser = serial.Serial("COM" + str(portNum), 9600)
 				return True
 			elif os.name == 'posix':
-				print('connecting to ' + "/dev/ttyUSB" + str(portNum))
-				self.ser = serial.Serial("/dev/ttyUSB" + str(portNum), 9600)
+				print('connecting to ' + self.osx_prefix + str(portNum))
+				self.ser = serial.Serial(self.osx_prefix + str(portNum), 9600)
 				return True
 			else:
 				print('not supported OS')
