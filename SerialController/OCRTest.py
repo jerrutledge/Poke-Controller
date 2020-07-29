@@ -8,7 +8,7 @@ from pprint import pprint
 capture_size = (1280, 720)
 digits = False
 
-crop_top, crop_bottom, crop_left, crop_right = 1, -70, 870, 1
+crop_top, crop_bottom, crop_left, crop_right = 300, 130, 730, 200
 
 cap = cv2.VideoCapture(0)
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, capture_size[0])
@@ -23,8 +23,10 @@ while(True):
 	# pprint(bw)
 	# [top:bottom, left:right]
 	bw = bw[crop_top:-crop_bottom, crop_left:-crop_right]
-	# bw = cv2.threshold(bw, 40, 255, cv2.THRESH_OTSU)[1]
-	# bw = cv2.bitwise_not(bw)
+	# bw = cv2.threshold(bw, 0, 2, cv2.THRESH_OTSU)[1] # for text boxes
+	# bw = cv2.threshold(bw, 200, 255, cv2.THRESH_TOZERO)[1] # for item menu
+	# bw = cv2.threshold(bw, 200, 255, cv2.THRESH_TOZERO)[1] # for raw binary
+	bw = cv2.bitwise_not(bw)
 
 	# Output OCR of frame
 	# Define config parameters.
