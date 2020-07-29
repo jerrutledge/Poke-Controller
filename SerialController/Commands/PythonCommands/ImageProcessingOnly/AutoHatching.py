@@ -25,8 +25,11 @@ class AutoHatching(AutoRelease):
 		self.hatched_box_num = 0
 		self.max_boxes = 18
 		self.release_boxes = True
-		self.perfect_ivs = [['Best', 'Best', 'Best', 'Best', 'Best', 'Best'], \
-				['Best', 'Best', 'Best', 'Best', 'Best', 'No good']]
+		self.perfect_ivs = [
+				['Best', 'Best', 'Best', 'Best', 'Best', 'Best'],
+				['Best', 'Best', 'Best', 'Best', 'Best', 'No good'],
+				['Best', 'No good', 'Best', 'Best', 'Best', 'Best'],
+				]
 		# self.perfect_ivs = []
 
 	def do(self):
