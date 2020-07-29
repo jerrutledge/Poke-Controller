@@ -12,38 +12,43 @@ class AutoTrainerBattle(ImageProcPythonCommand, ResetGame):
 
 	def __init__(self, cam):
 		super().__init__(cam)
-		self.exit = False
 		self.use_swords_dance = True
-		self.times_set_up = 0
+		self.times_set_up = 1
 
 	def do(self):
 		print('AUTO BATTLE: use_swords_dance='+str(self.use_swords_dance)+" "+str(self.times_set_up)+' times')
+		while True:
+			self.autoBattle(set_up_turns=self.times_set_up)
+		
+	def autoBattle(self, set_up_turns=0):
 		while True:
 			text = self.getText(top=-130, bottom=30, left=50, right=50, 
 				inverse=False, debug=False)
 			if "You are challenged by" in text or "sent out" in text:
 				print("Entering Trainer battle...")
-				if self.exit:
-					return
-				else:
-					self.trainerBattle()
-			if "Zacian appeared!" in text:
+				self.trainerBattle()
+				return
+			if "Zacian appeared!" in text or "Zamazenta appeared!" in text:
 				self.captureBattle()
+				return
+			if "appeared!" in text:
+				self.trainerBattle()
+				return
 			if "wants to learn" in text or "to forget" in text or "old move" in text:
 				print("learning move? text="+text)
 				self.finish()
 			self.pressRep(Button.A, 3)
 
-	def trainerBattle(self):
+	def trainerBattle(self, set_up_turns=0):
 		self.waitForBattleIcon()
 		# if there is set up, set up
-		if self.times_set_up > 0:
-			print("setting up "+str(self.times_set_up)+" times. boost move="+\
+		if set_up_turns > 0:
+			print("setting up "+str(set_up_turns)+" times. boost move="+\
 				str(self.use_swords_dance))
 			if self.use_swords_dance:
 				self.press(Button.A, wait=0.5)
 				self.press(Direction.DOWN)
-				for i in range(self.times_set_up):
+				for i in range(set_up_turns):
 					print("set up #" + str(i+1))
 					# use set up move
 					self.press(Button.A, wait=self.stream_delay)
@@ -63,14 +68,19 @@ class AutoTrainerBattle(ImageProcPythonCommand, ResetGame):
 		# now just spam until the battle is over
 		text = self.getText(top=-130, bottom=30, left=50, right=50, 
 				inverse=False, debug=False)
-		while not "defeated" in text:
+		while not ("defeated" in text or "defeat" in text):
 			self.press(Button.A)
 			text = self.getText(top=-130, bottom=30, left=50, right=50, 
 				inverse=False, debug=False)
 			print("checking text: " + str(text))
-			if "learn" in text or "forgot" in text or "old move" in text:
+			if "learn" in text or "forget" in text or "old move" in text:
 				print("learning move? exiting...")
 				self.finish()
+			if "no energy left" in text:
+				print("partner pokemon has been defeated. Choosing new pokemon.")
+				self.pressRep(Button.B, 4)
+				self.press(Direction.DOWN)
+				self.press(Button.A)
 		print("trainer has been defeated")
 
 	# wait until the battle icon shows up
@@ -83,7 +93,7 @@ class AutoTrainerBattle(ImageProcPythonCommand, ResetGame):
 			time += 1
 
 	# capture Zacian/Zamazenta with the master ball
-	def captureBattle(self, ball_position=3):
+	def captureBattle(self, ball_position=0):
 		self.waitForBattleIcon()
 		self.press(Button.X, wait=0.5)
 		self.pressRep(Direction.RIGHT, ball_position)
