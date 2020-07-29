@@ -44,7 +44,7 @@ class FindNStar(OfflineDateGlitchCommand):
 	def __init__(self, cam):
 		super().__init__(cam)
 		# reset and n are intended for finding shiny pokemon on particular frames:
-		# 1. save on n frames before our intended shiny frame
+		# 1. save on frame s-n (where s = the shiny frame)
 		# 2. advance n frames to our shiny frame
 		# 3. check if the pokemon is the right pokemon (e.g. is it G-Max Charizard?)
 		# 4. reset - taking us back n frames to try again
@@ -68,7 +68,7 @@ class FindNStar(OfflineDateGlitchCommand):
 		if reset:
 			self.resetGame(wait_for_load=True)
 		else:
-			# assume that the current raid is not the desired raid and begin by advancing the date
+			# assume that the current raid is not the desired raid and begin by advancing the frame
 			self.raidLeap()
 		while True:
 			if reset:
@@ -89,8 +89,9 @@ class FindNStar(OfflineDateGlitchCommand):
 			#check type
 			types = self.getTypes(100, 75)
 			print("types: " + str(types))
+
+			# we might've failed to enter the den in time for the stream delay
 			if (types == [] or stars > 5 or stars < 1):
-				# we probably failed to enter the den in time for the stream delay
 				# just try again
 				if reset:
 					self.resetGame(wait_for_load=True)

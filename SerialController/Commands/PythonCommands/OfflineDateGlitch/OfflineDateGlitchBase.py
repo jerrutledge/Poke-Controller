@@ -122,7 +122,7 @@ class OfflineDateGlitchCommand(ImageProcPythonCommand, ResetGame):
 
 	def enterRaidDen(self):
 		if self.isContainTemplate('raid_den_options.png'):
-			print("already in den")
+			print("OfflineDateGlitchBase.enterRaidDen: already in den")
 			return
 		# enter the raid screen
 		self.press(Button.A, duration=0.4, wait=self.stream_delay)
@@ -193,6 +193,9 @@ class OfflineDateGlitchCommand(ImageProcPythonCommand, ResetGame):
 				print("ability_text: " + ability_text)
 				if desired_ability in ability_text:
 					print("found ability: " + desired_ability)
+					# back out to the battle menu to catch
+					self.press(Button.B, wait=1)
+					self.press(Button.B, wait=1)
 					break
 				if i == 2:
 					print("could not find ability: " + desired_ability + " :(")
