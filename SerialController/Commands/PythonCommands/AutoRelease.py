@@ -3,8 +3,17 @@
 
 from Commands.PythonCommandBase import PythonCommand, ImageProcPythonCommand
 from Commands.Keys import KeyPress, Button, Direction, Stick
+import re
 
-# auto releaseing pokemons
+JUDGEMENT_STRINGS = ["No good", "Decent", "Pretty good", \
+				"Very good", "Fantastic", "Best"]
+
+# auto releasing pokemons
+# accepted IVs can be:
+# 1. an array of literal judge values (i.e. ["Best", "No Good", etc.]) 
+# 		where "*" = any value
+# 2. ["N*"] meaning any permutation of N or more "Best" values where N
+#		is a positive interger between 1 and 6
 class AutoRelease(ImageProcPythonCommand):
 	NAME = 'Release N Boxes'
 
@@ -15,11 +24,17 @@ class AutoRelease(ImageProcPythonCommand):
 		self.cam = cam
 
 		# release a number of boxes in a row
-		self.boxes = 3
+		self.boxes = 1
 		self.ocr_fails = 0
 		self.shinies = 0
-		self.accepted_ivs = [['Best', 'Best', 'Best', 'Best', 'Best', 'Best'], \
-			['Best', 'Best', 'Best', 'Best', 'Best', 'No good']]
+		self.accepted_ivs = [
+				['Best', 'Best', 'Best', 'Best', 'Best', 'Best'],
+				['Best', 'Best', 'Best', '*', 'Best', 'Best'],
+				['Best', 'Best', 'Best', 'Best', 'Best', '*'],
+				['Best', 'Best', 'Best', 'Best', 'Best', 'No good'],
+				['Best', 'No good', 'Best', 'Best', 'Best', 'Best'],
+				['5*']
+				]
 
 	def do(self):
 		if self.boxes > 1:
@@ -106,9 +121,8 @@ class AutoRelease(ImageProcPythonCommand):
 				self.press(Button.PLUS, wait=self.stream_delay)
 			# use OCR to check for perfect ivs
 			stats = []
-			judgements = ["No good", "Decent", "Pretty good", \
-				"Very good", "Fantastic", "Best"]
 			ocr_fail = True
+			ivs_are_acceptable = False
 			# there is a small chance the OCR will fail
 			# therefore we check a max three times, breaking
 			# if the format is correct
@@ -117,8 +131,8 @@ class AutoRelease(ImageProcPythonCommand):
 				stats = text.split('\n')
 				while '' in stats:
 					stats.remove('')
-				print("stats="+str(stats)+"; "+(str(stats in accepted_ivs)))
-				if len(stats) == 6 and set(stats).issubset(judgements):
+				print("stat reading="+str(stats)+"; ")
+				if len(stats) == 6 and set(stats).issubset(JUDGEMENT_STRINGS):
 					# ocr has read correct format!
 					ocr_fail = False
 					break
@@ -128,10 +142,36 @@ class AutoRelease(ImageProcPythonCommand):
 				print("OCR Fail, moving on...")
 				self.ocr_fails += 1
 			elif stats in accepted_ivs:
+				ivs_are_acceptable = False
+			else:
+				for iv_array in accepted_ivs:
+					# e.g. ["5*"]
+					if len(iv_array) == 1 and isinstance(iv_array[0], str):
+						match = re.search(r"^(\d)\*$", iv_array[0])
+						if match:
+							num_of_bests = int(match.group(1))
+							print("checking for "+str(num_of_bests)+" Bests based on string "+
+									iv_array[0] + " found: "+str(stats.count("Best")))
+							if stats.count("Best") >= num_of_bests:
+								ivs_are_acceptable = True
+								break
+					# e.g. ['Best', 'Best', 'Best', '*', 'Best', 'Best']
+					elif len(iv_array) == 6:
+						matching_array = []
+						for i in range(6):
+							if iv_array[i] == "*":
+								matching_array.append(stats[i])
+							else:
+								matching_array.append(iv_array[i])
+						if stats == matching_array:
+							ivs_are_acceptable = True
+							break
+
+			if ivs_are_acceptable:
 				# mark a perfect IV pokemon
-				perfect_iv = stats == ['Best', 'Best', 'Best', \
+				has_perfect_ivs = stats == ['Best', 'Best', 'Best',
 						'Best', 'Best', 'Best']
-				if perfect_iv:
+				if has_perfect_ivs:
 					print("Perfect IVs!")
 					self.MarkPerfect()
 			# if not shiny and non-acccpeted IVs, release
