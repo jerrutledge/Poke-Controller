@@ -53,12 +53,13 @@ class InfinityBerry(ImageProcPythonCommand):
 					if "fell from the tree" in text:
 						print('2 - Something fell: '+text)
 					if "fallen to the ground" in text:
+						print('3 - "'+text+'": check whether to continue shaking the tree...')
 						if self.isContinue():
-							print('3 - Continue shaking tree')
+							print('4 - Continue shaking tree')
 							self.press(Button.A, wait=4)
 							continue
 						else:
-							print('4 - Collect berries and advance the date')
+							print('5 - Collect berries and advance the date')
 							self.pressRep(Button.B, 10, interval=0.5)
 							break
 
