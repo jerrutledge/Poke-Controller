@@ -4,6 +4,7 @@
 from Commands.PythonCommandBase import PythonCommand, ImageProcPythonCommand
 from Commands.PythonCommands.AutoRelease import AutoRelease
 from Commands.Keys import KeyPress, Button, Direction, Stick
+from numpy import math
 
 # auto egg hatching using image recognition
 # the goal being to hatch several eggs at once
@@ -55,40 +56,24 @@ class AutoHatching(AutoRelease):
 				if self.party_num < 6:
 					print('mode: fill party ('+str(self.party_num)+'/6)')
 					self.getNewEgg()
-
+					# go to the side away from the tall grass
 					self.press(Direction.RIGHT, duration=1)
-					self.hold([Direction.RIGHT, Direction.R_LEFT])
-					# turn round and round
-					for time in range(24):
-						print('wait for ' + str(time))
-						self.wait(0.5)
-						self.hatchEgg()
-					self.holdEnd([Direction.RIGHT, Direction.R_LEFT])
-
+					self.bikeInCircles(interval_in_seconds=0.5, minimum_num_checks=20)
 				# if there's hatched pokemon in your party, 
 				# check if there's a new egg
 				elif self.hatched_num > self.hatched_box_num:
 					print('mode: add to full party - space for ' + 
 						str(self.hatched_num - self.hatched_box_num) + ' more')
 					self.getNewEgg()
+					# go to the side away from the tall grass
 					self.press(Direction.RIGHT, duration=1)
-					self.hold([Direction.RIGHT, Direction.R_LEFT])
-					for time in range(28):
-						print('wait for ' + str(time))
-						self.wait(0.3)
-						if self.hatchEgg(holdEnd=True) or time == 14:
-							self.holdEnd([Direction.RIGHT, Direction.R_LEFT])
-							break
+					self.bikeInCircles(minimum_num_checks=23, stop_on_hatch=True)
 
 				# otherwise wait until an egg hatches
 				else:
-					self.hold([Direction.RIGHT, Direction.R_LEFT])
-					time = 0
-					while not self.hatchEgg(holdEnd=True):
-						print('wait for hatch... (' + format(time, '.1f') + 's)')
-						time += 0.3
-						self.wait(0.3)
-					self.holdEnd([Direction.RIGHT, Direction.R_LEFT])
+					if not self.bikeInCircles(interval_in_seconds=0.2, 
+							minimum_num_checks=0, stop_on_hatch=True):
+						print("Big error. Please throw an error. Something should have hatched. ")
 
 			self.wait(self.stream_delay)
 			self.hatchEgg()
@@ -112,8 +97,6 @@ class AutoHatching(AutoRelease):
 
 	def getNewEgg(self):
 		self.flyToNursery()
-
-
 		self.press(Button.A, duration=0.4, wait=self.stream_delay)
 		egg_text = "Egg!"
 		screen_text = self.getText(top=-130, bottom=30, left=250, right=250)
@@ -163,6 +146,29 @@ class AutoHatching(AutoRelease):
 			return True
 		else:
 			return False
+
+	def bikeInCircles(self, interval_in_seconds = 0.3, minimum_num_checks = 0, 
+				stop_on_hatch=False):
+		total_time = interval_in_seconds * minimum_num_checks
+		# turn round and round
+		self.hold([Direction.RIGHT, Direction.R_LEFT])
+		num_checks = minimum_num_checks if minimum_num_checks > 0 else 1000
+		for time in range(num_checks):
+			real_time = time*interval_in_seconds
+			# print an update every three seconds
+			if real_time % 3 < (interval_in_seconds - 0.1):
+				if minimum_num_checks == 0:
+					print("Waiting for hatch. Time elapsed: " + '{:.1f}'.format(real_time) + "s")
+				else:
+					print('Biking in circles for ' + '{:.1f}'.format(real_time) + "s/" + 
+							'{:.1f}'.format(total_time) + "s")
+			self.wait(interval_in_seconds)
+			if (self.hatchEgg() and (stop_on_hatch or minimum_num_checks == 0)):
+				self.holdEnd([Direction.RIGHT, Direction.R_LEFT])
+				return True
+		self.holdEnd([Direction.RIGHT, Direction.R_LEFT])
+		return False
+
 
 	def flyToNursery(self):
 		self.hatchEgg()
