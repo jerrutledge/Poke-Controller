@@ -9,6 +9,7 @@ from .Keys import KeyPress, Button, Hat, Direction, Stick
 from . import CommandBase
 import pytesseract
 from pprint import pprint
+import datetime
 
 # constant, hopefully
 pokemonTypes = ["BUG", "DARK", "DRAGON", "ELECTRIC", "FAIRY", \
