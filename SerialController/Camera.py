@@ -35,16 +35,21 @@ class Camera:
 		_, self.image_bgr = self.camera.read()
 		return self.image_bgr
 
-	def saveCapture(self, top=1, bottom=1, left=1, right=1):
+	def saveCapture(self, top=1, bottom=1, left=1, right=1, custom_src=None):
 		src = self.image_bgr
+		if custom_src != None:
+			src = custom_src
 		crop = not (top==1 and bottom==1 and left==1 and right==1)
 		if crop:
 			src = src[top:-bottom, left:-right]
 
-		dt_now = datetime.datetime.now()
 		suffix = ""
 		if crop:
-			suffix = "T"+str(top)+"B"+str(bottom)+"L"+str(left)+"R"+str(right)
+			suffix += "T"+str(top)+"B"+str(bottom)+"L"+str(left)+"R"+str(right)
+		self.saveImage(src, suffix=suffix)
+	
+	def saveImage(self, src, suffix=""):
+		dt_now = datetime.datetime.now()
 		fileName = dt_now.strftime('%Y-%m-%d_%H-%M-%S')+suffix+".png"
 
 		if not os.path.exists(self.capture_dir):
@@ -53,7 +58,7 @@ class Camera:
 		save_path = os.path.join(self.capture_dir, fileName)
 		cv2.imwrite(save_path, src)
 
-		print('capture succeeded: ' + save_path)
+		print('image saved: ' + save_path)
 	
 	def destroy(self):
 		if self.camera is not None and self.camera.isOpened():
