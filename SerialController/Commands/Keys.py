@@ -238,7 +238,7 @@ class KeyPress:
 		self.format = SendFormat()
 		self.holdButton = []
 	
-	def input(self, btns):
+	def input(self, btns, print_button_press=True):
 		if not isinstance(btns, list):
 			btns = [btns]
 		
@@ -247,7 +247,8 @@ class KeyPress:
 				btns.append(btn)
 
 		# print to log
-		print(btns)
+		if print_button_press:
+			print(btns)
 
 		self.format.setButton([btn for btn in btns if type(btn) is Button])
 		self.format.setHat([btn for btn in btns if type(btn) is Hat])

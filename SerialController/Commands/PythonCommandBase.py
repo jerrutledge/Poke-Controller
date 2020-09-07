@@ -73,8 +73,8 @@ class PythonCommand(CommandBase.Command):
 		self.end(self.keys.ser)
 
 	# press button at duration times(s)
-	def press(self, buttons, duration=0.1, wait=0.1):
-		self.keys.input(buttons)
+	def press(self, buttons, duration=0.1, wait=0.1, print_button_press=True):
+		self.keys.input(buttons, print_button_press=print_button_press)
 		self.wait(duration)
 		self.keys.inputEnd(buttons)
 		self.wait(wait)
@@ -82,8 +82,14 @@ class PythonCommand(CommandBase.Command):
 
 	# press button at duration times(s) repeatedly
 	def pressRep(self, buttons, repeat, duration=0.1, interval=0.1, wait=0.1):
+		if repeat > 9:
+			print("[Start Mashing "+str(buttons)+" for "+'{:.1f}'.format(repeat*
+					(interval+duration))+"s at "+'{:.1f}'.format(1/interval)+"Hz...]")
 		for i in range(0, repeat):
-			self.press(buttons, duration, 0 if i == repeat - 1 else interval)
+			self.press(buttons, duration, 0 if i == repeat - 1 else interval, 
+					print_button_press=(repeat <= 9))
+		if repeat > 9:
+			print("[End Mashing "+str(buttons)+"]")
 		self.wait(wait)
 
 	# add hold buttons
