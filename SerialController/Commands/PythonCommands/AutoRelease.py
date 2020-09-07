@@ -129,8 +129,8 @@ class AutoRelease(ImageProcPythonCommand):
 			for k in range(3):
 				text = self.getText(135, 350, 990, 1)
 				stats = text.split('\n')
-				while '' in stats:
-					stats.remove('')
+				# remove all entries that aren't judge strings
+				stats = [x for x in stats if x in JUDGEMENT_STRINGS]
 				print("stat reading="+str(stats)+"; ")
 				if len(stats) == 6 and set(stats).issubset(JUDGEMENT_STRINGS):
 					# ocr has read correct format!
