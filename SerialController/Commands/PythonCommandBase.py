@@ -8,6 +8,7 @@ import cv2
 from .Keys import KeyPress, Button, Hat, Direction, Stick
 from . import CommandBase
 import pytesseract
+from pytesseract import Output
 from pprint import pprint
 import datetime
 
@@ -224,17 +225,23 @@ class ImageProcPythonCommand(PythonCommand):
 		# Define config parameters.
 		# '-l eng'  for using the English language
 		# '--oem 1' for using LSTM OCR Engine
+		config = ('-l eng --oem 1 --psm 3')
 		if digits:
 			config = ('-l eng digits')
-		else:
-			config = ('-l eng --oem 1 --psm 3')
 		text = pytesseract.image_to_string(src, config=config)
 
 		if debug:
+			# Run tesseract OCR on image
+			data = pytesseract.image_to_data(src, config=config, output_type=Output.DICT)
 			print("OCR Reading:")
 			print(text)
+			n_boxes = len(data['text'])
+			for i in range(n_boxes):
+				if int(data['conf'][i]) > 60:
+					(x, y, w, h) = (data['left'][i], data['top'][i], data['width'][i], data['height'][i])
+					src = cv2.rectangle(src, (x, y), (x + w, y + h), (0, 255, 0), 2)
 			if crop:
-				self.camera.saveCapture(top, bottom, left, right)
+				self.camera.saveImage(src, suffix="_rectangles")
 		return text
 
 	# Get interframe difference binarized image
