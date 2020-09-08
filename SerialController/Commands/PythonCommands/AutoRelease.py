@@ -142,7 +142,7 @@ class AutoRelease(ImageProcPythonCommand):
 				print("OCR Fail, moving on...")
 				self.ocr_fails += 1
 			elif stats in accepted_ivs:
-				ivs_are_acceptable = False
+				ivs_are_acceptable = True
 			else:
 				for iv_array in accepted_ivs:
 					# e.g. ["5*"]
