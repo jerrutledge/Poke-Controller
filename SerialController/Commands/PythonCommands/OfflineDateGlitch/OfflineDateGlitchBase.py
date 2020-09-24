@@ -91,19 +91,13 @@ class OfflineDateGlitchCommand(ImageProcPythonCommand, ResetGame):
 
 	def open_date_time_settings(self):
 		self.press(Button.HOME, wait=1)
-		self.press(Direction.DOWN)
-		self.press(Direction.RIGHT)
-		self.press(Direction.RIGHT)
-		self.press(Direction.RIGHT)
-		self.press(Direction.RIGHT)
+		self.press(Direction.DOWN, duration=0.02, wait=0.02)
+		self.pressRep(Direction.RIGHT, 4, interval=0.02, duration=0.02, wait=0.02)
 		self.press(Button.A, wait=1) # System Settings
 		self.press(Direction.DOWN, duration=2.3, wait=0.2)
 
 		self.press(Button.A, wait=0.3) # System Settings > System
-		self.press(Direction.DOWN)
-		self.press(Direction.DOWN)
-		self.press(Direction.DOWN)
-		self.press(Direction.DOWN, wait=0.3)
+		self.pressRep(Direction.DOWN, 4, interval=0.02, duration=0.02, wait=0.3)
 		self.press(Button.A, wait=0.2) # Date and Time
 		self.press(Direction.DOWN, duration=0.7, wait=0.2)
 
