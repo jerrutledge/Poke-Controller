@@ -5,6 +5,7 @@ from Commands.PythonCommandBase import PythonCommand, ImageProcPythonCommand
 from Commands.PythonCommands.AutoRelease import AutoRelease
 from Commands.Keys import KeyPress, Button, Direction, Stick
 from numpy import math
+from datetime import datetime, timedelta
 
 # auto egg hatching using image recognition
 # the goal being to hatch several eggs at once
@@ -26,6 +27,7 @@ class AutoHatching(AutoRelease):
 		self.hatched_box_num = 0
 		self.max_boxes = 18
 		self.release_boxes = True
+		self.start_time = datetime.now()
 		self.perfect_ivs = [
 				['Best', 'Best', 'Best', 'Best', 'Best', 'Best'],
 				['Best', 'Best', 'Best', 'Best', 'Best', 'No good'],
@@ -34,6 +36,11 @@ class AutoHatching(AutoRelease):
 		# self.perfect_ivs = []
 
 	def do(self):
+		self.start_time = datetime.now()
+		end_time = 0
+		shiny_num = 0
+
+		print("Starting Auto Hatch - " + str(self.start_time))
 		print("party_num: " + str(self.party_num))
 		print("hatched_num: " + str(self.hatched_num))
 		print("hatched_box_num: " + str(self.hatched_box_num))
@@ -44,13 +51,16 @@ class AutoHatching(AutoRelease):
 		self.press(Direction.DOWN, duration=0.5)
 		self.press(Button.B, wait=1)
 
-		shiny_num = 0
-
 		for i in range(0, self.max_boxes):
 			while self.hatched_box_num < 30:
-				print(' -- box#' + str(i+1) + ', hatched_box_num = ' + str(self.hatched_box_num))
-				if shiny_num > 0:
-					print('SHINY='+str(shiny_num))
+				time_elapsed = datetime.now() - self.start_time
+				print(str(time_elapsed) + ' -- box#' + str(i+1) + 
+						', hatched_box_num = ' + str(self.hatched_box_num))
+				if (shiny_num > 0 or end_time != 0):
+					shiny_phrase = ""
+					if shiny_num > 0:
+						shiny_phrase = 'SHINY='+str(shiny_num)
+					print(shiny_phrase + " -- estimated completion time: "+str(end_time))
 
 				# step one: fill up the party
 				if self.party_num < 6:
@@ -94,6 +104,13 @@ class AutoHatching(AutoRelease):
 			self.press(Button.B, wait=2)
 			self.press(Direction.DOWN, wait=0.2) # set cursor to map
 			self.press(Button.B, wait=1.5)
+
+			# calculate estimated completion time
+			time_elapsed = datetime.now() - self.start_time
+			seconds_per_box = time_elapsed.seconds / (i + 1)
+			print("pace: roughly " + str(seconds_per_box) + "seconds per box")
+			seconds_remaining = seconds_per_box * (self.max_boxes - i - 1)
+			end_time = datetime.now() + timedelta(seconds=seconds_remaining)
 
 	def getNewEgg(self):
 		self.flyToNursery()
