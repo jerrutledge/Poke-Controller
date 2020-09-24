@@ -16,7 +16,6 @@ class AutoLeague(PythonCommand):
 		self.hold(Direction(Stick.LEFT, 70))
 
 		while True:
-			for _ in range(0, 10):
-				self.press(Button.A, wait=0.5)
+			self.pressRep(Button.A, 10, wait=0.5)
 
 			self.press(Button.B)
