@@ -34,6 +34,7 @@ class UniquePokemon(AutoTrainerBattle):
 				self.autoBattle()
 			print("Mashing for "+str(self.mashing_duration/2)+" seconds")
 			self.pressRep(Button.A, self.mashing_duration, interval=0.5)
+			self.pressRep(Button.B, 4, interval=0.5)
 			print("Checking summary...")
 			self.press(Button.X, wait=1.5)
 			# (this assumes the pokemon menu is in the top left corner of the menu)

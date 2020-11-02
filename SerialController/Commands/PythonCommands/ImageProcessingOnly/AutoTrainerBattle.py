@@ -40,9 +40,9 @@ class AutoTrainerBattle(ImageProcPythonCommand, ResetGame):
 			self.pressRep(Button.A, 3)
 
 	def trainerBattle(self, set_up_turns=0):
-		self.waitForBattleIcon()
 		# if there is set up, set up
 		if set_up_turns > 0:
+			self.waitForBattleIcon()
 			print("setting up "+str(set_up_turns)+" times. boost move="+\
 				str(self.use_swords_dance))
 			if self.use_swords_dance:

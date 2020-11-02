@@ -62,6 +62,8 @@ class FindNStar(OfflineDateGlitchCommand):
 		self.debug = True
 
 	def do(self):
+		print("Find Raid combinations:")
+		print(self.combinations)
 		self.FindRaid(reset=self.reset, skip_num=self.n, combinations=self.combinations)
 
 	def FindRaid(self, reset=False, skip_num=4, combinations=[]):
@@ -87,7 +89,7 @@ class FindNStar(OfflineDateGlitchCommand):
 			print("stars: "+str(stars))
 
 			#check type
-			types = self.getTypes(100, 75)
+			types = self.getTypes(105, 75)
 			print("types: " + str(types))
 
 			# we might've failed to enter the den in time for the stream delay
@@ -101,7 +103,7 @@ class FindNStar(OfflineDateGlitchCommand):
 				if combo["types"] == types and combo["stars"] == stars:
 					# we don't need to check name and ability if we aren't resetting
 					if not reset:
-						print("Found a potential match for:" )
+						print("Found a potential match for: " + combo["name"])
 						self.press(Button.B, wait=2)
 						self.save()
 						result = self.battle(True, combo["name"],
