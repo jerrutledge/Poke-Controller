@@ -86,7 +86,7 @@ class AutoRelease(ImageProcPythonCommand):
 			# make sure we are viewing stats and not the pokemon model
 			# usually the box automatically opens to the stats unless the top left 
 			# Pokemon in the open box is an Egg?
-			text = self.getText(1, -70, 870, 1)
+			text = self.getText(20, -63, 878, 5)
 			if not ("lv." in text or "Lv." in text or "Egg" in text):
 				print('no lv. or egg in top: '+text)
 				self.press(Button.PLUS, wait=self.stream_delay)
@@ -118,6 +118,7 @@ class AutoRelease(ImageProcPythonCommand):
 			# make sure the judge view is open
 			text = self.getText(-30, 1, -300, 1)
 			if "Judge" in text:
+				print("Switching to judge view: " + text)
 				self.press(Button.PLUS, wait=self.stream_delay)
 			# use OCR to check for perfect ivs
 			stats = []
