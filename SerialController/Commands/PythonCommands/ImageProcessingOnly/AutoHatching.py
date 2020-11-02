@@ -51,7 +51,8 @@ class AutoHatching(AutoRelease):
 		self.press(Direction.DOWN, duration=0.5)
 		self.press(Button.B, wait=1)
 
-		for i in range(0, self.max_boxes):
+		i = 0
+		while i < self.max_boxes:
 			while self.hatched_box_num < 30:
 				time_elapsed = datetime.now() - self.start_time
 				print(str(time_elapsed) + ' -- box#' + str(i+1) + 
@@ -93,13 +94,19 @@ class AutoHatching(AutoRelease):
 			self.press(Direction.UP) # set cursor to party
 			self.press(Button.A, wait=2)
 			self.press(Button.R, wait=3+self.stream_delay)
+			current_shinies = shiny_num
 			if self.release_boxes:
 				shiny_num += self.ReleaseBox(accepted_ivs=self.perfect_ivs)
 			self.hatched_box_num = 0;
 			self.hatched_num -= 30;
 
+			if not (self.release_boxes and current_shinies == shiny_num and self.perfect_ivs == []):
 			# open next box
 			self.press(Button.R, wait=0.5)
+				i += 1
+			else:
+				# no pokemon were kept in the box - we can just try again
+				print("No shiny pokemon were found. Repeating box #"+str(i))
 			self.press(Button.B, wait=2)
 			self.press(Button.B, wait=2)
 			self.press(Direction.DOWN, wait=0.2) # set cursor to map
