@@ -89,6 +89,8 @@ class PythonCommand(CommandBase.Command):
 		for i in range(0, repeat):
 			self.press(buttons, duration, 0 if i == repeat - 1 else interval, 
 					print_button_press=(repeat <= 9))
+			if repeat > 30 and i % 10 == 0:
+				print("[Mashing "+str(buttons)+" ("+str(i)+"/"+str(repeat)+" reps)...]")
 		if repeat > 9:
 			print("[End Mashing "+str(buttons)+"]")
 		self.wait(wait)
