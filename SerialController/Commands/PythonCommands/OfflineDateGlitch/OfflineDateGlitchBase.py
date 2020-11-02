@@ -90,16 +90,16 @@ class OfflineDateGlitchCommand(ImageProcPythonCommand, ResetGame):
 		self.press(Button.HOME, wait=1)
 
 	def open_date_time_settings(self):
-		self.press(Button.HOME, wait=1)
-		self.press(Direction.DOWN, duration=0.02, wait=0.02)
-		self.pressRep(Direction.RIGHT, 4, interval=0.02, duration=0.02, wait=0.02)
+		self.press(Button.HOME, wait=1.2)
+		self.press(Direction.DOWN, duration=0.05, wait=0.05)
+		self.pressRep(Direction.RIGHT, 4, interval=0.05, duration=0.05, wait=0.05)
 		self.press(Button.A, wait=1) # System Settings
-		self.press(Direction.DOWN, duration=2.3, wait=0.2)
+		self.press(Direction.DOWN, duration=2.2, wait=0.05)
 
-		self.press(Button.A, wait=0.3) # System Settings > System
-		self.pressRep(Direction.DOWN, 4, interval=0.02, duration=0.02, wait=0.3)
+		self.press(Button.A, wait=0.2) # System Settings > System
+		self.pressRep(Direction.DOWN, 4, interval=0.05, duration=0.05, wait=0.3)
 		self.press(Button.A, wait=0.2) # Date and Time
-		self.press(Direction.DOWN, duration=0.7, wait=0.2)
+		self.press(Direction.DOWN, duration=0.7, wait=0.1)
 
 	def change_time_value(self, value):
 		if value < 0:
@@ -115,7 +115,9 @@ class OfflineDateGlitchCommand(ImageProcPythonCommand, ResetGame):
 		self.press(Button.A, wait=4)
 
 	def enterRaidDen(self):
-		if self.isContainTemplate('raid_den_options.png'):
+		text = self.getText()
+		print("den text 1=\""+text.replace("\n", " ")+"\"")
+		if "Invite Others" in text:
 			print("OfflineDateGlitchBase.enterRaidDen: already in den")
 			return
 		# enter the raid screen
@@ -124,9 +126,11 @@ class OfflineDateGlitchCommand(ImageProcPythonCommand, ResetGame):
 		# 1. "energy flowing out of the den"
 		# 2. inside the first screen of the den
 		print("in raid den yet?")
-		if not self.isContainTemplate('raid_den_options.png'):
+		text = self.getText()
+		print("den text 2=\""+text.replace("\n", " ")+"\"")
+		if not ("Invite" in text and "Others" in text):
 			print("not in raid den. entering")
-			self.press(Button.A, duration=0.4, wait=0.1) # 2000W
+			self.press(Button.A, duration=0.35, wait=0.05) # 2000W
 			self.press(Button.A, wait=1)
 
 	def raidLeap(self):
@@ -162,7 +166,7 @@ class OfflineDateGlitchCommand(ImageProcPythonCommand, ResetGame):
 		if check_pokemon:
 			found = False
 			print("get top text:")
-			for i in range(1, 40):
+			for i in range(1, 30):
 				print("getting text, attempt #"+str(i))
 				screen_text = self.getText(inverse=True, debug=True)
 				if desired_pokemon in screen_text:
