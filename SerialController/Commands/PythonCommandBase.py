@@ -282,22 +282,25 @@ class ImageProcPythonCommand(PythonCommand):
 
 	# this function takes in a set of coordinates on the screen to OCR for types
 	# and returns a list of the two types e.g. ["NORMAL", "FLYING"] or ["WATER", "None"]
-	def getTypes(self, top=1, left=1):
+	def getTypes(self, top=1, left=1, debug=False):
 		first_type = "None"
 		# there must be a first type
-		for _ in range(4):
-			first_type = self.getText(top, -(top+40), left, -(left+105), inverse=True)
-			if first_type in pokemonTypes:
-				break
+		for i in range(4):
+			first_type = self.getText(top, -(top+40), left, -(left+106), inverse=True, threshold=220, debug=debug)
 			for current_type in pokemonTypes:
 				if current_type in first_type:
 					first_type = current_type
 					break
+			if first_type in pokemonTypes:
+				break
+			if debug:
+				print("first_type=" + first_type + ((" (try#"+str(i)+")") if i > 0 else ""))
 		if first_type not in pokemonTypes:
 			print("ERROR: could not find first type. text="+str(first_type))
 			return []
-
-		second_type = self.getText(top, -(top+40), left+142, -(left+255), inverse=True)
+		second_type = self.getText(top, -(top+40), left+142, -(left+255), inverse=True, threshold=220, debug=debug)
+		if debug:
+			print("second_type=" + second_type)
 		for current_type in pokemonTypes:
 			if current_type in second_type:
 				second_type = current_type
