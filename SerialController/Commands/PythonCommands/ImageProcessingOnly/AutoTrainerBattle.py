@@ -112,3 +112,91 @@ class AutoTrainerBattle(ImageProcPythonCommand, ResetGame):
 		self.press(Button.A, wait=4)
 		self.pressRep(Button.A, 2, interval=0.5, wait=1)
 		self.pressRep(Direction.DOWN, 2)
+	
+	# determine the best attacking move - returns a number from 1 to 4.
+	def bestAttack(self):
+		attack_text = []
+		attack_text.append(self.getText(top=437, bottom=225, left=920, right=152))
+		attack_text.append(self.getText(508, 159, 920, 152))
+		attack_text.append(self.getText(574, 88, 920, 152))
+		attack_text.append(self.getText(645, 22, 920, 152))
+
+		# if we are already dynamaxed, move text appears in white
+		# OCR processing must invert the image to get a proper reading
+		if ("Max" in attack_text[0] or "Max" in attack_text[1] or 
+				"Max" in attack_text[2] or "Max" in attack_text[3]):
+			attack_text.clear()
+			attack_text.append(self.getText(437, 225, 920, 152, inverse=True))
+			attack_text.append(self.getText(508, 159, 920, 152, inverse=True))
+			attack_text.append(self.getText(574, 88, 920, 152, inverse=True))
+			attack_text.append(self.getText(645, 22, 920, 152, inverse=True))
+
+		pp_text = []
+		pp_text.append(self.getText(top=437, bottom=225, left=1155, right=25, inverse=True))
+		pp_text.append(self.getText(508, 159, 1155, 25, inverse=True))
+		pp_text.append(self.getText(574, 88, 1155, 25, inverse=True))
+		pp_text.append(self.getText(645, 22, 1155, 25, inverse=True))
+
+		attacks = []
+		for i in range(4):
+			effectiveness = 0
+			status = False
+			name = " ".join(attack_text[i].split())
+			try:
+				cur_pp = int(pp_text[i].split("/")[0])
+				max_pp = int(pp_text[i].split("/")[1])
+			except ValueError:
+				print("ValueError: couldn't determine PP for "+name)
+				cur_pp = 0
+				max_pp = 0
+			if max_pp == 0:
+				print("trying to read PP value again:")
+				pp_text = []
+				pp_text.append(self.getText(437, 225, 1155, 25, inverse=True, debug=True))
+				pp_text.append(self.getText(508, 159, 1155, 25, inverse=True, debug=True))
+				pp_text.append(self.getText(574, 88, 1155, 25, inverse=True, debug=True))
+				pp_text.append(self.getText(645, 22, 1155, 25, inverse=True, debug=True))
+				try:
+					cur_pp = int(pp_text[i].split("/")[0])
+					max_pp = int(pp_text[i].split("/")[1])
+				except ValueError:
+					print("still no OCR success, continuing...")
+					cur_pp = 0
+					max_pp = 0
+			if cur_pp == 0:
+				effectiveness = -1 # no pp - never select this move
+			elif ("Super effective" in attack_text[i] or \
+					("Super e" in attack_text[i]) or \
+					("Super" in attack_text[i] and "Max" in attack_text[i])):
+				effectiveness = 3
+			elif ("Not very effective" in attack_text[i]):
+				effectiveness = 1
+			elif ("Effective" in attack_text[i]):
+				effectiveness = 2
+			elif ("No effect" in attack_text[i]):
+				effectiveness = -1 # move has no effect - never select this move
+			else:
+				# sometimes, pokemon have less than 4 moves
+				# if the OCR doesn't see a long enough string, it's not a move
+				if len("".join(attack_text[i].strip())) <= 3:
+					effectiveness = -2
+				else:
+					# this is probably a status move
+					status = True
+			attacks.append({
+				"name": name,
+				"move_number": i,
+				"effectiveness": effectiveness,
+				"status_move": status,
+				"pp_left": cur_pp,
+				"max_pp": max_pp,
+			})
+
+		attacks.sort(key=lambda attack: attack["effectiveness"], reverse=True)
+
+		best_attack = attacks[0]
+
+		return best_attack, attacks
+		
+
+

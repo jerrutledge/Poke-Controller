@@ -8,7 +8,7 @@ from pprint import pprint
 capture_size = (1280, 720)
 digits = False
 
-crop_top, crop_bottom, crop_left, crop_right = 300, 130, 730, 200
+crop_top, crop_bottom, crop_left, crop_right = 437, 225, 1155, 25
 
 cap = cv2.VideoCapture(0)
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, capture_size[0])
@@ -20,11 +20,13 @@ while(True):
 
 	# Our operations on the frame come here
 	bw = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+	# bw = cv2.bitwise_not(bw)
 	# pprint(bw)
 	# [top:bottom, left:right]
 	bw = bw[crop_top:-crop_bottom, crop_left:-crop_right]
 	# bw = cv2.threshold(bw, 0, 2, cv2.THRESH_OTSU)[1] # for text boxes
 	# bw = cv2.threshold(bw, 200, 255, cv2.THRESH_TOZERO)[1] # for item menu
+	# bw = cv2.threshold(bw, 200, 255, cv2.THRESH_TOZERO)[1] # for moves
 	# bw = cv2.threshold(bw, 200, 255, cv2.THRESH_TOZERO)[1] # for raw binary
 	bw = cv2.bitwise_not(bw)
 
