@@ -97,16 +97,16 @@ class AutoHatching(AutoRelease):
 			current_shinies = shiny_num
 			if self.release_boxes:
 				shiny_num += self.ReleaseBox(accepted_ivs=self.perfect_ivs)
-			self.hatched_box_num = 0;
-			self.hatched_num -= 30;
+			self.hatched_box_num = 0
+			self.hatched_num -= 30
 
-			if not (self.release_boxes and current_shinies == shiny_num and self.perfect_ivs == []):
-			# open next box
-			self.press(Button.R, wait=0.5)
-				i += 1
-			else:
+			if (self.release_boxes and current_shinies == shiny_num and self.perfect_ivs == []):
 				# no pokemon were kept in the box - we can just try again
 				print("No shiny pokemon were found. Repeating box #"+str(i))
+			else:
+				# open next box
+				self.press(Button.R, wait=0.5)
+				i = i + 1
 			self.press(Button.B, wait=2)
 			self.press(Button.B, wait=2)
 			self.press(Direction.DOWN, wait=0.2) # set cursor to map
@@ -250,3 +250,4 @@ class AutoHatching(AutoRelease):
 			self.wait(self.stream_delay)
 			text = self.getText()
 		print("Battle screen cleared...")
+		return
