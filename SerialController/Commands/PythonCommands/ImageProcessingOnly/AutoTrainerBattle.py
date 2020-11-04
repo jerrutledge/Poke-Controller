@@ -37,6 +37,11 @@ class AutoTrainerBattle(ImageProcPythonCommand, ResetGame):
 			if "wants to learn" in text or "to forget" in text or "old move" in text:
 				print("learning move? text="+text)
 				self.finish()
+			if "Please select a Battle" in text or "Would you like to choose" in text:
+				for _ in range(3):
+					self.pressRep(Button.A, 2)
+					self.press(Direction.DOWN)
+				self.press(Button.A)
 			self.pressRep(Button.A, 3)
 
 	def trainerBattle(self, set_up_turns=0):
