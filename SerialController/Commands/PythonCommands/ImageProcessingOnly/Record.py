@@ -5,7 +5,7 @@ from Commands.PythonCommandBase import PythonCommand, ImageProcPythonCommand
 from Commands.Keys import KeyPress, Button, Direction, Stick
 
 class PokeScan(ImageProcPythonCommand):
-	NAME = 'PokeScan'
+	# NAME = 'PokeScan'
 
 	def __init__(self, cam):
 		super().__init__(cam)
