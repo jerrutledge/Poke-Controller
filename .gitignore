@@ -9,7 +9,6 @@
 *.sym
 *.eep
 *.exe
-*.json
 LUFA/
 SerialController/Captures/
 SerialController/settings.poke
@@ -119,3 +118,5 @@ venv.bak/
 # mypy
 .mypy_cache/
 Poke-Controller.code-workspace
+settings.json
+.vscode/launch.json
