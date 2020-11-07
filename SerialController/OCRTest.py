@@ -8,7 +8,8 @@ from pprint import pprint
 capture_size = (1280, 720)
 digits = False
 
-crop_top, crop_bottom, crop_left, crop_right = 437, 225, 1155, 25
+crop_top, crop_bottom, crop_left, crop_right = 447, 235, 1155, 25
+pad_top, pad_bottom, pad_left, pad_right = 0, 0, 0, 0
 
 cap = cv2.VideoCapture(0)
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, capture_size[0])
@@ -29,6 +30,9 @@ while(True):
 	# bw = cv2.threshold(bw, 200, 255, cv2.THRESH_TOZERO)[1] # for moves
 	# bw = cv2.threshold(bw, 200, 255, cv2.THRESH_TOZERO)[1] # for raw binary
 	bw = cv2.bitwise_not(bw)
+	# print(bw[-1, 0])
+	# bw = cv2.copyMakeBorder(bw, pad_top, pad_bottom, pad_left, 
+	# 		pad_right, cv2.BORDER_CONSTANT,value= int(bw[0,-1]))
 
 	# Output OCR of frame
 	# Define config parameters.

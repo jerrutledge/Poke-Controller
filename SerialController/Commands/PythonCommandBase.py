@@ -210,17 +210,23 @@ class ImageProcPythonCommand(PythonCommand):
 	# read text (from the specified part of the screen)
 	# debug = True will print the text and save a screenshot
 	def getText(self, top=1, bottom=1, left=1, right=1, digits=False, 
-			inverse=False, threshold = 0, debug=False):
+			inverse=False, threshold = 0, debug=False, pad_top=0, 
+			pad_bottom=0, pad_left=0, pad_right=0):
 		frame = self.camera.readFrame()
 		# gray and apply crop/threshold/inverse
 		src = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 		crop = not (left==1 and top==1 and right==1 and bottom==1)
+		padding = not (pad_left==1 and pad_top==1 and 
+				pad_right==1 and pad_bottom==1)
 		if crop:
 			src = src[top:-bottom, left:-right]
 		if inverse:
 			src = cv2.bitwise_not(src)
 		if threshold > 1:
 			src = cv2.threshold(src, threshold, 255, cv2.THRESH_OTSU)[1]
+		if padding:
+			src = cv2.copyMakeBorder(src, pad_top, pad_bottom, pad_left, 
+					pad_right, cv2.BORDER_CONSTANT, src[-1,0])
 
 
 		# Output OCR of selected area
