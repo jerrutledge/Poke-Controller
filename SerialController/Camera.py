@@ -35,7 +35,7 @@ class Camera:
 		_, self.image_bgr = self.camera.read()
 		return self.image_bgr
 
-	def saveCapture(self, top=1, bottom=1, left=1, right=1, custom_src=None):
+	def saveCapture(self, top=1, bottom=1, left=1, right=1, custom_src=None, suffix=""):
 		src = self.image_bgr
 		if custom_src != None:
 			src = custom_src
@@ -43,10 +43,10 @@ class Camera:
 		if crop:
 			src = src[top:-bottom, left:-right]
 
-		suffix = ""
+		full_suffix = suffix
 		if crop:
-			suffix += "T"+str(top)+"B"+str(bottom)+"L"+str(left)+"R"+str(right)
-		self.saveImage(src, suffix=suffix)
+			full_suffix = "T"+str(top)+"B"+str(bottom)+"L"+str(left)+"R"+str(right) + suffix
+		self.saveImage(src, suffix=full_suffix)
 	
 	def saveImage(self, src, suffix=""):
 		dt_now = datetime.datetime.now()
