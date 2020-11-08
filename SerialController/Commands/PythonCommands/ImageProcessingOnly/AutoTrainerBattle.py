@@ -245,10 +245,11 @@ class AutoTrainerBattle(ImageProcPythonCommand, ResetGame):
 					# this is probably a status move
 					status = True
 			# multiply the effectiveness of the move by what we know about game state
-			if turn == 1 and (not (dynamax or dynamaxed)) and cur_move and cur_move["oneUse"]:
-				effectiveness = 50000
-			elif turn != 1 and cur_move and cur_move["oneUse"]:
-				effectiveness = 0
+			if (not (dynamax or dynamaxed)) and cur_move and cur_move["oneUse"]:
+				if turn == 1:
+					effectiveness = 50000
+				else:
+					effectiveness = 0
 			elif cur_move and effectiveness > 0:
 				# apply STAB
 				if givenPokemon and cur_move["moveType"] in givenPokemon["types"]:
