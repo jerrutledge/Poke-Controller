@@ -93,10 +93,10 @@ class AutoDynamaxAdventure(AutoTrainerBattle):
 			for i in range(4):
 				self.wait(self.stream_delay)
 				poke_name = self.getText(30, -80, 765, -940, inverse=True)
-				poke_name = " ".join(poke_name.strip())
+				poke_name = " ".join(poke_name.split())
 				if poke_name not in catches:
 					catches.append(poke_name)
-					self.camera.saveCapture(suffix=" ("+str(i)+")")
+					self.camera.saveCapture(suffix=" "+poke_name+" ("+str(i)+")")
 					if (self.isContainTemplate("shiny_mark.png")):
 						print("SHINY!!! Pokemon #" + str(i+1))
 						shinies.append(i)
@@ -268,6 +268,7 @@ class AutoDynamaxAdventure(AutoTrainerBattle):
 					if temp_old_val < temp_new_val:
 						print("Accepting new Pokémon (Value: "+str(temp_new_val)+" > "
 								+str(temp_old_val)+")")
+						change_pokemon = True
 						self.press(Button.A)
 					else:
 						print("Rejecting new Pokémon (Value: "+str(temp_new_val)+" < "
@@ -281,6 +282,7 @@ class AutoDynamaxAdventure(AutoTrainerBattle):
 					self.currentPokemon = self.next_pokemon
 					if (self.currentPokemon is not None):
 						self.initializeCurrentPokemon()
+						print("new pokemon " + self.currentPokemon["name"])
 				self.next_pokemon = None
 				self.wait(6)
 			else:
