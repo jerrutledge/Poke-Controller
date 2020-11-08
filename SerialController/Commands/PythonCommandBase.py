@@ -216,8 +216,8 @@ class ImageProcPythonCommand(PythonCommand):
 		# gray and apply crop/threshold/inverse
 		src = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 		crop = not (left==1 and top==1 and right==1 and bottom==1)
-		padding = not (pad_left==1 and pad_top==1 and 
-				pad_right==1 and pad_bottom==1)
+		padding = not (pad_left==0 and pad_top==0 and 
+				pad_right==0 and pad_bottom==0)
 		if crop:
 			src = src[top:-bottom, left:-right]
 		if inverse:
