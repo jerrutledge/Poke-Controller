@@ -218,7 +218,7 @@ class AutoDynamaxAdventure(AutoTrainerBattle):
 				self.pressRep(Button.A, 6, interval=0.3)
 				# update our lowest pp number
 				self.lowest_pp = min(best_attack["PP"] - 1, self.lowest_pp)
-				if self.currentPokemon:
+				if self.currentPokemon and self.currentPokemon["moves"]:
 					self.currentPokemon["moves"][best_attack["move_number"]]["PP"] -= 1
 				if self.turn_num:
 					self.turn_num += 1

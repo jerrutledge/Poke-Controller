@@ -189,7 +189,7 @@ class AutoTrainerBattle(ImageProcPythonCommand, ResetGame):
 			cur_pp = 0
 			name = " ".join(attack_text[i].split())
 			cur_move = None
-			if givenPokemon:
+			if givenPokemon and givenPokemon["moves"]:
 				cur_move = givenPokemon["moves"][i]
 			else:
 				for move in self.pokemonMoves:
@@ -203,9 +203,7 @@ class AutoTrainerBattle(ImageProcPythonCommand, ResetGame):
 			else:
 				print("Couldn't identify move '" + name + "'")
 			# determine pp value
-			if cur_move and "PP" in cur_move:
-				cur_pp = cur_move["PP"]
-			else:
+			cur_pp = -1
 				for j in range(3):
 					pp_text = self.getText(tb[i]["top"]+6, tb[i]["bottom"]+6, 
 							pp_lr[0], pp_lr[1], inverse=True)
@@ -216,7 +214,7 @@ class AutoTrainerBattle(ImageProcPythonCommand, ResetGame):
 						print(str(e) + ": "+name+" PP unknown")
 						cur_pp = -1
 					if cur_pp == -1:
-						print("OCR Fail. PP ="+pp_text+"")
+					print("OCR Fail. PP = "+pp_text+"")
 					else:
 						break
 				if cur_move:
