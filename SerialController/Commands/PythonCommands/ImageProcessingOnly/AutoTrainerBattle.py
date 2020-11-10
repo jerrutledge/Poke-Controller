@@ -204,21 +204,21 @@ class AutoTrainerBattle(ImageProcPythonCommand, ResetGame):
 				print("Couldn't identify move '" + name + "'")
 			# determine pp value
 			cur_pp = -1
-				for j in range(3):
-					pp_text = self.getText(tb[i]["top"]+6, tb[i]["bottom"]+6, 
-							pp_lr[0], pp_lr[1], inverse=True)
-					pp_text = "".join(pp_text.split())
-					try:
-						cur_pp = int(pp_text.split("/")[0])
-					except (ValueError, IndexError) as e:
-						print(str(e) + ": "+name+" PP unknown")
-						cur_pp = -1
-					if cur_pp == -1:
+			for j in range(3):
+				pp_text = self.getText(tb[i]["top"]+6, tb[i]["bottom"]+6, 
+						pp_lr[0], pp_lr[1], inverse=True)
+				pp_text = "".join(pp_text.split())
+				try:
+					cur_pp = int(pp_text.split("/")[0])
+				except (ValueError, IndexError) as e:
+					print(str(e) + ": "+name+" PP unknown")
+					cur_pp = -1
+				if cur_pp == -1:
 					print("OCR Fail. PP = "+pp_text+"")
-					else:
-						break
-				if cur_move:
-					cur_move["PP"] = cur_pp
+				else:
+					break
+			if cur_move:
+				cur_move["PP"] = cur_pp
 			# determine through OCR whether the move is super effective or not
 			if cur_pp <= 0:
 				effectiveness = -1 # no pp - never select this move
@@ -258,7 +258,7 @@ class AutoTrainerBattle(ImageProcPythonCommand, ResetGame):
 						effectiveness *= givenPokemon["stats"][1]
 					if cur_move["moveCategory"] == "Special":
 						effectiveness *= givenPokemon["stats"][3]
-				# finally is it a max move
+				# Is it a max move
 				if dynamax or dynamaxed:
 					effectiveness *= int(cur_move["maxMovePower"])
 					cur_move["effectiveness"] = int(effectiveness)
@@ -266,6 +266,9 @@ class AutoTrainerBattle(ImageProcPythonCommand, ResetGame):
 					accuracy = min(cur_move["accuracy"], 100) / 100
 					accuracy = accuracy * cur_move["averageEffectiveness"]
 					effectiveness *= cur_move["power"] * accuracy / cur_move["turnsTaken"]
+				# if there are two moves of equal power, we slightly prefer the one with more pp
+				if cur_pp < 5:
+					effectiveness -= 5 - cur_pp
 			# append what we know about the move to our array
 			if cur_move:
 				cur_move["effectiveness"] = effectiveness
