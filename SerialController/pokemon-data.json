@@ -5056,21 +5056,12 @@
 		"name": "Ditto",
 		"ability": "Imposter",
 		"types": [
-			"NORMAL",
+			"None",
 			"None"
 		],
-		"moves": [
-			{
-				"name": "Transform",
-				"status": true,
-				"types": [
-					"NORMAL",
-					"None"
-				]
-			}
-		],
+		"moves": [],
 		"BST": 300,
-		"stats": [],
+		"stats": [50, 50, 50, 50, 50, 50],
 		"defensiveAdvantages": [],
 		"offensiveAdvantages": [],
 		"value": 600
