@@ -24,6 +24,7 @@ class AutoDynamaxAdventure(AutoTrainerBattle):
 		self.next_pokemon = ""
 		self.pokemonData = None
 		self.currentPokemon = None
+		self.catchTopPokemon = True
 
 		with open('pokemon-data.json') as poke_data:
 			self.pokemonData = json.load(poke_data)
@@ -41,8 +42,12 @@ class AutoDynamaxAdventure(AutoTrainerBattle):
 
 			# yes, I'd like to go on an adventure
 			self.pressRep(Button.A, 3, duration=0.5, interval=0.3, wait=0.5)
-			# no, I'm not looking for a particular pokemon
-			self.pressRep(Button.B, 3, duration=0.5, interval=0.3, wait=0.5)
+			if self.catchTopPokemon:
+				# yes, I'm looking for a particular pokemon
+				self.pressRep(Button.A, 3, duration=0.5, interval=0.3, wait=0.5)
+			else:
+				# no, I'm not looking for a particular pokemon
+				self.pressRep(Button.B, 3, duration=0.5, interval=0.3, wait=0.5)
 			# yes, I'd like to save the game
 			self.pressRep(Button.A, 3, duration=0.5, interval=0.3, wait=2.4)
 			# no, I don't want to invite anyone
@@ -104,23 +109,28 @@ class AutoDynamaxAdventure(AutoTrainerBattle):
 				else:
 					break
 			# exit from pokemon summary
-			self.press(Button.B, wait=2.3)
+			self.press(Button.B, wait=2.5)
 			print("Options: "+str(catches))
 			if len(shinies) > 1:
 				print("wow 2+ shinies!!! Gotta stop")
 				break
 			elif len(shinies) > 0:
 				print("found a shiny in slot " + str(shinies[0] + 1))
-				self.press(Direction.UP, duration=1)
-				self.pressRep(Direction.DOWN, shinies[0])
-				self.pressRep(Button.A, 5)
+				self.press(Direction.UP, duration=2, wait=0.2)
+				self.pressRep(Direction.DOWN, shinies[0], interval=0.2)
+				self.pressRep(Button.A, 6, interval=0.3)
 			else:
 				print("Not selecting any Pokemon...")
 				self.press(Button.B, duration=0.9, wait=0.5)
 				self.press(Button.A)
-			self.pressRep(Button.B, 4, interval=0.5)
+			self.pressRep(Button.B, 2, duration = 0.5, interval=0.5)
 			self.press(Button.A)
-			self.pressRep(Button.B, 30, interval=0.4)
+			if self.catchTopPokemon:
+				self.press(Button.B)
+				self.pressRep(Button.A, 10, duration=0.5, interval=0.5)
+				self.pressRep(Button.B, 10, duration=0.5, interval=0.5)
+			else:
+				self.pressRep(Button.B, 30, interval=0.4)
 	
 	def maxAdventureCycle(self):
 		for _ in range(10000):
