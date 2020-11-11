@@ -35,10 +35,11 @@ class AutoDynamaxAdventure(AutoTrainerBattle):
 			self.current_hp = 0
 			self.max_hp = 0
 			self.lowest_pp = 30
-			self.boss_type = 'None'
 			self.turn_num = 0
 			self.next_pokemon = None
 			self.currentPokemon = None
+			if not self.catchTopPokemon:
+				self.boss_type = 'None'
 
 			# yes, I'd like to go on an adventure
 			self.pressRep(Button.A, 3, duration=0.5, interval=0.3, wait=0.5)
@@ -69,7 +70,16 @@ class AutoDynamaxAdventure(AutoTrainerBattle):
 				print(pokemon_abilities)
 				for pokemon in pokemon_options:
 					if pokemon in self.pokemonData:
-						values.append(self.pokemonData[pokemon]["value"])
+						if pokemon + " (2)" in self.pokemonData:
+							i = pokemon_options.index(pokemon)
+							ability = self.pokemonData[pokemon]["ability"]
+							if ability != pokemon_abilities[i]:
+								name = pokemon + " (2)"
+								v = self.pokemonRate(self.pokemonData[name])
+								values.append(v)
+								continue
+						v = self.pokemonRate(self.pokemonData[pokemon])
+						values.append(v)
 					else:
 						print("couldn't find "+pokemon)
 						values.append(0)
@@ -157,7 +167,7 @@ class AutoDynamaxAdventure(AutoTrainerBattle):
 			
 			# update the game state via text
 			boss_text_regex = re.search("There’s a strong (.*)-type reaction", text)
-			next_pokemon_regex = re.search("^(.*) is weak! Throw a Poké Ball now!", text)
+			next_pokemon_regex = re.search("^([A-Za-z \-.]*) is weak! Throw a Pok", text)
 			cur_pokemon_regex = re.search("Go! (.*)!", text)
 			if boss_text_regex is not None:
 				if boss_text_regex.group(1).upper() in pokemonTypes:
@@ -168,7 +178,7 @@ class AutoDynamaxAdventure(AutoTrainerBattle):
 				else:
 					print("Boss type? No...")
 			elif next_pokemon_regex is not None:
-				next_pokemon_text = next_pokemon_regex.group(1)
+				next_pokemon_text = next_pokemon_regex.group(1).strip(" ")
 				print("TEXT next pokemon: "+text)
 				if next_pokemon_text in self.pokemonData:
 					self.next_pokemon = self.pokemonData[next_pokemon_text]
@@ -208,8 +218,8 @@ class AutoDynamaxAdventure(AutoTrainerBattle):
 				print("Battle Icon - selecting move")
 				self.press(Button.A, wait=0.2)
 				# center the cursor on the first move
-				self.press(Direction.RIGHT, duration=1) # deselect dynamax
-				self.press(Direction.UP, duration=1)
+				self.press(Direction.RIGHT, duration=0.8) # deselect dynamax
+				self.hold(Direction.UP)
 				# determine the best move via OCR
 				if self.currentPokemon is not None:
 					# if we know them, provide attacks
@@ -217,25 +227,24 @@ class AutoDynamaxAdventure(AutoTrainerBattle):
 							givenPokemon=self.currentPokemon, turn=self.turn_num)
 				else:
 					best_attack, attacks, dynamax = self.bestAttack(turn=self.turn_num)
+				self.holdEnd(Direction.UP)
+				self.wait(0.06) # we have to wait for the hold end to be written
 				print("Choose move#" + str(best_attack["move_number"] + 1) + ": " + best_attack["moveName"])
 				# move up from the bottom in case there are less than 4 moves
 				self.pressRep(Direction.UP, (4 - best_attack["move_number"]) % 4)
 				if dynamax:
 					self.press(Direction.LEFT)
-				self.pressRep(Button.A, 6, interval=0.3)
+				self.pressRep(Button.A, 5, interval=0.2)
 				# in case we are targeting ourselves for some reason
 				self.press(Direction.UP)
-				self.pressRep(Button.A, 6, interval=0.3)
+				self.pressRep(Button.A, 5, interval=0.2)
+				self.press(Direction.RIGHT)
+				self.pressRep(Button.A, 5, interval=0.2)
 				# update our lowest pp number
 				self.lowest_pp = min(best_attack["PP"] - 1, self.lowest_pp)
-				if self.currentPokemon and self.currentPokemon["moves"]:
-					self.currentPokemon["moves"][best_attack["move_number"]]["PP"] -= 1
 				if self.turn_num:
 					self.turn_num += 1
 				self.wait(4)
-			elif "Caught" in text:
-				print("Final screen TEXT: " + text)
-				break
 			elif "hold one item" in text:
 				print("Item offered! Choosing item")
 				self.pressRep(Button.A, 10, interval=0.5)
@@ -246,45 +255,21 @@ class AutoDynamaxAdventure(AutoTrainerBattle):
 					"One Trainer can choose to put the Pokémon" in text:
 				print("New Pokémon offer! TEXT:" + text)
 				change_pokemon = False
+				temp_old_val = 100
+				temp_new_val = 100
 				if self.next_pokemon is None or self.currentPokemon is None:
 					# if there is an OCR fail or otherwise the pokemon is unknown
-					if self.current_hp < self.max_hp/2 or self.lowest_pp < 3:
-						print("Accepting new Pokémon (HP: "+str(self.current_hp)+"/"
-								+str(self.max_hp)+"; PP: "+str(self.lowest_pp)+")")
-						change_pokemon = True
-						self.press(Button.A)
-					else:
-						print("Rejecting new Pokémon (HP: "+str(self.current_hp)+"/"
-								+str(self.max_hp)+"; PP: "+str(self.lowest_pp)+")")
-						self.press(Button.B)
+					temp_old_val = self.pokemonRate(rateHP=True)
+					temp_new_val = self.pokemonRate(rateHP=False)
 				else:
 					print(self.currentPokemon)
 					print(self.next_pokemon)
 					# do math to see whether the new pokemon should be taken
-					hp_modifier = math.floor((1 + (self.current_hp / self.max_hp)) / 2)
-					temp_old_val = self.currentPokemon["value"] * hp_modifier
-					if self.lowest_pp < 3:
-						temp_old_val = min(temp_old_val * 0.5, 400)
-					temp_new_val = self.next_pokemon["value"]
-					if self.boss_type:
-						if self.boss_type in self.next_pokemon["offensiveAdvantages"]:
-							temp_new_val = temp_new_val + 100
-						if self.boss_type in self.next_pokemon["defensiveAdvantages"]:
-							temp_new_val = temp_new_val + 120
-						if self.boss_type in self.currentPokemon["offensiveAdvantages"]:
-							temp_old_val = temp_old_val + 100
-						if self.boss_type in self.currentPokemon["defensiveAdvantages"]:
-							temp_old_val = temp_old_val + 120
-					if temp_old_val < temp_new_val:
-						print("Accepting new Pokémon (Value: "+str(temp_new_val)+" > "
-								+str(temp_old_val)+")")
-						change_pokemon = True
-						self.press(Button.A)
-					else:
-						print("Rejecting new Pokémon (Value: "+str(temp_new_val)+" < "
-								+str(temp_old_val)+")")
-						self.press(Button.B)
-				if change_pokemon:
+					temp_old_val = self.pokemonRate(self.currentPokemon, rateHP=True)
+					temp_new_val = self.pokemonRate(self.next_pokemon, rateHP=False)
+				if temp_old_val < temp_new_val:
+					print("Accepting new Pokémon (Value: "+str(temp_new_val)+" > "
+							+str(temp_old_val)+")")
 					self.press(Button.A)
 					self.current_hp = 100
 					self.max_hp = 100
@@ -293,8 +278,15 @@ class AutoDynamaxAdventure(AutoTrainerBattle):
 					if (self.currentPokemon is not None):
 						self.initializeCurrentPokemon()
 						print("new pokemon " + self.currentPokemon["name"])
+				else:
+					print("Rejecting new Pokémon (Value: "+str(temp_new_val)+" < "
+							+str(temp_old_val)+")")
+					self.press(Button.B)
 				self.next_pokemon = None
 				self.wait(6)
+			elif "Caught" in text or " @ confim @ quit" in text:
+				print("Final screen TEXT: " + text)
+				break
 			else:
 				print("TEXT: " + text)
 			self.wait(0.2)
@@ -308,3 +300,24 @@ class AutoDynamaxAdventure(AutoTrainerBattle):
 			move["move_number"] = i
 			self.lowest_pp = min(move["PP"], self.lowest_pp)
 			i += 1
+	
+	def pokemonRate(self, pokemon=None, rateHP=False):
+		hp_modifier = 1
+		val = 600
+		if pokemon:
+			val = pokemon["value"]
+		if self.boss_type in pokemonTypes and pokemon:
+			typad = 0
+			if self.boss_type in pokemon["offensiveAdvantages"]:
+				typad += 100
+			dmatch = pokemon["defensiveMatchups"]
+			typad += 120 / dmatch[self.boss_type]
+			print("type advantage = "+str(typad))
+			val += typad
+		if rateHP:
+			hp_modifier = (1 + (self.current_hp / max(1, self.max_hp))) / 2 + 0.06
+			print("HP modifier = "+str(hp_modifier))
+			val = math.floor(hp_modifier * val)
+			if self.lowest_pp < 3:
+				val = max(val * 0.5, 420)
+		return val

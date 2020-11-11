@@ -81,20 +81,34 @@
 			80,
 			60
 		],
-		"value": 520,
+		"value": 497,
 		"offensiveAdvantages": [
 			"WATER",
 			"GROUND",
 			"ROCK",
-			"GRASS"
-		],
-		"defensiveAdvantages": [
-			"WATER",
-			"ELECTRIC",
 			"GRASS",
-			"FIGHTING",
 			"FAIRY"
-		]
+		],
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.25,
+			"ICE": 2.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 2.0,
+			"PSYCHIC": 2.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 0.5
+		}
 	},
 	"Charmeleon": {
 		"name": "Charmeleon",
@@ -178,7 +192,7 @@
 			65,
 			80
 		],
-		"value": 512,
+		"value": 491,
 		"offensiveAdvantages": [
 			"GRASS",
 			"ICE",
@@ -186,14 +200,26 @@
 			"STEEL",
 			"DRAGON"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"GRASS",
-			"ICE",
-			"BUG",
-			"STEEL",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 2.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 2.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 0.5
+		}
 	},
 	"Wartortle": {
 		"name": "Wartortle",
@@ -277,7 +303,7 @@
 			80,
 			58
 		],
-		"value": 574,
+		"value": 515,
 		"offensiveAdvantages": [
 			"FIRE",
 			"GROUND",
@@ -290,12 +316,26 @@
 			"DARK",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"ICE",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 2.0,
+			"GRASS": 2.0,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Butterfree": {
 		"name": "Butterfree",
@@ -379,21 +419,36 @@
 			80,
 			70
 		],
-		"value": 514,
+		"value": 502,
 		"offensiveAdvantages": [
 			"GRASS",
 			"PSYCHIC",
 			"DARK",
+			"FAIRY",
 			"WATER",
 			"GROUND",
 			"ROCK"
 		],
-		"defensiveAdvantages": [
-			"GRASS",
-			"FIGHTING",
-			"GROUND",
-			"BUG"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 2.0,
+			"GRASS": 0.25,
+			"ICE": 2.0,
+			"FIGHTING": 0.25,
+			"POISON": 1.0,
+			"GROUND": 0.125,
+			"FLYING": 2.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 4.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Raichu": {
 		"name": "Raichu",
@@ -477,7 +532,7 @@
 			80,
 			110
 		],
-		"value": 569,
+		"value": 560,
 		"offensiveAdvantages": [
 			"WATER",
 			"FLYING",
@@ -489,11 +544,26 @@
 			"DARK",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"ELECTRIC",
-			"FLYING",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Raichu (2)": {
 		"name": "Raichu",
@@ -577,20 +647,33 @@
 			80,
 			110
 		],
-		"value": 605,
+		"value": 593,
 		"offensiveAdvantages": [
 			"WATER",
 			"FLYING",
 			"FIGHTING",
 			"POISON"
 		],
-		"defensiveAdvantages": [
-			"ELECTRIC",
-			"FIGHTING",
-			"FLYING",
-			"PSYCHIC",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 0.5,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 0.5,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Sandslash": {
 		"name": "Sandslash",
@@ -688,11 +771,26 @@
 			"PSYCHIC",
 			"DARK"
 		],
-		"defensiveAdvantages": [
-			"ELECTRIC",
-			"POISON",
-			"ROCK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 2.0,
+			"ELECTRIC": 0.125,
+			"GRASS": 2.0,
+			"ICE": 2.0,
+			"FIGHTING": 1.0,
+			"POISON": 0.5,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 0.5,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Sandslash (2)": {
 		"name": "Sandslash",
@@ -790,19 +888,26 @@
 			"DARK",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"GRASS",
-			"ICE",
-			"POISON",
-			"FLYING",
-			"PSYCHIC",
-			"BUG",
-			"GHOST",
-			"DRAGON",
-			"DARK",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 4.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 0.25,
+			"FIGHTING": 4.0,
+			"POISON": 0.125,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 0.5,
+			"BUG": 0.5,
+			"ROCK": 1.0,
+			"GHOST": 0.5,
+			"DRAGON": 0.5,
+			"DARK": 0.5,
+			"STEEL": 1.0,
+			"FAIRY": 0.5
+		}
 	},
 	"Nidoqueen": {
 		"name": "Nidoqueen",
@@ -886,7 +991,7 @@
 			85,
 			76
 		],
-		"value": 617,
+		"value": 589,
 		"offensiveAdvantages": [
 			"FIRE",
 			"ELECTRIC",
@@ -894,20 +999,33 @@
 			"ROCK",
 			"STEEL",
 			"GRASS",
+			"FAIRY",
 			"FIGHTING",
 			"DRAGON",
 			"DARK",
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"ELECTRIC",
-			"FIGHTING",
-			"POISON",
-			"BUG",
-			"ROCK",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 2.0,
+			"ELECTRIC": 0.125,
+			"GRASS": 1.0,
+			"ICE": 2.0,
+			"FIGHTING": 0.5,
+			"POISON": 0.25,
+			"GROUND": 2.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 2.0,
+			"BUG": 0.5,
+			"ROCK": 0.5,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 0.5
+		}
 	},
 	"Nidoking": {
 		"name": "Nidoking",
@@ -991,7 +1109,7 @@
 			75,
 			85
 		],
-		"value": 662,
+		"value": 665,
 		"offensiveAdvantages": [
 			"FIRE",
 			"ELECTRIC",
@@ -1006,14 +1124,26 @@
 			"DRAGON",
 			"WATER"
 		],
-		"defensiveAdvantages": [
-			"ELECTRIC",
-			"FIGHTING",
-			"POISON",
-			"BUG",
-			"ROCK",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 2.0,
+			"ELECTRIC": 0.125,
+			"GRASS": 1.0,
+			"ICE": 2.0,
+			"FIGHTING": 0.5,
+			"POISON": 0.25,
+			"GROUND": 2.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 2.0,
+			"BUG": 0.5,
+			"ROCK": 0.5,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 0.5
+		}
 	},
 	"Clefairy": {
 		"name": "Clefairy",
@@ -1097,7 +1227,7 @@
 			65,
 			35
 		],
-		"value": 390,
+		"value": 363,
 		"offensiveAdvantages": [
 			"FIRE",
 			"GROUND",
@@ -1110,7 +1240,26 @@
 			"FIGHTING",
 			"POISON"
 		],
-		"defensiveAdvantages": []
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 0.5,
+			"POISON": 2.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 0.125,
+			"DARK": 0.5,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Clefable": {
 		"name": "Clefable",
@@ -1194,7 +1343,7 @@
 			90,
 			60
 		],
-		"value": 550,
+		"value": 546,
 		"offensiveAdvantages": [
 			"FIRE",
 			"ICE",
@@ -1205,7 +1354,26 @@
 			"DARK",
 			"POISON"
 		],
-		"defensiveAdvantages": []
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 0.5,
+			"POISON": 2.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 0.125,
+			"DARK": 0.5,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Jigglypuff": {
 		"name": "Jigglypuff",
@@ -1289,7 +1457,7 @@
 			25,
 			20
 		],
-		"value": 295,
+		"value": 281,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"POISON",
@@ -1298,9 +1466,26 @@
 			"DRAGON",
 			"DARK"
 		],
-		"defensiveAdvantages": [
-			"GHOST"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 2.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 1.0,
+			"GHOST": 0.125,
+			"DRAGON": 0.125,
+			"DARK": 0.5,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Wigglytuff": {
 		"name": "Wigglytuff",
@@ -1384,16 +1569,33 @@
 			50,
 			45
 		],
-		"value": 555,
+		"value": 537,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"DRAGON",
 			"DARK",
 			"POISON"
 		],
-		"defensiveAdvantages": [
-			"GHOST"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 2.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 1.0,
+			"GHOST": 0.125,
+			"DRAGON": 0.125,
+			"DARK": 0.5,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Gloom": {
 		"name": "Gloom",
@@ -1477,9 +1679,10 @@
 			75,
 			40
 		],
-		"value": 479,
+		"value": 467,
 		"offensiveAdvantages": [
 			"GRASS",
+			"FAIRY",
 			"FIGHTING",
 			"DRAGON",
 			"DARK",
@@ -1487,13 +1690,26 @@
 			"GROUND",
 			"ROCK"
 		],
-		"defensiveAdvantages": [
-			"WATER",
-			"ELECTRIC",
-			"GRASS",
-			"FIGHTING",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.25,
+			"ICE": 2.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 2.0,
+			"PSYCHIC": 2.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 0.5
+		}
 	},
 	"Vileplume": {
 		"name": "Vileplume",
@@ -1577,22 +1793,36 @@
 			90,
 			50
 		],
-		"value": 572,
+		"value": 580,
 		"offensiveAdvantages": [
 			"WATER",
 			"GROUND",
 			"ROCK",
 			"GRASS",
+			"FAIRY",
 			"PSYCHIC",
 			"DARK"
 		],
-		"defensiveAdvantages": [
-			"WATER",
-			"ELECTRIC",
-			"GRASS",
-			"FIGHTING",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.25,
+			"ICE": 2.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 2.0,
+			"PSYCHIC": 2.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 0.5
+		}
 	},
 	"Dugtrio": {
 		"name": "Dugtrio",
@@ -1676,7 +1906,7 @@
 			70,
 			120
 		],
-		"value": 513,
+		"value": 508,
 		"offensiveAdvantages": [
 			"FIRE",
 			"ELECTRIC",
@@ -1687,11 +1917,26 @@
 			"FLYING",
 			"BUG"
 		],
-		"defensiveAdvantages": [
-			"ELECTRIC",
-			"POISON",
-			"ROCK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 2.0,
+			"ELECTRIC": 0.125,
+			"GRASS": 2.0,
+			"ICE": 2.0,
+			"FIGHTING": 1.0,
+			"POISON": 0.5,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 0.5,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Dugtrio (2)": {
 		"name": "Dugtrio",
@@ -1779,6 +2024,7 @@
 		"offensiveAdvantages": [
 			"ICE",
 			"ROCK",
+			"FAIRY",
 			"FIRE",
 			"ELECTRIC",
 			"POISON",
@@ -1786,20 +2032,26 @@
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"ELECTRIC",
-			"POISON",
-			"FLYING",
-			"PSYCHIC",
-			"BUG",
-			"ROCK",
-			"GHOST",
-			"DRAGON",
-			"DARK",
-			"STEEL",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 2.0,
+			"WATER": 2.0,
+			"ELECTRIC": 0.125,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 0.125,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 0.5,
+			"BUG": 0.5,
+			"ROCK": 0.25,
+			"GHOST": 0.5,
+			"DRAGON": 0.5,
+			"DARK": 0.5,
+			"STEEL": 0.5,
+			"FAIRY": 0.5
+		}
 	},
 	"Persian": {
 		"name": "Persian",
@@ -1883,15 +2135,32 @@
 			65,
 			115
 		],
-		"value": 562,
+		"value": 524,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"DRAGON",
 			"DARK"
 		],
-		"defensiveAdvantages": [
-			"GHOST"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 0.125,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Persian (2)": {
 		"name": "Persian",
@@ -1975,16 +2244,31 @@
 			65,
 			115
 		],
-		"value": 523,
+		"value": 496,
 		"offensiveAdvantages": [
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"PSYCHIC",
-			"GHOST",
-			"DARK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.125,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 0.5,
+			"DRAGON": 1.0,
+			"DARK": 0.5,
+			"STEEL": 1.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Golduck": {
 		"name": "Golduck",
@@ -2068,18 +2352,32 @@
 			80,
 			85
 		],
-		"value": 604,
+		"value": 590,
 		"offensiveAdvantages": [
 			"FIRE",
 			"GROUND",
 			"ROCK"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"ICE",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 2.0,
+			"GRASS": 2.0,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Poliwrath": {
 		"name": "Poliwrath",
@@ -2163,7 +2461,7 @@
 			90,
 			70
 		],
-		"value": 632,
+		"value": 626,
 		"offensiveAdvantages": [
 			"NORMAL",
 			"ICE",
@@ -2173,15 +2471,26 @@
 			"FIRE",
 			"GROUND"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"ICE",
-			"BUG",
-			"ROCK",
-			"DARK",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0,
+			"ELECTRIC": 2.0,
+			"GRASS": 2.0,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 2.0,
+			"PSYCHIC": 2.0,
+			"BUG": 0.5,
+			"ROCK": 0.5,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 0.5,
+			"STEEL": 0.5,
+			"FAIRY": 2.0
+		}
 	},
 	"Kadabra": {
 		"name": "Kadabra",
@@ -2265,17 +2574,33 @@
 			70,
 			105
 		],
-		"value": 510,
+		"value": 532,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"POISON",
 			"DRAGON",
 			"DARK"
 		],
-		"defensiveAdvantages": [
-			"FIGHTING",
-			"PSYCHIC"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.5,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Machoke": {
 		"name": "Machoke",
@@ -2372,11 +2697,26 @@
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"BUG",
-			"ROCK",
-			"DARK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 2.0,
+			"PSYCHIC": 2.0,
+			"BUG": 0.5,
+			"ROCK": 0.5,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 0.5,
+			"STEEL": 1.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Tentacruel": {
 		"name": "Tentacruel",
@@ -2460,23 +2800,34 @@
 			120,
 			100
 		],
-		"value": 629,
+		"value": 602,
 		"offensiveAdvantages": [
 			"FIRE",
 			"GROUND",
 			"ROCK",
-			"GRASS"
-		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"ICE",
-			"FIGHTING",
-			"POISON",
-			"BUG",
-			"STEEL",
+			"GRASS",
 			"FAIRY"
-		]
+		],
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 2.0,
+			"GRASS": 1.0,
+			"ICE": 0.5,
+			"FIGHTING": 0.5,
+			"POISON": 0.5,
+			"GROUND": 2.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 2.0,
+			"BUG": 0.5,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 0.5
+		}
 	},
 	"Slowbro": {
 		"name": "Slowbro",
@@ -2569,14 +2920,26 @@
 			"BUG",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"ICE",
-			"FIGHTING",
-			"PSYCHIC",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 2.0,
+			"GRASS": 2.0,
+			"ICE": 0.5,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.5,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Magneton": {
 		"name": "Magneton",
@@ -2660,31 +3023,36 @@
 			70,
 			70
 		],
-		"value": 535,
+		"value": 549,
 		"offensiveAdvantages": [
 			"WATER",
 			"FLYING",
 			"ICE",
 			"ROCK",
+			"FAIRY",
 			"FIGHTING",
 			"POISON"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"ELECTRIC",
-			"GRASS",
-			"ICE",
-			"POISON",
-			"FLYING",
-			"PSYCHIC",
-			"BUG",
-			"ROCK",
-			"GHOST",
-			"DRAGON",
-			"DARK",
-			"STEEL",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.5,
+			"ICE": 0.5,
+			"FIGHTING": 2.0,
+			"POISON": 0.125,
+			"GROUND": 4.0,
+			"FLYING": 0.25,
+			"PSYCHIC": 0.5,
+			"BUG": 0.5,
+			"ROCK": 0.5,
+			"GHOST": 0.5,
+			"DRAGON": 0.5,
+			"DARK": 0.5,
+			"STEEL": 0.25,
+			"FAIRY": 0.5
+		}
 	},
 	"Haunter": {
 		"name": "Haunter",
@@ -2768,7 +3136,7 @@
 			55,
 			95
 		],
-		"value": 485,
+		"value": 497,
 		"offensiveAdvantages": [
 			"PSYCHIC",
 			"GHOST",
@@ -2778,14 +3146,26 @@
 			"GROUND",
 			"ROCK"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"GRASS",
-			"FIGHTING",
-			"POISON",
-			"BUG",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.125,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 1.0,
+			"FIGHTING": 0.125,
+			"POISON": 0.25,
+			"GROUND": 0,
+			"FLYING": 1.0,
+			"PSYCHIC": 2.0,
+			"BUG": 0.25,
+			"ROCK": 1.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 1.0,
+			"FAIRY": 0.5
+		}
 	},
 	"Kingler": {
 		"name": "Kingler",
@@ -2869,7 +3249,7 @@
 			50,
 			75
 		],
-		"value": 585,
+		"value": 618,
 		"offensiveAdvantages": [
 			"FIRE",
 			"GROUND",
@@ -2883,12 +3263,26 @@
 			"NORMAL",
 			"DARK"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"ICE",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 2.0,
+			"GRASS": 2.0,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Exeggutor": {
 		"name": "Exeggutor",
@@ -2972,7 +3366,7 @@
 			75,
 			55
 		],
-		"value": 667,
+		"value": 680,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"POISON",
@@ -2983,14 +3377,26 @@
 			"ELECTRIC",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"WATER",
-			"ELECTRIC",
-			"GRASS",
-			"FIGHTING",
-			"GROUND",
-			"PSYCHIC"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 0.5,
+			"POISON": 2.0,
+			"GROUND": 0.5,
+			"FLYING": 2.0,
+			"PSYCHIC": 0.5,
+			"BUG": 4.0,
+			"ROCK": 1.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Marowak": {
 		"name": "Marowak",
@@ -3074,7 +3480,7 @@
 			80,
 			45
 		],
-		"value": 550,
+		"value": 525,
 		"offensiveAdvantages": [
 			"FIRE",
 			"ELECTRIC",
@@ -3083,13 +3489,29 @@
 			"STEEL",
 			"PSYCHIC",
 			"GHOST",
-			"ICE"
+			"ICE",
+			"FAIRY"
 		],
-		"defensiveAdvantages": [
-			"ELECTRIC",
-			"POISON",
-			"ROCK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 2.0,
+			"ELECTRIC": 0.125,
+			"GRASS": 2.0,
+			"ICE": 2.0,
+			"FIGHTING": 1.0,
+			"POISON": 0.5,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 0.5,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Marowak (2)": {
 		"name": "Marowak",
@@ -3173,7 +3595,7 @@
 			80,
 			45
 		],
-		"value": 578,
+		"value": 547,
 		"offensiveAdvantages": [
 			"GRASS",
 			"ICE",
@@ -3181,19 +3603,29 @@
 			"STEEL",
 			"PSYCHIC",
 			"GHOST",
-			"ROCK"
-		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"FIRE",
-			"GRASS",
-			"ICE",
-			"FIGHTING",
-			"POISON",
-			"BUG",
-			"STEEL",
+			"ROCK",
 			"FAIRY"
-		]
+		],
+		"defensiveMatchups": {
+			"NORMAL": 0.125,
+			"FIRE": 0.5,
+			"WATER": 2.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 0.5,
+			"FIGHTING": 0.125,
+			"POISON": 0.5,
+			"GROUND": 2.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.25,
+			"ROCK": 2.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 0.5,
+			"FAIRY": 0.5
+		}
 	},
 	"Hitmonlee": {
 		"name": "Hitmonlee",
@@ -3277,7 +3709,7 @@
 			110,
 			87
 		],
-		"value": 585,
+		"value": 611,
 		"offensiveAdvantages": [
 			"NORMAL",
 			"ICE",
@@ -3289,11 +3721,26 @@
 			"BUG",
 			"GRASS"
 		],
-		"defensiveAdvantages": [
-			"BUG",
-			"ROCK",
-			"DARK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 2.0,
+			"PSYCHIC": 2.0,
+			"BUG": 0.5,
+			"ROCK": 0.5,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 0.5,
+			"STEEL": 1.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Hitmonchan": {
 		"name": "Hitmonchan",
@@ -3377,7 +3824,7 @@
 			110,
 			76
 		],
-		"value": 602,
+		"value": 609,
 		"offensiveAdvantages": [
 			"NORMAL",
 			"ICE",
@@ -3391,11 +3838,26 @@
 			"GROUND",
 			"DRAGON"
 		],
-		"defensiveAdvantages": [
-			"BUG",
-			"ROCK",
-			"DARK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 2.0,
+			"PSYCHIC": 2.0,
+			"BUG": 0.5,
+			"ROCK": 0.5,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 0.5,
+			"STEEL": 1.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Lickitung": {
 		"name": "Lickitung",
@@ -3479,7 +3941,7 @@
 			75,
 			30
 		],
-		"value": 530,
+		"value": 472,
 		"offensiveAdvantages": [
 			"GRASS",
 			"GROUND",
@@ -3489,9 +3951,26 @@
 			"FIRE",
 			"ROCK"
 		],
-		"defensiveAdvantages": [
-			"GHOST"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 0.125,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Weezing": {
 		"name": "Weezing",
@@ -3575,22 +4054,36 @@
 			70,
 			60
 		],
-		"value": 643,
+		"value": 620,
 		"offensiveAdvantages": [
 			"GRASS",
+			"FAIRY",
 			"ICE",
 			"BUG",
 			"STEEL",
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"GRASS",
-			"FIGHTING",
-			"POISON",
-			"BUG",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 1.0,
+			"FIGHTING": 0.5,
+			"POISON": 0.5,
+			"GROUND": 2.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 2.0,
+			"BUG": 0.5,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 0.5
+		}
 	},
 	"Weezing (2)": {
 		"name": "Weezing",
@@ -3674,25 +4167,39 @@
 			70,
 			60
 		],
-		"value": 603,
+		"value": 586,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"DRAGON",
 			"DARK",
 			"GRASS",
+			"FAIRY",
 			"ICE",
 			"BUG",
 			"STEEL",
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"GRASS",
-			"FIGHTING",
-			"POISON",
-			"BUG",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 1.0,
+			"FIGHTING": 0.25,
+			"POISON": 1.0,
+			"GROUND": 2.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 2.0,
+			"BUG": 0.25,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 0.125,
+			"DARK": 0.5,
+			"STEEL": 2.0,
+			"FAIRY": 0.5
+		}
 	},
 	"Rhydon": {
 		"name": "Rhydon",
@@ -3776,7 +4283,7 @@
 			45,
 			40
 		],
-		"value": 583,
+		"value": 612,
 		"offensiveAdvantages": [
 			"FIRE",
 			"ELECTRIC",
@@ -3785,16 +4292,29 @@
 			"STEEL",
 			"ICE",
 			"FLYING",
-			"BUG"
+			"BUG",
+			"FAIRY"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"FIRE",
-			"ELECTRIC",
-			"POISON",
-			"FLYING",
-			"ROCK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 0.5,
+			"WATER": 4.0,
+			"ELECTRIC": 0.125,
+			"GRASS": 4.0,
+			"ICE": 2.0,
+			"FIGHTING": 2.0,
+			"POISON": 0.25,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 0.5,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Chansey": {
 		"name": "Chansey",
@@ -3878,14 +4398,31 @@
 			105,
 			50
 		],
-		"value": 480,
+		"value": 460,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"POISON"
 		],
-		"defensiveAdvantages": [
-			"GHOST"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 0.125,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Tangela": {
 		"name": "Tangela",
@@ -3969,18 +4506,32 @@
 			40,
 			60
 		],
-		"value": 563,
+		"value": 505,
 		"offensiveAdvantages": [
 			"WATER",
 			"GROUND",
 			"ROCK"
 		],
-		"defensiveAdvantages": [
-			"WATER",
-			"ELECTRIC",
-			"GRASS",
-			"GROUND"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 1.0,
+			"POISON": 2.0,
+			"GROUND": 0.5,
+			"FLYING": 2.0,
+			"PSYCHIC": 1.0,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Kangaskhan": {
 		"name": "Kangaskhan",
@@ -4064,7 +4615,7 @@
 			80,
 			90
 		],
-		"value": 647,
+		"value": 639,
 		"offensiveAdvantages": [
 			"PSYCHIC",
 			"GHOST",
@@ -4075,9 +4626,26 @@
 			"STEEL",
 			"DRAGON"
 		],
-		"defensiveAdvantages": [
-			"GHOST"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 0.125,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Seadra": {
 		"name": "Seadra",
@@ -4161,19 +4729,33 @@
 			45,
 			85
 		],
-		"value": 552,
+		"value": 546,
 		"offensiveAdvantages": [
 			"FIRE",
 			"GROUND",
 			"ROCK",
 			"DRAGON"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"ICE",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 2.0,
+			"GRASS": 2.0,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Seaking": {
 		"name": "Seaking",
@@ -4257,7 +4839,7 @@
 			80,
 			68
 		],
-		"value": 586,
+		"value": 575,
 		"offensiveAdvantages": [
 			"FIRE",
 			"GROUND",
@@ -4265,16 +4847,31 @@
 			"GRASS",
 			"FIGHTING",
 			"BUG",
+			"FAIRY",
 			"ELECTRIC",
 			"POISON",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"ICE",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 2.0,
+			"GRASS": 2.0,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Starmie": {
 		"name": "Starmie",
@@ -4358,7 +4955,7 @@
 			85,
 			115
 		],
-		"value": 661,
+		"value": 652,
 		"offensiveAdvantages": [
 			"FIRE",
 			"ICE",
@@ -4371,14 +4968,26 @@
 			"GRASS",
 			"GROUND"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"ICE",
-			"FIGHTING",
-			"PSYCHIC",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 2.0,
+			"GRASS": 2.0,
+			"ICE": 0.5,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.5,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Mr. Mime": {
 		"name": "Mr. Mime",
@@ -4467,10 +5076,26 @@
 			"FIGHTING",
 			"POISON"
 		],
-		"defensiveAdvantages": [
-			"FIGHTING",
-			"PSYCHIC"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 0.25,
+			"POISON": 2.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.5,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 2.0,
+			"DRAGON": 0.125,
+			"DARK": 1.0,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Mr. Mime (2)": {
 		"name": "Mr. Mime",
@@ -4563,10 +5188,26 @@
 			"FLYING",
 			"DRAGON"
 		],
-		"defensiveAdvantages": [
-			"ICE",
-			"PSYCHIC"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.5,
+			"BUG": 2.0,
+			"ROCK": 2.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Scyther": {
 		"name": "Scyther",
@@ -4650,7 +5291,7 @@
 			80,
 			105
 		],
-		"value": 620,
+		"value": 632,
 		"offensiveAdvantages": [
 			"GRASS",
 			"PSYCHIC",
@@ -4659,12 +5300,26 @@
 			"FIGHTING",
 			"BUG"
 		],
-		"defensiveAdvantages": [
-			"GRASS",
-			"FIGHTING",
-			"GROUND",
-			"BUG"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 2.0,
+			"GRASS": 0.25,
+			"ICE": 2.0,
+			"FIGHTING": 0.25,
+			"POISON": 1.0,
+			"GROUND": 0.125,
+			"FLYING": 2.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 4.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Jynx": {
 		"name": "Jynx",
@@ -4748,7 +5403,7 @@
 			95,
 			95
 		],
-		"value": 555,
+		"value": 570,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"DRAGON",
@@ -4757,10 +5412,26 @@
 			"GROUND",
 			"FLYING"
 		],
-		"defensiveAdvantages": [
-			"ICE",
-			"PSYCHIC"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.5,
+			"BUG": 2.0,
+			"ROCK": 2.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Electabuzz": {
 		"name": "Electabuzz",
@@ -4844,16 +5515,31 @@
 			85,
 			105
 		],
-		"value": 588,
+		"value": 583,
 		"offensiveAdvantages": [
 			"WATER",
 			"FLYING"
 		],
-		"defensiveAdvantages": [
-			"ELECTRIC",
-			"FLYING",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 0.5,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Magmar": {
 		"name": "Magmar",
@@ -4942,16 +5628,29 @@
 			"GRASS",
 			"ICE",
 			"BUG",
-			"STEEL"
-		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"GRASS",
-			"ICE",
-			"BUG",
 			"STEEL",
 			"FAIRY"
-		]
+		],
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 2.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 2.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 0.5
+		}
 	},
 	"Tauros": {
 		"name": "Tauros",
@@ -5048,9 +5747,26 @@
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"GHOST"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 0.125,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Ditto": {
 		"name": "Ditto",
@@ -5061,8 +5777,31 @@
 		],
 		"moves": [],
 		"BST": 300,
-		"stats": [50, 50, 50, 50, 50, 50],
-		"defensiveAdvantages": [],
+		"stats": [],
+		"defensiveMatchups": [
+			1,
+			1,
+			1,
+			1,
+			1,
+			1,
+			1,
+			1,
+			1,
+			1,
+			1,
+			1,
+			1,
+			1,
+			1,
+			1,
+			1,
+			1,
+			1,
+			1,
+			1,
+			1
+		],
 		"offensiveAdvantages": [],
 		"value": 600
 	},
@@ -5148,7 +5887,7 @@
 			95,
 			65
 		],
-		"value": 592,
+		"value": 599,
 		"offensiveAdvantages": [
 			"FIRE",
 			"GROUND",
@@ -5159,12 +5898,26 @@
 			"GRASS",
 			"FLYING"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"ICE",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0,
+			"ELECTRIC": 2.0,
+			"GRASS": 2.0,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Jolteon": {
 		"name": "Jolteon",
@@ -5248,18 +6001,33 @@
 			95,
 			130
 		],
-		"value": 640,
+		"value": 651,
 		"offensiveAdvantages": [
 			"WATER",
 			"FLYING",
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"ELECTRIC",
-			"FLYING",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Flareon": {
 		"name": "Flareon",
@@ -5343,7 +6111,7 @@
 			110,
 			65
 		],
-		"value": 600,
+		"value": 596,
 		"offensiveAdvantages": [
 			"GRASS",
 			"ICE",
@@ -5355,14 +6123,26 @@
 			"DRAGON",
 			"DARK"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"GRASS",
-			"ICE",
-			"BUG",
-			"STEEL",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0,
+			"WATER": 2.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 2.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 0.5
+		}
 	},
 	"Porygon": {
 		"name": "Porygon",
@@ -5446,7 +6226,7 @@
 			75,
 			40
 		],
-		"value": 566,
+		"value": 528,
 		"offensiveAdvantages": [
 			"PSYCHIC",
 			"GHOST",
@@ -5456,9 +6236,26 @@
 			"DRAGON",
 			"WATER"
 		],
-		"defensiveAdvantages": [
-			"GHOST"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 0.125,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Dragonair": {
 		"name": "Dragonair",
@@ -5542,7 +6339,7 @@
 			70,
 			70
 		],
-		"value": 562,
+		"value": 529,
 		"offensiveAdvantages": [
 			"GRASS",
 			"GROUND",
@@ -5550,12 +6347,26 @@
 			"DRAGON",
 			"WATER"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"ELECTRIC",
-			"GRASS"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 2.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Noctowl": {
 		"name": "Noctowl",
@@ -5639,19 +6450,33 @@
 			96,
 			70
 		],
-		"value": 513,
+		"value": 493,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"POISON",
 			"GRASS",
 			"BUG"
 		],
-		"defensiveAdvantages": [
-			"GRASS",
-			"GROUND",
-			"BUG",
-			"GHOST"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 2.0,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 0.125,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 2.0,
+			"GHOST": 0.125,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Lanturn": {
 		"name": "Lanturn",
@@ -5735,7 +6560,7 @@
 			76,
 			67
 		],
-		"value": 579,
+		"value": 550,
 		"offensiveAdvantages": [
 			"FIRE",
 			"GROUND",
@@ -5745,13 +6570,26 @@
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"ICE",
-			"FLYING",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 0,
+			"GRASS": 2.0,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.25,
+			"FAIRY": 1.0
+		}
 	},
 	"Togetic": {
 		"name": "Togetic",
@@ -5835,7 +6673,7 @@
 			105,
 			40
 		],
-		"value": 483,
+		"value": 451,
 		"offensiveAdvantages": [
 			"FIRE",
 			"GROUND",
@@ -5848,12 +6686,26 @@
 			"BUG",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"GRASS",
-			"FIGHTING",
-			"GROUND",
-			"BUG"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 2.0,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 0.25,
+			"POISON": 2.0,
+			"GROUND": 0.125,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.25,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 0.125,
+			"DARK": 0.5,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Xatu": {
 		"name": "Xatu",
@@ -5937,7 +6789,7 @@
 			70,
 			95
 		],
-		"value": 550,
+		"value": 546,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"POISON",
@@ -5946,12 +6798,26 @@
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"GRASS",
-			"FIGHTING",
-			"GROUND",
-			"PSYCHIC"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 2.0,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 0.25,
+			"POISON": 1.0,
+			"GROUND": 0.125,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.5,
+			"BUG": 1.0,
+			"ROCK": 2.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Bellossom": {
 		"name": "Bellossom",
@@ -6035,7 +6901,7 @@
 			100,
 			50
 		],
-		"value": 567,
+		"value": 559,
 		"offensiveAdvantages": [
 			"WATER",
 			"GROUND",
@@ -6044,12 +6910,26 @@
 			"DRAGON",
 			"DARK"
 		],
-		"defensiveAdvantages": [
-			"WATER",
-			"ELECTRIC",
-			"GRASS",
-			"GROUND"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 1.0,
+			"POISON": 2.0,
+			"GROUND": 0.5,
+			"FLYING": 2.0,
+			"PSYCHIC": 1.0,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Azumarill": {
 		"name": "Azumarill",
@@ -6133,7 +7013,7 @@
 			80,
 			50
 		],
-		"value": 539,
+		"value": 479,
 		"offensiveAdvantages": [
 			"FIRE",
 			"GROUND",
@@ -6144,12 +7024,26 @@
 			"GRASS",
 			"BUG"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"ICE",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 2.0,
+			"GRASS": 0,
+			"ICE": 0.5,
+			"FIGHTING": 0.5,
+			"POISON": 2.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 0.125,
+			"DARK": 0.5,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Sudowoodo": {
 		"name": "Sudowoodo",
@@ -6243,15 +7137,30 @@
 			"ICE",
 			"FLYING",
 			"BUG",
+			"FAIRY",
 			"NORMAL",
 			"DARK"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"FIRE",
-			"POISON",
-			"FLYING"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 0.5,
+			"WATER": 2.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 2.0,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 0.5,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Politoed": {
 		"name": "Politoed",
@@ -6335,7 +7244,7 @@
 			100,
 			70
 		],
-		"value": 617,
+		"value": 599,
 		"offensiveAdvantages": [
 			"FIRE",
 			"GROUND",
@@ -6344,12 +7253,26 @@
 			"POISON",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"ICE",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 2.0,
+			"GRASS": 2.0,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Quagsire": {
 		"name": "Quagsire",
@@ -6433,7 +7356,7 @@
 			65,
 			35
 		],
-		"value": 512,
+		"value": 483,
 		"offensiveAdvantages": [
 			"NORMAL",
 			"ICE",
@@ -6443,16 +7366,30 @@
 			"FIRE",
 			"GROUND",
 			"GRASS",
+			"FAIRY",
 			"FIGHTING",
 			"POISON"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"ELECTRIC",
-			"POISON",
-			"ROCK",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 1.0,
+			"ELECTRIC": 0.125,
+			"GRASS": 4.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 0.5,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 0.5,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Slowking": {
 		"name": "Slowking",
@@ -6536,7 +7473,7 @@
 			110,
 			30
 		],
-		"value": 623,
+		"value": 604,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"POISON",
@@ -6549,14 +7486,26 @@
 			"FLYING",
 			"DRAGON"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"ICE",
-			"FIGHTING",
-			"PSYCHIC",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 2.0,
+			"GRASS": 2.0,
+			"ICE": 0.5,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.5,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Dunsparce": {
 		"name": "Dunsparce",
@@ -6640,7 +7589,7 @@
 			65,
 			45
 		],
-		"value": 567,
+		"value": 517,
 		"offensiveAdvantages": [
 			"GRASS",
 			"PSYCHIC",
@@ -6652,9 +7601,26 @@
 			"FLYING",
 			"DRAGON"
 		],
-		"defensiveAdvantages": [
-			"GHOST"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 0.125,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Qwilfish": {
 		"name": "Qwilfish",
@@ -6738,24 +7704,35 @@
 			55,
 			85
 		],
-		"value": 522,
+		"value": 518,
 		"offensiveAdvantages": [
 			"GRASS",
+			"FAIRY",
 			"FIRE",
 			"GROUND",
 			"ROCK",
 			"ICE"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"ICE",
-			"FIGHTING",
-			"POISON",
-			"BUG",
-			"STEEL",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 2.0,
+			"GRASS": 1.0,
+			"ICE": 0.5,
+			"FIGHTING": 0.5,
+			"POISON": 0.5,
+			"GROUND": 2.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 2.0,
+			"BUG": 0.5,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 0.5
+		}
 	},
 	"Sneasel": {
 		"name": "Sneasel",
@@ -6839,7 +7816,7 @@
 			75,
 			115
 		],
-		"value": 583,
+		"value": 560,
 		"offensiveAdvantages": [
 			"GRASS",
 			"GROUND",
@@ -6848,12 +7825,26 @@
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"ICE",
-			"PSYCHIC",
-			"GHOST",
-			"DARK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 0.5,
+			"FIGHTING": 4.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.125,
+			"BUG": 2.0,
+			"ROCK": 2.0,
+			"GHOST": 0.5,
+			"DRAGON": 1.0,
+			"DARK": 0.5,
+			"STEEL": 2.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Piloswine": {
 		"name": "Piloswine",
@@ -6937,7 +7928,7 @@
 			60,
 			50
 		],
-		"value": 582,
+		"value": 566,
 		"offensiveAdvantages": [
 			"GRASS",
 			"GROUND",
@@ -6951,10 +7942,26 @@
 			"DARK",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"ELECTRIC",
-			"POISON"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 2.0,
+			"ELECTRIC": 0.125,
+			"GRASS": 2.0,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 0.5,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Octillery": {
 		"name": "Octillery",
@@ -7038,22 +8045,37 @@
 			75,
 			45
 		],
-		"value": 611,
+		"value": 618,
 		"offensiveAdvantages": [
 			"GRASS",
 			"PSYCHIC",
 			"DARK",
 			"ICE",
 			"ROCK",
+			"FAIRY",
 			"FIRE",
 			"GROUND"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"ICE",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 2.0,
+			"GRASS": 2.0,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Mantine": {
 		"name": "Mantine",
@@ -7137,7 +8159,7 @@
 			140,
 			70
 		],
-		"value": 570,
+		"value": 545,
 		"offensiveAdvantages": [
 			"GRASS",
 			"FIGHTING",
@@ -7148,14 +8170,26 @@
 			"ICE",
 			"FLYING"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"FIGHTING",
-			"GROUND",
-			"BUG",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0,
+			"ELECTRIC": 4.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 0.125,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Skarmory": {
 		"name": "Skarmory",
@@ -7239,31 +8273,38 @@
 			70,
 			70
 		],
-		"value": 599,
+		"value": 572,
 		"offensiveAdvantages": [
 			"PSYCHIC",
 			"GHOST",
 			"ICE",
 			"ROCK",
+			"FAIRY",
 			"GRASS",
 			"DARK",
 			"FIGHTING",
 			"BUG"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"GRASS",
-			"POISON",
-			"GROUND",
-			"FLYING",
-			"PSYCHIC",
-			"BUG",
-			"GHOST",
-			"DRAGON",
-			"DARK",
-			"STEEL",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 2.0,
+			"GRASS": 0.25,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 0.125,
+			"GROUND": 0.125,
+			"FLYING": 0.5,
+			"PSYCHIC": 0.5,
+			"BUG": 0.25,
+			"ROCK": 1.0,
+			"GHOST": 0.5,
+			"DRAGON": 0.5,
+			"DARK": 0.5,
+			"STEEL": 0.5,
+			"FAIRY": 0.5
+		}
 	},
 	"Hitmontop": {
 		"name": "Hitmontop",
@@ -7347,7 +8388,7 @@
 			110,
 			70
 		],
-		"value": 572,
+		"value": 566,
 		"offensiveAdvantages": [
 			"FIRE",
 			"ELECTRIC",
@@ -7362,11 +8403,26 @@
 			"ICE",
 			"DARK"
 		],
-		"defensiveAdvantages": [
-			"BUG",
-			"ROCK",
-			"DARK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 2.0,
+			"PSYCHIC": 2.0,
+			"BUG": 0.5,
+			"ROCK": 0.5,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 0.5,
+			"STEEL": 1.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Miltank": {
 		"name": "Miltank",
@@ -7450,7 +8506,7 @@
 			70,
 			100
 		],
-		"value": 575,
+		"value": 558,
 		"offensiveAdvantages": [
 			"WATER",
 			"FLYING",
@@ -7458,9 +8514,26 @@
 			"DRAGON",
 			"DARK"
 		],
-		"defensiveAdvantages": [
-			"GHOST"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 0.125,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Grovyle": {
 		"name": "Grovyle",
@@ -7544,7 +8617,7 @@
 			65,
 			95
 		],
-		"value": 482,
+		"value": 463,
 		"offensiveAdvantages": [
 			"WATER",
 			"GROUND",
@@ -7554,12 +8627,26 @@
 			"DARK",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"WATER",
-			"ELECTRIC",
-			"GRASS",
-			"GROUND"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 1.0,
+			"POISON": 2.0,
+			"GROUND": 0.5,
+			"FLYING": 2.0,
+			"PSYCHIC": 1.0,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Sceptile": {
 		"name": "Sceptile",
@@ -7643,7 +8730,7 @@
 			85,
 			120
 		],
-		"value": 683,
+		"value": 677,
 		"offensiveAdvantages": [
 			"WATER",
 			"GROUND",
@@ -7653,12 +8740,26 @@
 			"PSYCHIC",
 			"DARK"
 		],
-		"defensiveAdvantages": [
-			"WATER",
-			"ELECTRIC",
-			"GRASS",
-			"GROUND"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 1.0,
+			"POISON": 2.0,
+			"GROUND": 0.5,
+			"FLYING": 2.0,
+			"PSYCHIC": 1.0,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Combusken": {
 		"name": "Combusken",
@@ -7742,7 +8843,7 @@
 			60,
 			55
 		],
-		"value": 519,
+		"value": 502,
 		"offensiveAdvantages": [
 			"GRASS",
 			"ICE",
@@ -7753,14 +8854,26 @@
 			"DARK",
 			"FIGHTING"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"GRASS",
-			"ICE",
-			"BUG",
-			"DARK",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 2.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 2.0,
+			"FLYING": 2.0,
+			"PSYCHIC": 2.0,
+			"BUG": 0.25,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 0.5,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Blaziken": {
 		"name": "Blaziken",
@@ -7844,7 +8957,7 @@
 			70,
 			80
 		],
-		"value": 668,
+		"value": 691,
 		"offensiveAdvantages": [
 			"GRASS",
 			"ICE",
@@ -7854,14 +8967,26 @@
 			"ROCK",
 			"DARK"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"GRASS",
-			"ICE",
-			"BUG",
-			"DARK",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 2.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 2.0,
+			"FLYING": 2.0,
+			"PSYCHIC": 2.0,
+			"BUG": 0.25,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 0.5,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Marshtomp": {
 		"name": "Marshtomp",
@@ -7945,7 +9070,7 @@
 			70,
 			50
 		],
-		"value": 542,
+		"value": 511,
 		"offensiveAdvantages": [
 			"FIRE",
 			"GROUND",
@@ -7957,13 +9082,26 @@
 			"FLYING",
 			"DRAGON"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"ELECTRIC",
-			"POISON",
-			"ROCK",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 1.0,
+			"ELECTRIC": 0.125,
+			"GRASS": 4.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 0.5,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 0.5,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Swampert": {
 		"name": "Swampert",
@@ -8047,7 +9185,7 @@
 			90,
 			60
 		],
-		"value": 658,
+		"value": 639,
 		"offensiveAdvantages": [
 			"FIRE",
 			"GROUND",
@@ -8060,13 +9198,26 @@
 			"STEEL",
 			"FIGHTING"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"ELECTRIC",
-			"POISON",
-			"ROCK",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 1.0,
+			"ELECTRIC": 0.125,
+			"GRASS": 4.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 0.5,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 0.5,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Linoone": {
 		"name": "Linoone",
@@ -8150,7 +9301,7 @@
 			61,
 			100
 		],
-		"value": 527,
+		"value": 495,
 		"offensiveAdvantages": [
 			"GRASS",
 			"PSYCHIC",
@@ -8159,9 +9310,26 @@
 			"DRAGON",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"GHOST"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 0.125,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Linoone (2)": {
 		"name": "Linoone",
@@ -8245,16 +9413,31 @@
 			61,
 			100
 		],
-		"value": 486,
+		"value": 461,
 		"offensiveAdvantages": [
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"PSYCHIC",
-			"GHOST",
-			"DARK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 4.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.125,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 0.125,
+			"DRAGON": 1.0,
+			"DARK": 0.5,
+			"STEEL": 1.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Pelipper": {
 		"name": "Pelipper",
@@ -8338,7 +9521,7 @@
 			70,
 			65
 		],
-		"value": 533,
+		"value": 503,
 		"offensiveAdvantages": [
 			"GRASS",
 			"FIGHTING",
@@ -8347,14 +9530,26 @@
 			"ICE",
 			"FLYING"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"FIGHTING",
-			"GROUND",
-			"BUG",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 4.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 0.125,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Ninjask": {
 		"name": "Ninjask",
@@ -8438,7 +9633,7 @@
 			50,
 			160
 		],
-		"value": 526,
+		"value": 515,
 		"offensiveAdvantages": [
 			"GRASS",
 			"PSYCHIC",
@@ -8449,12 +9644,26 @@
 			"ROCK",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"GRASS",
-			"FIGHTING",
-			"GROUND",
-			"BUG"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 2.0,
+			"GRASS": 0.25,
+			"ICE": 2.0,
+			"FIGHTING": 0.25,
+			"POISON": 1.0,
+			"GROUND": 0.125,
+			"FLYING": 2.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 4.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Exploud": {
 		"name": "Exploud",
@@ -8538,7 +9747,7 @@
 			73,
 			68
 		],
-		"value": 639,
+		"value": 625,
 		"offensiveAdvantages": [
 			"NORMAL",
 			"ICE",
@@ -8550,9 +9759,26 @@
 			"FLYING",
 			"DRAGON"
 		],
-		"defensiveAdvantages": [
-			"GHOST"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 0.125,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Lairon": {
 		"name": "Lairon",
@@ -8636,27 +9862,35 @@
 			50,
 			40
 		],
-		"value": 501,
+		"value": 494,
 		"offensiveAdvantages": [
 			"ICE",
 			"ROCK",
+			"FAIRY",
 			"FIRE",
 			"FLYING",
 			"BUG"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"ICE",
-			"POISON",
-			"FLYING",
-			"PSYCHIC",
-			"BUG",
-			"ROCK",
-			"GHOST",
-			"DRAGON",
-			"DARK",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.25,
+			"FIRE": 1.0,
+			"WATER": 2.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 0.5,
+			"FIGHTING": 4.0,
+			"POISON": 0.125,
+			"GROUND": 4.0,
+			"FLYING": 0.25,
+			"PSYCHIC": 0.5,
+			"BUG": 0.5,
+			"ROCK": 0.5,
+			"GHOST": 0.5,
+			"DRAGON": 0.5,
+			"DARK": 0.5,
+			"STEEL": 1.0,
+			"FAIRY": 0.5
+		}
 	},
 	"Manectric": {
 		"name": "Manectric",
@@ -8740,7 +9974,7 @@
 			60,
 			105
 		],
-		"value": 633,
+		"value": 628,
 		"offensiveAdvantages": [
 			"WATER",
 			"FLYING",
@@ -8751,11 +9985,26 @@
 			"FIGHTING",
 			"POISON"
 		],
-		"defensiveAdvantages": [
-			"ELECTRIC",
-			"FLYING",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Roselia": {
 		"name": "Roselia",
@@ -8848,13 +10097,26 @@
 			"POISON",
 			"FIRE"
 		],
-		"defensiveAdvantages": [
-			"WATER",
-			"ELECTRIC",
-			"GRASS",
-			"FIGHTING",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.25,
+			"ICE": 2.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 2.0,
+			"PSYCHIC": 2.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 0.5
+		}
 	},
 	"Sharpedo": {
 		"name": "Sharpedo",
@@ -8938,7 +10200,7 @@
 			40,
 			95
 		],
-		"value": 557,
+		"value": 577,
 		"offensiveAdvantages": [
 			"FIRE",
 			"GROUND",
@@ -8947,15 +10209,26 @@
 			"GHOST",
 			"DRAGON"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"ICE",
-			"PSYCHIC",
-			"GHOST",
-			"DARK",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 2.0,
+			"GRASS": 2.0,
+			"ICE": 0.5,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.125,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 0.5,
+			"DRAGON": 1.0,
+			"DARK": 0.5,
+			"STEEL": 0.5,
+			"FAIRY": 2.0
+		}
 	},
 	"Wailmer": {
 		"name": "Wailmer",
@@ -9039,22 +10312,37 @@
 			35,
 			60
 		],
-		"value": 457,
+		"value": 439,
 		"offensiveAdvantages": [
 			"FIRE",
 			"GROUND",
 			"ROCK",
 			"ICE",
+			"FAIRY",
 			"GRASS",
 			"FIGHTING",
 			"BUG"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"ICE",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 2.0,
+			"GRASS": 2.0,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Torkoal": {
 		"name": "Torkoal",
@@ -9138,21 +10426,33 @@
 			70,
 			20
 		],
-		"value": 555,
+		"value": 542,
 		"offensiveAdvantages": [
 			"GRASS",
 			"ICE",
 			"BUG",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"GRASS",
-			"ICE",
-			"BUG",
-			"STEEL",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 2.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 2.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 0.5
+		}
 	},
 	"Flygon": {
 		"name": "Flygon",
@@ -9236,10 +10536,11 @@
 			80,
 			100
 		],
-		"value": 646,
+		"value": 635,
 		"offensiveAdvantages": [
 			"ICE",
 			"ROCK",
+			"FAIRY",
 			"DRAGON",
 			"GRASS",
 			"PSYCHIC",
@@ -9249,12 +10550,26 @@
 			"POISON",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"ELECTRIC",
-			"POISON",
-			"ROCK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 1.0,
+			"ELECTRIC": 0.125,
+			"GRASS": 1.0,
+			"ICE": 4.0,
+			"FIGHTING": 1.0,
+			"POISON": 0.5,
+			"GROUND": 0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 0.5,
+			"GHOST": 1.0,
+			"DRAGON": 2.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Altaria": {
 		"name": "Altaria",
@@ -9338,7 +10653,7 @@
 			105,
 			80
 		],
-		"value": 615,
+		"value": 577,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"DRAGON",
@@ -9351,14 +10666,26 @@
 			"GROUND",
 			"ROCK"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"GRASS",
-			"FIGHTING",
-			"GROUND",
-			"BUG"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.25,
+			"ICE": 4.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 0.125,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 2.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Whiscash": {
 		"name": "Whiscash",
@@ -9442,23 +10769,37 @@
 			71,
 			60
 		],
-		"value": 560,
+		"value": 539,
 		"offensiveAdvantages": [
 			"GRASS",
 			"FIGHTING",
 			"BUG",
+			"FAIRY",
 			"FIRE",
 			"GROUND",
 			"ROCK",
 			"POISON"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"ELECTRIC",
-			"POISON",
-			"ROCK",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 1.0,
+			"ELECTRIC": 0.125,
+			"GRASS": 4.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 0.5,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 0.5,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Crawdaunt": {
 		"name": "Crawdaunt",
@@ -9542,7 +10883,7 @@
 			55,
 			55
 		],
-		"value": 588,
+		"value": 600,
 		"offensiveAdvantages": [
 			"PSYCHIC",
 			"GHOST",
@@ -9550,15 +10891,26 @@
 			"GROUND",
 			"ROCK"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"ICE",
-			"PSYCHIC",
-			"GHOST",
-			"DARK",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 2.0,
+			"GRASS": 2.0,
+			"ICE": 0.5,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.125,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 0.5,
+			"DRAGON": 1.0,
+			"DARK": 0.5,
+			"STEEL": 0.5,
+			"FAIRY": 2.0
+		}
 	},
 	"Claydol": {
 		"name": "Claydol",
@@ -9642,7 +10994,7 @@
 			120,
 			75
 		],
-		"value": 608,
+		"value": 576,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"POISON",
@@ -9651,13 +11003,26 @@
 			"FLYING",
 			"BUG"
 		],
-		"defensiveAdvantages": [
-			"ELECTRIC",
-			"FIGHTING",
-			"POISON",
-			"PSYCHIC",
-			"ROCK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 2.0,
+			"ELECTRIC": 0.125,
+			"GRASS": 2.0,
+			"ICE": 2.0,
+			"FIGHTING": 0.5,
+			"POISON": 0.5,
+			"GROUND": 0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.5,
+			"BUG": 2.0,
+			"ROCK": 0.5,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Cradily": {
 		"name": "Cradily",
@@ -9741,7 +11106,7 @@
 			107,
 			43
 		],
-		"value": 615,
+		"value": 592,
 		"offensiveAdvantages": [
 			"WATER",
 			"GROUND",
@@ -9750,12 +11115,29 @@
 			"ICE",
 			"FLYING",
 			"BUG",
-			"GRASS"
+			"GRASS",
+			"FAIRY"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"ELECTRIC"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 0.5,
+			"GRASS": 1.0,
+			"ICE": 2.0,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Armaldo": {
 		"name": "Armaldo",
@@ -9839,7 +11221,7 @@
 			80,
 			45
 		],
-		"value": 597,
+		"value": 623,
 		"offensiveAdvantages": [
 			"GRASS",
 			"PSYCHIC",
@@ -9853,10 +11235,26 @@
 			"ROCK",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"POISON"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 1.0,
+			"WATER": 2.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 0.5,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Dusclops": {
 		"name": "Dusclops",
@@ -9940,7 +11338,7 @@
 			130,
 			25
 		],
-		"value": 542,
+		"value": 512,
 		"offensiveAdvantages": [
 			"PSYCHIC",
 			"GHOST",
@@ -9949,12 +11347,26 @@
 			"GRASS",
 			"DARK"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"FIGHTING",
-			"POISON",
-			"BUG"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.125,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 0.125,
+			"POISON": 0.5,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 1.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Absol": {
 		"name": "Absol",
@@ -10038,7 +11450,7 @@
 			60,
 			75
 		],
-		"value": 620,
+		"value": 619,
 		"offensiveAdvantages": [
 			"GRASS",
 			"GROUND",
@@ -10050,11 +11462,26 @@
 			"BUG",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"PSYCHIC",
-			"GHOST",
-			"DARK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.125,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 0.5,
+			"DRAGON": 1.0,
+			"DARK": 0.5,
+			"STEEL": 1.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Glalie": {
 		"name": "Glalie",
@@ -10138,10 +11565,11 @@
 			80,
 			80
 		],
-		"value": 550,
+		"value": 536,
 		"offensiveAdvantages": [
 			"ICE",
 			"ROCK",
+			"FAIRY",
 			"PSYCHIC",
 			"GHOST",
 			"GRASS",
@@ -10149,9 +11577,26 @@
 			"FLYING",
 			"DRAGON"
 		],
-		"defensiveAdvantages": [
-			"ICE"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 0.5,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Sealeo": {
 		"name": "Sealeo",
@@ -10235,7 +11680,7 @@
 			70,
 			45
 		],
-		"value": 514,
+		"value": 485,
 		"offensiveAdvantages": [
 			"GRASS",
 			"GROUND",
@@ -10244,10 +11689,26 @@
 			"FIRE",
 			"ROCK"
 		],
-		"defensiveAdvantages": [
-			"WATER",
-			"ICE"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 0.5,
+			"ELECTRIC": 2.0,
+			"GRASS": 2.0,
+			"ICE": 0.25,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Relicanth": {
 		"name": "Relicanth",
@@ -10331,7 +11792,7 @@
 			65,
 			55
 		],
-		"value": 648,
+		"value": 631,
 		"offensiveAdvantages": [
 			"FIRE",
 			"GROUND",
@@ -10341,13 +11802,26 @@
 			"BUG",
 			"DRAGON"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"FIRE",
-			"ICE",
-			"POISON",
-			"FLYING"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 0.25,
+			"WATER": 1.0,
+			"ELECTRIC": 2.0,
+			"GRASS": 4.0,
+			"ICE": 0.5,
+			"FIGHTING": 2.0,
+			"POISON": 0.5,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Metang": {
 		"name": "Metang",
@@ -10431,27 +11905,36 @@
 			80,
 			50
 		],
-		"value": 533,
+		"value": 504,
 		"offensiveAdvantages": [
 			"ICE",
 			"ROCK",
+			"FAIRY",
 			"WATER",
 			"FLYING",
 			"FIGHTING",
 			"POISON"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"GRASS",
-			"ICE",
-			"POISON",
-			"FLYING",
-			"PSYCHIC",
-			"ROCK",
-			"DRAGON",
-			"STEEL",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 0.125,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 0.25,
+			"BUG": 1.0,
+			"ROCK": 0.5,
+			"GHOST": 1.0,
+			"DRAGON": 0.5,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 0.5
+		}
 	},
 	"Luxray": {
 		"name": "Luxray",
@@ -10535,18 +12018,33 @@
 			79,
 			70
 		],
-		"value": 601,
+		"value": 607,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"POISON",
 			"WATER",
 			"FLYING"
 		],
-		"defensiveAdvantages": [
-			"ELECTRIC",
-			"FLYING",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 0.5,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Vespiquen": {
 		"name": "Vespiquen",
@@ -10630,7 +12128,7 @@
 			102,
 			40
 		],
-		"value": 592,
+		"value": 568,
 		"offensiveAdvantages": [
 			"GRASS",
 			"PSYCHIC",
@@ -10642,12 +12140,26 @@
 			"ROCK",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"GRASS",
-			"FIGHTING",
-			"GROUND",
-			"BUG"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 2.0,
+			"GRASS": 0.25,
+			"ICE": 2.0,
+			"FIGHTING": 0.25,
+			"POISON": 1.0,
+			"GROUND": 0.125,
+			"FLYING": 2.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 4.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Cherrim": {
 		"name": "Cherrim",
@@ -10731,7 +12243,7 @@
 			78,
 			85
 		],
-		"value": 517,
+		"value": 508,
 		"offensiveAdvantages": [
 			"WATER",
 			"GROUND",
@@ -10741,12 +12253,26 @@
 			"BUG",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"WATER",
-			"ELECTRIC",
-			"GRASS",
-			"GROUND"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 1.0,
+			"POISON": 2.0,
+			"GROUND": 0.5,
+			"FLYING": 2.0,
+			"PSYCHIC": 1.0,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Gastrodon": {
 		"name": "Gastrodon",
@@ -10830,7 +12356,7 @@
 			82,
 			39
 		],
-		"value": 617,
+		"value": 593,
 		"offensiveAdvantages": [
 			"GRASS",
 			"PSYCHIC",
@@ -10842,13 +12368,26 @@
 			"GROUND",
 			"ROCK"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"ELECTRIC",
-			"POISON",
-			"ROCK",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 1.0,
+			"ELECTRIC": 0.125,
+			"GRASS": 4.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 0.5,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 0.5,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Drifblim": {
 		"name": "Drifblim",
@@ -10932,7 +12471,7 @@
 			54,
 			80
 		],
-		"value": 588,
+		"value": 579,
 		"offensiveAdvantages": [
 			"GRASS",
 			"ICE",
@@ -10943,14 +12482,26 @@
 			"WATER",
 			"FLYING"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"GRASS",
-			"FIGHTING",
-			"POISON",
-			"GROUND",
-			"BUG"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.125,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 2.0,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 0.125,
+			"POISON": 0.5,
+			"GROUND": 0.125,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.25,
+			"ROCK": 2.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Lopunny": {
 		"name": "Lopunny",
@@ -11034,7 +12585,7 @@
 			96,
 			105
 		],
-		"value": 580,
+		"value": 556,
 		"offensiveAdvantages": [
 			"NORMAL",
 			"ICE",
@@ -11046,9 +12597,26 @@
 			"GRASS",
 			"BUG"
 		],
-		"defensiveAdvantages": [
-			"GHOST"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 0.125,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Skuntank": {
 		"name": "Skuntank",
@@ -11132,22 +12700,36 @@
 			61,
 			84
 		],
-		"value": 614,
+		"value": 592,
 		"offensiveAdvantages": [
 			"PSYCHIC",
 			"GHOST",
 			"GRASS",
 			"ICE",
 			"BUG",
-			"STEEL"
+			"STEEL",
+			"FAIRY"
 		],
-		"defensiveAdvantages": [
-			"GRASS",
-			"POISON",
-			"PSYCHIC",
-			"GHOST",
-			"DARK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 0.5,
+			"GROUND": 2.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.125,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 0.5,
+			"DRAGON": 1.0,
+			"DARK": 0.5,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Bronzong": {
 		"name": "Bronzong",
@@ -11231,25 +12813,34 @@
 			116,
 			33
 		],
-		"value": 536,
+		"value": 532,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"POISON",
 			"ICE",
-			"ROCK"
-		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"GRASS",
-			"ICE",
-			"POISON",
-			"FLYING",
-			"PSYCHIC",
 			"ROCK",
-			"DRAGON",
-			"STEEL",
 			"FAIRY"
-		]
+		],
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 0.125,
+			"GROUND": 0,
+			"FLYING": 0.5,
+			"PSYCHIC": 0.25,
+			"BUG": 1.0,
+			"ROCK": 0.5,
+			"GHOST": 1.0,
+			"DRAGON": 0.5,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 0.5
+		}
 	},
 	"Munchlax": {
 		"name": "Munchlax",
@@ -11333,18 +12924,36 @@
 			85,
 			5
 		],
-		"value": 555,
+		"value": 530,
 		"offensiveAdvantages": [
 			"WATER",
 			"FLYING",
 			"GRASS",
 			"ICE",
 			"BUG",
-			"STEEL"
+			"STEEL",
+			"FAIRY"
 		],
-		"defensiveAdvantages": [
-			"GHOST"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 0.125,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Drapion": {
 		"name": "Drapion",
@@ -11428,22 +13037,36 @@
 			75,
 			95
 		],
-		"value": 622,
+		"value": 610,
 		"offensiveAdvantages": [
 			"PSYCHIC",
 			"GHOST",
 			"GRASS",
 			"DARK",
 			"ICE",
-			"ROCK"
+			"ROCK",
+			"FAIRY"
 		],
-		"defensiveAdvantages": [
-			"GRASS",
-			"POISON",
-			"PSYCHIC",
-			"GHOST",
-			"DARK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 0.5,
+			"GROUND": 2.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.125,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 0.5,
+			"DRAGON": 1.0,
+			"DARK": 0.5,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Abomasnow": {
 		"name": "Abomasnow",
@@ -11527,7 +13150,7 @@
 			85,
 			60
 		],
-		"value": 589,
+		"value": 581,
 		"offensiveAdvantages": [
 			"GRASS",
 			"GROUND",
@@ -11536,12 +13159,26 @@
 			"WATER",
 			"ROCK"
 		],
-		"defensiveAdvantages": [
-			"WATER",
-			"ELECTRIC",
-			"GRASS",
-			"GROUND"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 4.0,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.5,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 2.0,
+			"GROUND": 0.5,
+			"FLYING": 2.0,
+			"PSYCHIC": 1.0,
+			"BUG": 2.0,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Froslass": {
 		"name": "Froslass",
@@ -11625,7 +13262,7 @@
 			70,
 			110
 		],
-		"value": 589,
+		"value": 567,
 		"offensiveAdvantages": [
 			"GRASS",
 			"GROUND",
@@ -11634,13 +13271,26 @@
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"ICE",
-			"FIGHTING",
-			"POISON",
-			"BUG"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.125,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 0.5,
+			"FIGHTING": 0.125,
+			"POISON": 0.5,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 2.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Rotom": {
 		"name": "Rotom",
@@ -11724,7 +13374,7 @@
 			77,
 			91
 		],
-		"value": 505,
+		"value": 502,
 		"offensiveAdvantages": [
 			"WATER",
 			"FLYING",
@@ -11735,15 +13385,26 @@
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"ELECTRIC",
-			"FIGHTING",
-			"POISON",
-			"FLYING",
-			"BUG",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.125,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 0.5,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 0.125,
+			"POISON": 0.5,
+			"GROUND": 0,
+			"FLYING": 0.5,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 1.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Stoutland": {
 		"name": "Stoutland",
@@ -11827,15 +13488,32 @@
 			90,
 			80
 		],
-		"value": 600,
+		"value": 591,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"DRAGON",
 			"DARK"
 		],
-		"defensiveAdvantages": [
-			"GHOST"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 0.125,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Liepard": {
 		"name": "Liepard",
@@ -11919,7 +13597,7 @@
 			50,
 			106
 		],
-		"value": 528,
+		"value": 518,
 		"offensiveAdvantages": [
 			"PSYCHIC",
 			"GHOST",
@@ -11927,11 +13605,26 @@
 			"DRAGON",
 			"DARK"
 		],
-		"defensiveAdvantages": [
-			"PSYCHIC",
-			"GHOST",
-			"DARK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.125,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 0.5,
+			"DRAGON": 1.0,
+			"DARK": 0.5,
+			"STEEL": 1.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Musharna": {
 		"name": "Musharna",
@@ -12015,7 +13708,7 @@
 			95,
 			29
 		],
-		"value": 622,
+		"value": 631,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"POISON",
@@ -12023,10 +13716,26 @@
 			"GROUND",
 			"ROCK"
 		],
-		"defensiveAdvantages": [
-			"FIGHTING",
-			"PSYCHIC"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.5,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Unfezant": {
 		"name": "Unfezant",
@@ -12110,7 +13819,7 @@
 			55,
 			93
 		],
-		"value": 524,
+		"value": 529,
 		"offensiveAdvantages": [
 			"GRASS",
 			"FIGHTING",
@@ -12118,12 +13827,26 @@
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"GRASS",
-			"GROUND",
-			"BUG",
-			"GHOST"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 2.0,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 0.125,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 2.0,
+			"GHOST": 0.125,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Boldore": {
 		"name": "Boldore",
@@ -12207,25 +13930,40 @@
 			40,
 			20
 		],
-		"value": 507,
+		"value": 513,
 		"offensiveAdvantages": [
 			"FIRE",
 			"ICE",
 			"FLYING",
 			"BUG",
 			"ROCK",
+			"FAIRY",
 			"NORMAL",
 			"DARK",
 			"STEEL",
 			"ELECTRIC",
 			"POISON"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"FIRE",
-			"POISON",
-			"FLYING"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 0.5,
+			"WATER": 2.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 2.0,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 0.5,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Swoobat": {
 		"name": "Swoobat",
@@ -12309,19 +14047,33 @@
 			55,
 			114
 		],
-		"value": 505,
+		"value": 487,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"POISON",
 			"GRASS",
 			"BUG"
 		],
-		"defensiveAdvantages": [
-			"GRASS",
-			"FIGHTING",
-			"GROUND",
-			"PSYCHIC"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 2.0,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 0.25,
+			"POISON": 1.0,
+			"GROUND": 0.125,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.5,
+			"BUG": 1.0,
+			"ROCK": 2.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Audino": {
 		"name": "Audino",
@@ -12405,7 +14157,7 @@
 			86,
 			50
 		],
-		"value": 560,
+		"value": 514,
 		"offensiveAdvantages": [
 			"FIRE",
 			"GROUND",
@@ -12418,9 +14170,26 @@
 			"BUG",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"GHOST"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 0.125,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Gurdurr": {
 		"name": "Gurdurr",
@@ -12504,7 +14273,7 @@
 			50,
 			40
 		],
-		"value": 543,
+		"value": 550,
 		"offensiveAdvantages": [
 			"NORMAL",
 			"ICE",
@@ -12515,11 +14284,26 @@
 			"ELECTRIC",
 			"POISON"
 		],
-		"defensiveAdvantages": [
-			"BUG",
-			"ROCK",
-			"DARK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 2.0,
+			"PSYCHIC": 2.0,
+			"BUG": 0.5,
+			"ROCK": 0.5,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 0.5,
+			"STEEL": 1.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Palpitoad": {
 		"name": "Palpitoad",
@@ -12603,7 +14387,7 @@
 			55,
 			69
 		],
-		"value": 517,
+		"value": 470,
 		"offensiveAdvantages": [
 			"FIRE",
 			"GROUND",
@@ -12615,13 +14399,26 @@
 			"FIGHTING",
 			"BUG"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"ELECTRIC",
-			"POISON",
-			"ROCK",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 1.0,
+			"ELECTRIC": 0.125,
+			"GRASS": 4.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 0.5,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 0.5,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Seismitoad": {
 		"name": "Seismitoad",
@@ -12705,17 +14502,31 @@
 			75,
 			74
 		],
-		"value": 584,
+		"value": 572,
 		"offensiveAdvantages": [
-			"GRASS"
+			"GRASS",
+			"FAIRY"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"ELECTRIC",
-			"POISON",
-			"ROCK",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 1.0,
+			"ELECTRIC": 0.125,
+			"GRASS": 4.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 0.5,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 0.5,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Scolipede": {
 		"name": "Scolipede",
@@ -12803,18 +14614,32 @@
 		"offensiveAdvantages": [
 			"ICE",
 			"ROCK",
+			"FAIRY",
 			"GRASS",
 			"PSYCHIC",
 			"GHOST",
 			"DARK"
 		],
-		"defensiveAdvantages": [
-			"GRASS",
-			"FIGHTING",
-			"POISON",
-			"BUG",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.25,
+			"ICE": 1.0,
+			"FIGHTING": 0.25,
+			"POISON": 0.5,
+			"GROUND": 1.0,
+			"FLYING": 2.0,
+			"PSYCHIC": 2.0,
+			"BUG": 0.5,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 0.5
+		}
 	},
 	"Whimsicott": {
 		"name": "Whimsicott",
@@ -12898,7 +14723,7 @@
 			75,
 			116
 		],
-		"value": 604,
+		"value": 571,
 		"offensiveAdvantages": [
 			"GRASS",
 			"FIGHTING",
@@ -12911,12 +14736,26 @@
 			"DRAGON",
 			"DARK"
 		],
-		"defensiveAdvantages": [
-			"WATER",
-			"ELECTRIC",
-			"GRASS",
-			"GROUND"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 0.5,
+			"POISON": 4.0,
+			"GROUND": 0.5,
+			"FLYING": 2.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 0.125,
+			"DARK": 0.5,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Lilligant": {
 		"name": "Lilligant",
@@ -13000,7 +14839,7 @@
 			75,
 			90
 		],
-		"value": 585,
+		"value": 595,
 		"offensiveAdvantages": [
 			"WATER",
 			"GROUND",
@@ -13011,12 +14850,26 @@
 			"FIGHTING",
 			"POISON"
 		],
-		"defensiveAdvantages": [
-			"WATER",
-			"ELECTRIC",
-			"GRASS",
-			"GROUND"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 1.0,
+			"POISON": 2.0,
+			"GROUND": 0.5,
+			"FLYING": 2.0,
+			"PSYCHIC": 1.0,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Basculin": {
 		"name": "Basculin",
@@ -13100,7 +14953,7 @@
 			55,
 			98
 		],
-		"value": 595,
+		"value": 585,
 		"offensiveAdvantages": [
 			"FIRE",
 			"GROUND",
@@ -13111,12 +14964,26 @@
 			"FLYING",
 			"DRAGON"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"ICE",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 2.0,
+			"GRASS": 2.0,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Basculin (2)": {
 		"name": "Basculin",
@@ -13200,7 +15067,7 @@
 			55,
 			98
 		],
-		"value": 560,
+		"value": 547,
 		"offensiveAdvantages": [
 			"FIRE",
 			"GROUND",
@@ -13208,12 +15075,26 @@
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"ICE",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 2.0,
+			"GRASS": 2.0,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Krookodile": {
 		"name": "Krookodile",
@@ -13297,7 +15178,7 @@
 			70,
 			92
 		],
-		"value": 606,
+		"value": 597,
 		"offensiveAdvantages": [
 			"FIRE",
 			"ELECTRIC",
@@ -13310,14 +15191,26 @@
 			"FLYING",
 			"BUG"
 		],
-		"defensiveAdvantages": [
-			"ELECTRIC",
-			"POISON",
-			"PSYCHIC",
-			"ROCK",
-			"GHOST",
-			"DARK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 2.0,
+			"ELECTRIC": 0.125,
+			"GRASS": 2.0,
+			"ICE": 2.0,
+			"FIGHTING": 2.0,
+			"POISON": 0.5,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.125,
+			"BUG": 2.0,
+			"ROCK": 0.5,
+			"GHOST": 0.5,
+			"DRAGON": 1.0,
+			"DARK": 0.5,
+			"STEEL": 1.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Maractus": {
 		"name": "Maractus",
@@ -13401,7 +15294,7 @@
 			67,
 			60
 		],
-		"value": 584,
+		"value": 585,
 		"offensiveAdvantages": [
 			"WATER",
 			"GROUND",
@@ -13409,12 +15302,26 @@
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"WATER",
-			"ELECTRIC",
-			"GRASS",
-			"GROUND"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 1.0,
+			"POISON": 2.0,
+			"GROUND": 0.5,
+			"FLYING": 2.0,
+			"PSYCHIC": 1.0,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Crustle": {
 		"name": "Crustle",
@@ -13498,7 +15405,7 @@
 			75,
 			45
 		],
-		"value": 593,
+		"value": 598,
 		"offensiveAdvantages": [
 			"GRASS",
 			"PSYCHIC",
@@ -13511,10 +15418,26 @@
 			"ROCK",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"POISON"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 1.0,
+			"WATER": 2.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 0.5,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Sigilyph": {
 		"name": "Sigilyph",
@@ -13598,7 +15521,7 @@
 			80,
 			97
 		],
-		"value": 610,
+		"value": 614,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"POISON",
@@ -13607,14 +15530,29 @@
 			"ROCK",
 			"GRASS",
 			"BUG",
-			"ICE"
+			"ICE",
+			"FAIRY"
 		],
-		"defensiveAdvantages": [
-			"GRASS",
-			"FIGHTING",
-			"GROUND",
-			"PSYCHIC"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 2.0,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 0.25,
+			"POISON": 1.0,
+			"GROUND": 0.125,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.5,
+			"BUG": 1.0,
+			"ROCK": 2.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Cofagrigus": {
 		"name": "Cofagrigus",
@@ -13698,7 +15636,7 @@
 			105,
 			30
 		],
-		"value": 568,
+		"value": 563,
 		"offensiveAdvantages": [
 			"PSYCHIC",
 			"GHOST",
@@ -13709,12 +15647,26 @@
 			"FIGHTING",
 			"POISON"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"FIGHTING",
-			"POISON",
-			"BUG"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.125,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 0.125,
+			"POISON": 0.5,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 1.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Garbodor": {
 		"name": "Garbodor",
@@ -13798,22 +15750,36 @@
 			82,
 			75
 		],
-		"value": 604,
+		"value": 582,
 		"offensiveAdvantages": [
 			"GRASS",
+			"FAIRY",
 			"NORMAL",
 			"ICE",
 			"ROCK",
 			"DARK",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"GRASS",
-			"FIGHTING",
-			"POISON",
-			"BUG",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 1.0,
+			"FIGHTING": 0.5,
+			"POISON": 0.5,
+			"GROUND": 2.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 2.0,
+			"BUG": 0.5,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 0.5
+		}
 	},
 	"Cinccino": {
 		"name": "Cinccino",
@@ -13897,7 +15863,7 @@
 			60,
 			115
 		],
-		"value": 552,
+		"value": 539,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"POISON",
@@ -13906,9 +15872,26 @@
 			"FLYING",
 			"DRAGON"
 		],
-		"defensiveAdvantages": [
-			"GHOST"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 0.125,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Vanillish": {
 		"name": "Vanillish",
@@ -13992,16 +15975,33 @@
 			75,
 			59
 		],
-		"value": 523,
+		"value": 497,
 		"offensiveAdvantages": [
 			"GRASS",
 			"GROUND",
 			"FLYING",
 			"DRAGON"
 		],
-		"defensiveAdvantages": [
-			"ICE"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 0.5,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Emolga": {
 		"name": "Emolga",
@@ -14085,7 +16085,7 @@
 			60,
 			103
 		],
-		"value": 537,
+		"value": 510,
 		"offensiveAdvantages": [
 			"GRASS",
 			"FIGHTING",
@@ -14093,14 +16093,26 @@
 			"WATER",
 			"FLYING"
 		],
-		"defensiveAdvantages": [
-			"GRASS",
-			"FIGHTING",
-			"GROUND",
-			"FLYING",
-			"BUG",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 0.125,
+			"FLYING": 0.5,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Escavalier": {
 		"name": "Escavalier",
@@ -14184,7 +16196,7 @@
 			105,
 			20
 		],
-		"value": 597,
+		"value": 632,
 		"offensiveAdvantages": [
 			"FIRE",
 			"ELECTRIC",
@@ -14197,19 +16209,26 @@
 			"DARK",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"GRASS",
-			"ICE",
-			"POISON",
-			"PSYCHIC",
-			"BUG",
-			"GHOST",
-			"DRAGON",
-			"DARK",
-			"STEEL",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 4.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.25,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 0.125,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.5,
+			"BUG": 0.5,
+			"ROCK": 1.0,
+			"GHOST": 0.5,
+			"DRAGON": 0.5,
+			"DARK": 0.5,
+			"STEEL": 0.5,
+			"FAIRY": 0.5
+		}
 	},
 	"Amoonguss": {
 		"name": "Amoonguss",
@@ -14293,22 +16312,36 @@
 			80,
 			30
 		],
-		"value": 564,
+		"value": 549,
 		"offensiveAdvantages": [
 			"GRASS",
+			"FAIRY",
 			"PSYCHIC",
 			"DARK",
 			"WATER",
 			"GROUND",
 			"ROCK"
 		],
-		"defensiveAdvantages": [
-			"WATER",
-			"ELECTRIC",
-			"GRASS",
-			"FIGHTING",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.25,
+			"ICE": 2.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 2.0,
+			"PSYCHIC": 2.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 0.5
+		}
 	},
 	"Jellicent": {
 		"name": "Jellicent",
@@ -14392,7 +16425,7 @@
 			105,
 			60
 		],
-		"value": 566,
+		"value": 548,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"DRAGON",
@@ -14404,16 +16437,26 @@
 			"GRASS",
 			"FLYING"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"FIRE",
-			"WATER",
-			"ICE",
-			"FIGHTING",
-			"POISON",
-			"BUG",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.125,
+			"FIRE": 0.5,
+			"WATER": 0,
+			"ELECTRIC": 2.0,
+			"GRASS": 2.0,
+			"ICE": 0.5,
+			"FIGHTING": 0.125,
+			"POISON": 0.5,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 1.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Galvantula": {
 		"name": "Galvantula",
@@ -14497,7 +16540,7 @@
 			60,
 			108
 		],
-		"value": 611,
+		"value": 607,
 		"offensiveAdvantages": [
 			"WATER",
 			"FLYING",
@@ -14505,12 +16548,26 @@
 			"PSYCHIC",
 			"DARK"
 		],
-		"defensiveAdvantages": [
-			"ELECTRIC",
-			"GRASS",
-			"FIGHTING",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.5,
+			"ICE": 1.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Klang": {
 		"name": "Klang",
@@ -14594,30 +16651,36 @@
 			85,
 			50
 		],
-		"value": 590,
+		"value": 545,
 		"offensiveAdvantages": [
 			"WATER",
 			"FLYING",
 			"ICE",
 			"ROCK",
+			"FAIRY",
 			"FIRE",
 			"BUG"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"GRASS",
-			"ICE",
-			"POISON",
-			"FLYING",
-			"PSYCHIC",
-			"BUG",
-			"ROCK",
-			"GHOST",
-			"DRAGON",
-			"DARK",
-			"STEEL",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 0.5,
+			"FIGHTING": 2.0,
+			"POISON": 0.125,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 0.5,
+			"BUG": 0.5,
+			"ROCK": 0.5,
+			"GHOST": 0.5,
+			"DRAGON": 0.5,
+			"DARK": 0.5,
+			"STEEL": 0.5,
+			"FAIRY": 0.5
+		}
 	},
 	"Klinklang": {
 		"name": "Klinklang",
@@ -14704,23 +16767,29 @@
 		"value": 596,
 		"offensiveAdvantages": [
 			"ICE",
-			"ROCK"
-		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"GRASS",
-			"ICE",
-			"POISON",
-			"FLYING",
-			"PSYCHIC",
-			"BUG",
 			"ROCK",
-			"GHOST",
-			"DRAGON",
-			"DARK",
-			"STEEL",
 			"FAIRY"
-		]
+		],
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 0.5,
+			"FIGHTING": 2.0,
+			"POISON": 0.125,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 0.5,
+			"BUG": 0.5,
+			"ROCK": 0.5,
+			"GHOST": 0.5,
+			"DRAGON": 0.5,
+			"DARK": 0.5,
+			"STEEL": 0.5,
+			"FAIRY": 0.5
+		}
 	},
 	"Beheeyem": {
 		"name": "Beheeyem",
@@ -14804,7 +16873,7 @@
 			95,
 			40
 		],
-		"value": 632,
+		"value": 668,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"POISON",
@@ -14815,10 +16884,26 @@
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"FIGHTING",
-			"PSYCHIC"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.5,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Lampent": {
 		"name": "Lampent",
@@ -14902,7 +16987,7 @@
 			60,
 			55
 		],
-		"value": 461,
+		"value": 439,
 		"offensiveAdvantages": [
 			"GRASS",
 			"ICE",
@@ -14913,17 +16998,26 @@
 			"FIGHTING",
 			"POISON"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"FIRE",
-			"GRASS",
-			"ICE",
-			"FIGHTING",
-			"POISON",
-			"BUG",
-			"STEEL",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.125,
+			"FIRE": 0,
+			"WATER": 2.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 0.5,
+			"FIGHTING": 0.125,
+			"POISON": 0.5,
+			"GROUND": 2.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.25,
+			"ROCK": 2.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 0.5,
+			"FAIRY": 0.5
+		}
 	},
 	"Fraxure": {
 		"name": "Fraxure",
@@ -15007,19 +17101,33 @@
 			50,
 			67
 		],
-		"value": 573,
+		"value": 601,
 		"offensiveAdvantages": [
 			"DRAGON",
 			"GRASS",
 			"PSYCHIC",
 			"DARK"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"ELECTRIC",
-			"GRASS"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 2.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Beartic": {
 		"name": "Beartic",
@@ -15103,7 +17211,7 @@
 			80,
 			50
 		],
-		"value": 649,
+		"value": 630,
 		"offensiveAdvantages": [
 			"NORMAL",
 			"ICE",
@@ -15116,9 +17224,26 @@
 			"DRAGON",
 			"FIRE"
 		],
-		"defensiveAdvantages": [
-			"ICE"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 0.5,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Cryogonal": {
 		"name": "Cryogonal",
@@ -15202,7 +17327,7 @@
 			135,
 			105
 		],
-		"value": 628,
+		"value": 622,
 		"offensiveAdvantages": [
 			"GRASS",
 			"GROUND",
@@ -15213,9 +17338,26 @@
 			"WATER",
 			"ROCK"
 		],
-		"defensiveAdvantages": [
-			"ICE"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 0.5,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Accelgor": {
 		"name": "Accelgor",
@@ -15304,15 +17446,31 @@
 			"GRASS",
 			"PSYCHIC",
 			"DARK",
+			"FAIRY",
 			"FIRE",
 			"GROUND",
 			"ROCK"
 		],
-		"defensiveAdvantages": [
-			"GRASS",
-			"FIGHTING",
-			"GROUND"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 1.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 0.5,
+			"FLYING": 2.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Stunfisk": {
 		"name": "Stunfisk",
@@ -15396,7 +17554,7 @@
 			99,
 			32
 		],
-		"value": 599,
+		"value": 574,
 		"offensiveAdvantages": [
 			"WATER",
 			"FLYING",
@@ -15407,13 +17565,26 @@
 			"STEEL",
 			"GROUND"
 		],
-		"defensiveAdvantages": [
-			"ELECTRIC",
-			"POISON",
-			"FLYING",
-			"ROCK",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 2.0,
+			"ELECTRIC": 0.125,
+			"GRASS": 2.0,
+			"ICE": 2.0,
+			"FIGHTING": 1.0,
+			"POISON": 0.5,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 0.5,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Stunfisk (2)": {
 		"name": "Stunfisk",
@@ -15497,10 +17668,11 @@
 			99,
 			32
 		],
-		"value": 598,
+		"value": 567,
 		"offensiveAdvantages": [
 			"ICE",
 			"ROCK",
+			"FAIRY",
 			"PSYCHIC",
 			"GHOST",
 			"FIRE",
@@ -15508,20 +17680,26 @@
 			"POISON",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"ELECTRIC",
-			"POISON",
-			"FLYING",
-			"PSYCHIC",
-			"BUG",
-			"ROCK",
-			"GHOST",
-			"DRAGON",
-			"DARK",
-			"STEEL",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 2.0,
+			"WATER": 2.0,
+			"ELECTRIC": 0.125,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 0.125,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 0.5,
+			"BUG": 0.5,
+			"ROCK": 0.25,
+			"GHOST": 0.5,
+			"DRAGON": 0.5,
+			"DARK": 0.5,
+			"STEEL": 0.5,
+			"FAIRY": 0.5
+		}
 	},
 	"Mienshao": {
 		"name": "Mienshao",
@@ -15605,7 +17783,7 @@
 			60,
 			105
 		],
-		"value": 623,
+		"value": 640,
 		"offensiveAdvantages": [
 			"NORMAL",
 			"ICE",
@@ -15616,11 +17794,26 @@
 			"FLYING",
 			"BUG"
 		],
-		"defensiveAdvantages": [
-			"BUG",
-			"ROCK",
-			"DARK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 2.0,
+			"PSYCHIC": 2.0,
+			"BUG": 0.5,
+			"ROCK": 0.5,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 0.5,
+			"STEEL": 1.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Druddigon": {
 		"name": "Druddigon",
@@ -15704,7 +17897,7 @@
 			90,
 			48
 		],
-		"value": 626,
+		"value": 654,
 		"offensiveAdvantages": [
 			"PSYCHIC",
 			"GHOST",
@@ -15713,17 +17906,32 @@
 			"BUG",
 			"ICE",
 			"ROCK",
+			"FAIRY",
 			"FIRE",
 			"ELECTRIC",
 			"POISON",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"ELECTRIC",
-			"GRASS"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 2.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Golurk": {
 		"name": "Golurk",
@@ -15807,7 +18015,7 @@
 			80,
 			55
 		],
-		"value": 604,
+		"value": 609,
 		"offensiveAdvantages": [
 			"NORMAL",
 			"ICE",
@@ -15820,14 +18028,26 @@
 			"ELECTRIC",
 			"POISON"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"ELECTRIC",
-			"FIGHTING",
-			"POISON",
-			"BUG",
-			"ROCK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.125,
+			"FIRE": 1.0,
+			"WATER": 2.0,
+			"ELECTRIC": 0.125,
+			"GRASS": 2.0,
+			"ICE": 2.0,
+			"FIGHTING": 0.125,
+			"POISON": 0.25,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 0.5,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Bisharp": {
 		"name": "Bisharp",
@@ -15911,29 +18131,37 @@
 			70,
 			70
 		],
-		"value": 600,
+		"value": 627,
 		"offensiveAdvantages": [
 			"PSYCHIC",
 			"GHOST",
 			"GRASS",
+			"FAIRY",
 			"FIGHTING",
 			"POISON",
 			"ICE",
 			"ROCK"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"GRASS",
-			"ICE",
-			"POISON",
-			"FLYING",
-			"PSYCHIC",
-			"ROCK",
-			"GHOST",
-			"DRAGON",
-			"DARK",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 0.5,
+			"FIGHTING": 4.0,
+			"POISON": 0.125,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 0.125,
+			"BUG": 1.0,
+			"ROCK": 0.5,
+			"GHOST": 0.25,
+			"DRAGON": 0.5,
+			"DARK": 0.25,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Bouffalant": {
 		"name": "Bouffalant",
@@ -16017,19 +18245,37 @@
 			95,
 			55
 		],
-		"value": 657,
+		"value": 674,
 		"offensiveAdvantages": [
 			"PSYCHIC",
 			"GHOST",
 			"ICE",
 			"ROCK",
+			"FAIRY",
 			"NORMAL",
 			"DARK",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"GHOST"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 0.125,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Heatmor": {
 		"name": "Heatmor",
@@ -16113,7 +18359,7 @@
 			66,
 			65
 		],
-		"value": 597,
+		"value": 600,
 		"offensiveAdvantages": [
 			"GRASS",
 			"ICE",
@@ -16123,14 +18369,26 @@
 			"GROUND",
 			"ROCK"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"GRASS",
-			"ICE",
-			"BUG",
-			"STEEL",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0,
+			"WATER": 2.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 2.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 0.5
+		}
 	},
 	"Durant": {
 		"name": "Durant",
@@ -16214,7 +18472,7 @@
 			48,
 			109
 		],
-		"value": 578,
+		"value": 587,
 		"offensiveAdvantages": [
 			"WATER",
 			"FLYING",
@@ -16222,21 +18480,29 @@
 			"PSYCHIC",
 			"DARK",
 			"ICE",
-			"ROCK"
-		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"GRASS",
-			"ICE",
-			"POISON",
-			"PSYCHIC",
-			"BUG",
-			"GHOST",
-			"DRAGON",
-			"DARK",
-			"STEEL",
+			"ROCK",
 			"FAIRY"
-		]
+		],
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 4.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.25,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 0.125,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.5,
+			"BUG": 0.5,
+			"ROCK": 1.0,
+			"GHOST": 0.5,
+			"DRAGON": 0.5,
+			"DARK": 0.5,
+			"STEEL": 0.5,
+			"FAIRY": 0.5
+		}
 	},
 	"Diggersby": {
 		"name": "Diggersby",
@@ -16320,7 +18586,7 @@
 			77,
 			78
 		],
-		"value": 540,
+		"value": 488,
 		"offensiveAdvantages": [
 			"FIRE",
 			"ICE",
@@ -16331,12 +18597,26 @@
 			"ROCK",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"ELECTRIC",
-			"POISON",
-			"ROCK",
-			"GHOST"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 2.0,
+			"ELECTRIC": 0.125,
+			"GRASS": 2.0,
+			"ICE": 2.0,
+			"FIGHTING": 2.0,
+			"POISON": 0.5,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 0.5,
+			"GHOST": 0.125,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Talonflame": {
 		"name": "Talonflame",
@@ -16420,24 +18700,36 @@
 			69,
 			126
 		],
-		"value": 614,
+		"value": 586,
 		"offensiveAdvantages": [
 			"GRASS",
 			"FIGHTING",
 			"BUG",
 			"ICE",
 			"ROCK",
+			"FAIRY",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"GRASS",
-			"FIGHTING",
-			"GROUND",
-			"BUG",
-			"STEEL",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 2.0,
+			"ELECTRIC": 2.0,
+			"GRASS": 0.25,
+			"ICE": 1.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 0.125,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.25,
+			"ROCK": 4.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 0.5
+		}
 	},
 	"Pangoro": {
 		"name": "Pangoro",
@@ -16521,22 +18813,37 @@
 			71,
 			58
 		],
-		"value": 602,
+		"value": 628,
 		"offensiveAdvantages": [
 			"ICE",
 			"ROCK",
+			"FAIRY",
 			"NORMAL",
 			"DARK",
 			"STEEL",
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"PSYCHIC",
-			"ROCK",
-			"GHOST",
-			"DARK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 2.0,
+			"PSYCHIC": 0.125,
+			"BUG": 1.0,
+			"ROCK": 0.5,
+			"GHOST": 0.5,
+			"DRAGON": 1.0,
+			"DARK": 0.25,
+			"STEEL": 1.0,
+			"FAIRY": 4.0
+		}
 	},
 	"Doublade": {
 		"name": "Doublade",
@@ -16620,10 +18927,11 @@
 			49,
 			35
 		],
-		"value": 563,
+		"value": 574,
 		"offensiveAdvantages": [
 			"ICE",
 			"ROCK",
+			"FAIRY",
 			"NORMAL",
 			"DARK",
 			"STEEL",
@@ -16631,20 +18939,26 @@
 			"FIGHTING",
 			"BUG"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"GRASS",
-			"ICE",
-			"FIGHTING",
-			"POISON",
-			"FLYING",
-			"PSYCHIC",
-			"BUG",
-			"ROCK",
-			"DRAGON",
-			"STEEL",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.125,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 0.5,
+			"FIGHTING": 0.125,
+			"POISON": 0.125,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 0.5,
+			"BUG": 0.25,
+			"ROCK": 0.5,
+			"GHOST": 1.0,
+			"DRAGON": 0.5,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 0.5
+		}
 	},
 	"Malamar": {
 		"name": "Malamar",
@@ -16728,7 +19042,7 @@
 			75,
 			73
 		],
-		"value": 612,
+		"value": 578,
 		"offensiveAdvantages": [
 			"PSYCHIC",
 			"GHOST",
@@ -16737,9 +19051,26 @@
 			"WATER",
 			"FLYING"
 		],
-		"defensiveAdvantages": [
-			"PSYCHIC"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.125,
+			"BUG": 4.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Barbaracle": {
 		"name": "Barbaracle",
@@ -16823,22 +19154,36 @@
 			86,
 			68
 		],
-		"value": 646,
+		"value": 634,
 		"offensiveAdvantages": [
 			"FIRE",
 			"GROUND",
 			"ROCK",
 			"GRASS",
 			"FLYING",
-			"DRAGON"
+			"DRAGON",
+			"FAIRY"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"FIRE",
-			"ICE",
-			"POISON",
-			"FLYING"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 0.25,
+			"WATER": 1.0,
+			"ELECTRIC": 2.0,
+			"GRASS": 4.0,
+			"ICE": 0.5,
+			"FIGHTING": 2.0,
+			"POISON": 0.5,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Heliolisk": {
 		"name": "Heliolisk",
@@ -16922,7 +19267,7 @@
 			94,
 			109
 		],
-		"value": 551,
+		"value": 557,
 		"offensiveAdvantages": [
 			"WATER",
 			"FLYING",
@@ -16933,12 +19278,26 @@
 			"ROCK",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"ELECTRIC",
-			"FLYING",
-			"GHOST",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 0.5,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 0.125,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Tyrantrum": {
 		"name": "Tyrantrum",
@@ -17022,7 +19381,7 @@
 			59,
 			71
 		],
-		"value": 679,
+		"value": 713,
 		"offensiveAdvantages": [
 			"DRAGON",
 			"FIRE",
@@ -17034,13 +19393,26 @@
 			"DARK",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"FIRE",
-			"ELECTRIC",
-			"POISON",
-			"FLYING"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 0.25,
+			"WATER": 1.0,
+			"ELECTRIC": 0.5,
+			"GRASS": 1.0,
+			"ICE": 2.0,
+			"FIGHTING": 2.0,
+			"POISON": 0.5,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 2.0,
+			"DARK": 1.0,
+			"STEEL": 2.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Aurorus": {
 		"name": "Aurorus",
@@ -17124,7 +19496,7 @@
 			92,
 			58
 		],
-		"value": 632,
+		"value": 621,
 		"offensiveAdvantages": [
 			"WATER",
 			"FLYING",
@@ -17132,12 +19504,26 @@
 			"ICE",
 			"BUG"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"ICE",
-			"POISON",
-			"FLYING"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 1.0,
+			"WATER": 2.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 2.0,
+			"ICE": 0.5,
+			"FIGHTING": 4.0,
+			"POISON": 0.5,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 4.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Hawlucha": {
 		"name": "Hawlucha",
@@ -17221,24 +19607,38 @@
 			63,
 			118
 		],
-		"value": 612,
+		"value": 603,
 		"offensiveAdvantages": [
 			"PSYCHIC",
 			"GHOST",
 			"GRASS",
+			"FAIRY",
 			"NORMAL",
 			"ICE",
 			"ROCK",
 			"DARK",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"GRASS",
-			"FIGHTING",
-			"GROUND",
-			"BUG",
-			"DARK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 2.0,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 0.125,
+			"FLYING": 2.0,
+			"PSYCHIC": 2.0,
+			"BUG": 0.25,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 0.5,
+			"STEEL": 1.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Dedenne": {
 		"name": "Dedenne",
@@ -17322,7 +19722,7 @@
 			67,
 			101
 		],
-		"value": 509,
+		"value": 494,
 		"offensiveAdvantages": [
 			"WATER",
 			"FLYING",
@@ -17330,11 +19730,26 @@
 			"DRAGON",
 			"DARK"
 		],
-		"defensiveAdvantages": [
-			"ELECTRIC",
-			"FLYING",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 0.5,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 0.5,
+			"POISON": 2.0,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 0.125,
+			"DARK": 0.5,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Klefki": {
 		"name": "Klefki",
@@ -17418,30 +19833,36 @@
 			87,
 			75
 		],
-		"value": 550,
+		"value": 534,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"POISON",
 			"DRAGON",
 			"DARK",
 			"ICE",
-			"ROCK"
-		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"GRASS",
-			"ICE",
-			"POISON",
-			"FLYING",
-			"PSYCHIC",
-			"BUG",
 			"ROCK",
-			"GHOST",
-			"DRAGON",
-			"DARK",
-			"STEEL",
 			"FAIRY"
-		]
+		],
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 0.125,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 0.5,
+			"BUG": 0.25,
+			"ROCK": 0.5,
+			"GHOST": 0.5,
+			"DRAGON": 0.125,
+			"DARK": 0.25,
+			"STEEL": 1.0,
+			"FAIRY": 0.5
+		}
 	},
 	"Trevenant": {
 		"name": "Trevenant",
@@ -17525,7 +19946,7 @@
 			82,
 			56
 		],
-		"value": 549,
+		"value": 556,
 		"offensiveAdvantages": [
 			"WATER",
 			"GROUND",
@@ -17537,14 +19958,26 @@
 			"DARK",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"WATER",
-			"ELECTRIC",
-			"GRASS",
-			"FIGHTING",
-			"GROUND"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.125,
+			"FIRE": 2.0,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 0.125,
+			"POISON": 1.0,
+			"GROUND": 0.5,
+			"FLYING": 2.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Gourgeist": {
 		"name": "Gourgeist",
@@ -17628,7 +20061,7 @@
 			75,
 			84
 		],
-		"value": 551,
+		"value": 533,
 		"offensiveAdvantages": [
 			"GRASS",
 			"ICE",
@@ -17640,14 +20073,26 @@
 			"GROUND",
 			"ROCK"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"WATER",
-			"ELECTRIC",
-			"GRASS",
-			"FIGHTING",
-			"GROUND"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.125,
+			"FIRE": 2.0,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 0.125,
+			"POISON": 1.0,
+			"GROUND": 0.5,
+			"FLYING": 2.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Charjabug": {
 		"name": "Charjabug",
@@ -17731,7 +20176,7 @@
 			75,
 			36
 		],
-		"value": 452,
+		"value": 443,
 		"offensiveAdvantages": [
 			"GRASS",
 			"PSYCHIC",
@@ -17744,12 +20189,26 @@
 			"ROCK",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"ELECTRIC",
-			"GRASS",
-			"FIGHTING",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.5,
+			"ICE": 1.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Vikavolt": {
 		"name": "Vikavolt",
@@ -17833,7 +20292,7 @@
 			75,
 			43
 		],
-		"value": 627,
+		"value": 630,
 		"offensiveAdvantages": [
 			"WATER",
 			"FLYING",
@@ -17843,15 +20302,30 @@
 			"ROCK",
 			"STEEL",
 			"GRASS",
+			"FAIRY",
 			"PSYCHIC",
 			"DARK"
 		],
-		"defensiveAdvantages": [
-			"ELECTRIC",
-			"GRASS",
-			"FIGHTING",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.5,
+			"ICE": 1.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Ribombee": {
 		"name": "Ribombee",
@@ -17935,7 +20409,7 @@
 			70,
 			124
 		],
-		"value": 534,
+		"value": 530,
 		"offensiveAdvantages": [
 			"GRASS",
 			"PSYCHIC",
@@ -17947,11 +20421,26 @@
 			"ROCK",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"GRASS",
-			"FIGHTING",
-			"GROUND"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 1.0,
+			"FIGHTING": 0.25,
+			"POISON": 2.0,
+			"GROUND": 0.5,
+			"FLYING": 2.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 0.125,
+			"DARK": 0.5,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Lycanroc": {
 		"name": "Lycanroc",
@@ -18035,19 +20524,33 @@
 			65,
 			112
 		],
-		"value": 577,
+		"value": 572,
 		"offensiveAdvantages": [
 			"FIRE",
 			"ICE",
 			"FLYING",
 			"BUG"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"FIRE",
-			"POISON",
-			"FLYING"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 0.5,
+			"WATER": 2.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 2.0,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 0.5,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Lycanroc (2)": {
 		"name": "Lycanroc",
@@ -18131,7 +20634,7 @@
 			65,
 			112
 		],
-		"value": 604,
+		"value": 622,
 		"offensiveAdvantages": [
 			"FIRE",
 			"ICE",
@@ -18144,12 +20647,26 @@
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"FIRE",
-			"POISON",
-			"FLYING"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 0.5,
+			"WATER": 2.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 2.0,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 0.5,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Mudsdale": {
 		"name": "Mudsdale",
@@ -18233,7 +20750,7 @@
 			85,
 			35
 		],
-		"value": 634,
+		"value": 668,
 		"offensiveAdvantages": [
 			"PSYCHIC",
 			"GHOST",
@@ -18246,11 +20763,26 @@
 			"ELECTRIC",
 			"POISON"
 		],
-		"defensiveAdvantages": [
-			"ELECTRIC",
-			"POISON",
-			"ROCK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 2.0,
+			"ELECTRIC": 0.125,
+			"GRASS": 2.0,
+			"ICE": 2.0,
+			"FIGHTING": 1.0,
+			"POISON": 0.5,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 0.5,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Araquanid": {
 		"name": "Araquanid",
@@ -18334,22 +20866,36 @@
 			132,
 			42
 		],
-		"value": 576,
+		"value": 539,
 		"offensiveAdvantages": [
 			"FIRE",
 			"GROUND",
 			"ROCK",
 			"GRASS",
 			"PSYCHIC",
-			"DARK"
+			"DARK",
+			"FAIRY"
 		],
-		"defensiveAdvantages": [
-			"WATER",
-			"ICE",
-			"FIGHTING",
-			"GROUND",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 0,
+			"ELECTRIC": 2.0,
+			"GRASS": 1.0,
+			"ICE": 0.5,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 0.5,
+			"FLYING": 2.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Lurantis": {
 		"name": "Lurantis",
@@ -18433,7 +20979,7 @@
 			90,
 			45
 		],
-		"value": 631,
+		"value": 611,
 		"offensiveAdvantages": [
 			"WATER",
 			"GROUND",
@@ -18442,12 +20988,26 @@
 			"PSYCHIC",
 			"DARK"
 		],
-		"defensiveAdvantages": [
-			"WATER",
-			"ELECTRIC",
-			"GRASS",
-			"GROUND"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 1.0,
+			"POISON": 2.0,
+			"GROUND": 0.5,
+			"FLYING": 2.0,
+			"PSYCHIC": 1.0,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Shiinotic": {
 		"name": "Shiinotic",
@@ -18531,7 +21091,7 @@
 			100,
 			30
 		],
-		"value": 490,
+		"value": 481,
 		"offensiveAdvantages": [
 			"WATER",
 			"GROUND",
@@ -18541,12 +21101,26 @@
 			"DARK",
 			"FIRE"
 		],
-		"defensiveAdvantages": [
-			"WATER",
-			"ELECTRIC",
-			"GRASS",
-			"GROUND"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 0.5,
+			"POISON": 4.0,
+			"GROUND": 0.5,
+			"FLYING": 2.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 0.125,
+			"DARK": 0.5,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Salazzle": {
 		"name": "Salazzle",
@@ -18630,23 +21204,34 @@
 			60,
 			117
 		],
-		"value": 560,
+		"value": 552,
 		"offensiveAdvantages": [
 			"GRASS",
+			"FAIRY",
 			"ICE",
 			"BUG",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"GRASS",
-			"ICE",
-			"FIGHTING",
-			"POISON",
-			"BUG",
-			"STEEL",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 2.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.25,
+			"ICE": 0.5,
+			"FIGHTING": 0.5,
+			"POISON": 0.5,
+			"GROUND": 4.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 2.0,
+			"BUG": 0.25,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 0.25
+		}
 	},
 	"Bewear": {
 		"name": "Bewear",
@@ -18730,7 +21315,7 @@
 			60,
 			60
 		],
-		"value": 622,
+		"value": 653,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"DRAGON",
@@ -18738,12 +21323,26 @@
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"BUG",
-			"ROCK",
-			"GHOST",
-			"DARK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 2.0,
+			"PSYCHIC": 2.0,
+			"BUG": 0.5,
+			"ROCK": 0.5,
+			"GHOST": 0.125,
+			"DRAGON": 1.0,
+			"DARK": 0.5,
+			"STEEL": 1.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Tsareena": {
 		"name": "Tsareena",
@@ -18827,7 +21426,7 @@
 			98,
 			72
 		],
-		"value": 586,
+		"value": 601,
 		"offensiveAdvantages": [
 			"WATER",
 			"GROUND",
@@ -18836,12 +21435,26 @@
 			"FIGHTING",
 			"BUG"
 		],
-		"defensiveAdvantages": [
-			"WATER",
-			"ELECTRIC",
-			"GRASS",
-			"GROUND"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 1.0,
+			"POISON": 2.0,
+			"GROUND": 0.5,
+			"FLYING": 2.0,
+			"PSYCHIC": 1.0,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Comfey": {
 		"name": "Comfey",
@@ -18925,7 +21538,7 @@
 			110,
 			100
 		],
-		"value": 555,
+		"value": 542,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"DRAGON",
@@ -18934,7 +21547,26 @@
 			"GROUND",
 			"ROCK"
 		],
-		"defensiveAdvantages": []
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 0.5,
+			"POISON": 2.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 0.125,
+			"DARK": 0.5,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Oranguru": {
 		"name": "Oranguru",
@@ -19018,15 +21650,31 @@
 			110,
 			60
 		],
-		"value": 575,
+		"value": 566,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"POISON"
 		],
-		"defensiveAdvantages": [
-			"PSYCHIC",
-			"GHOST"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.5,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 0.125,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Passimian": {
 		"name": "Passimian",
@@ -19110,7 +21758,7 @@
 			60,
 			80
 		],
-		"value": 597,
+		"value": 618,
 		"offensiveAdvantages": [
 			"NORMAL",
 			"ICE",
@@ -19123,11 +21771,26 @@
 			"GRASS",
 			"FIGHTING"
 		],
-		"defensiveAdvantages": [
-			"BUG",
-			"ROCK",
-			"DARK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 2.0,
+			"PSYCHIC": 2.0,
+			"BUG": 0.5,
+			"ROCK": 0.5,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 0.5,
+			"STEEL": 1.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Palossand": {
 		"name": "Palossand",
@@ -19221,14 +21884,26 @@
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"ELECTRIC",
-			"FIGHTING",
-			"POISON",
-			"BUG",
-			"ROCK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.125,
+			"FIRE": 1.0,
+			"WATER": 2.0,
+			"ELECTRIC": 0.125,
+			"GRASS": 2.0,
+			"ICE": 2.0,
+			"FIGHTING": 0.125,
+			"POISON": 0.25,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 0.5,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Pyukumuku": {
 		"name": "Pyukumuku",
@@ -19312,9 +21987,10 @@
 			130,
 			5
 		],
-		"value": 200,
+		"value": 410,
 		"offensiveAdvantages": [
 			"GRASS",
+			"FAIRY",
 			"PSYCHIC",
 			"GHOST",
 			"NORMAL",
@@ -19323,12 +21999,26 @@
 			"DARK",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"ICE",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 2.0,
+			"GRASS": 2.0,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Togedemaru": {
 		"name": "Togedemaru",
@@ -19412,30 +22102,35 @@
 			73,
 			96
 		],
-		"value": 551,
+		"value": 533,
 		"offensiveAdvantages": [
 			"WATER",
 			"FLYING",
 			"GRASS",
+			"FAIRY",
 			"ICE",
 			"ROCK"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"ELECTRIC",
-			"GRASS",
-			"ICE",
-			"POISON",
-			"FLYING",
-			"PSYCHIC",
-			"BUG",
-			"ROCK",
-			"GHOST",
-			"DRAGON",
-			"DARK",
-			"STEEL",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.5,
+			"ICE": 0.5,
+			"FIGHTING": 2.0,
+			"POISON": 0.125,
+			"GROUND": 4.0,
+			"FLYING": 0.25,
+			"PSYCHIC": 0.5,
+			"BUG": 0.5,
+			"ROCK": 0.5,
+			"GHOST": 0.5,
+			"DRAGON": 0.5,
+			"DARK": 0.5,
+			"STEEL": 0.25,
+			"FAIRY": 0.5
+		}
 	},
 	"Mimikyu": {
 		"name": "Mimikyu",
@@ -19519,7 +22214,7 @@
 			105,
 			96
 		],
-		"value": 546,
+		"value": 539,
 		"offensiveAdvantages": [
 			"PSYCHIC",
 			"GHOST",
@@ -19527,12 +22222,26 @@
 			"DRAGON",
 			"DARK"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"FIGHTING",
-			"POISON",
-			"BUG"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.125,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 0.125,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.25,
+			"ROCK": 1.0,
+			"GHOST": 2.0,
+			"DRAGON": 0.125,
+			"DARK": 1.0,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Greedent": {
 		"name": "Greedent",
@@ -19616,16 +22325,34 @@
 			75,
 			20
 		],
-		"value": 572,
+		"value": 566,
 		"offensiveAdvantages": [
 			"ICE",
 			"ROCK",
+			"FAIRY",
 			"FIGHTING",
 			"POISON"
 		],
-		"defensiveAdvantages": [
-			"GHOST"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 0.125,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Orbeetle": {
 		"name": "Orbeetle",
@@ -19709,7 +22436,7 @@
 			120,
 			90
 		],
-		"value": 607,
+		"value": 587,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"POISON",
@@ -19717,12 +22444,26 @@
 			"PSYCHIC",
 			"DARK"
 		],
-		"defensiveAdvantages": [
-			"GRASS",
-			"FIGHTING",
-			"GROUND",
-			"PSYCHIC"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 1.0,
+			"FIGHTING": 0.25,
+			"POISON": 1.0,
+			"GROUND": 0.5,
+			"FLYING": 2.0,
+			"PSYCHIC": 0.5,
+			"BUG": 2.0,
+			"ROCK": 2.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Thievul": {
 		"name": "Thievul",
@@ -19806,7 +22547,7 @@
 			92,
 			90
 		],
-		"value": 563,
+		"value": 535,
 		"offensiveAdvantages": [
 			"PSYCHIC",
 			"GHOST",
@@ -19815,11 +22556,26 @@
 			"BUG",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"PSYCHIC",
-			"GHOST",
-			"DARK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.125,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 0.5,
+			"DRAGON": 1.0,
+			"DARK": 0.5,
+			"STEEL": 1.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Eldegoss": {
 		"name": "Eldegoss",
@@ -19903,7 +22659,7 @@
 			120,
 			60
 		],
-		"value": 541,
+		"value": 525,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"POISON",
@@ -19911,12 +22667,26 @@
 			"GROUND",
 			"ROCK"
 		],
-		"defensiveAdvantages": [
-			"WATER",
-			"ELECTRIC",
-			"GRASS",
-			"GROUND"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 1.0,
+			"POISON": 2.0,
+			"GROUND": 0.5,
+			"FLYING": 2.0,
+			"PSYCHIC": 1.0,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Dubwool": {
 		"name": "Dubwool",
@@ -20000,7 +22770,7 @@
 			90,
 			88
 		],
-		"value": 610,
+		"value": 586,
 		"offensiveAdvantages": [
 			"WATER",
 			"GROUND",
@@ -20010,9 +22780,26 @@
 			"DARK",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"GHOST"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 0.125,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Drednaw": {
 		"name": "Drednaw",
@@ -20096,7 +22883,7 @@
 			68,
 			74
 		],
-		"value": 621,
+		"value": 641,
 		"offensiveAdvantages": [
 			"FIRE",
 			"GROUND",
@@ -20105,16 +22892,30 @@
 			"PSYCHIC",
 			"DARK",
 			"ICE",
+			"FAIRY",
 			"FLYING",
 			"BUG"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"FIRE",
-			"ICE",
-			"POISON",
-			"FLYING"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 0.25,
+			"WATER": 1.0,
+			"ELECTRIC": 2.0,
+			"GRASS": 4.0,
+			"ICE": 0.5,
+			"FIGHTING": 2.0,
+			"POISON": 0.5,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Boltund": {
 		"name": "Boltund",
@@ -20198,7 +22999,7 @@
 			60,
 			121
 		],
-		"value": 572,
+		"value": 563,
 		"offensiveAdvantages": [
 			"WATER",
 			"FLYING",
@@ -20208,11 +23009,26 @@
 			"DRAGON",
 			"DARK"
 		],
-		"defensiveAdvantages": [
-			"ELECTRIC",
-			"FLYING",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 0.5,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Carkol": {
 		"name": "Carkol",
@@ -20296,7 +23112,7 @@
 			70,
 			50
 		],
-		"value": 502,
+		"value": 465,
 		"offensiveAdvantages": [
 			"GRASS",
 			"ICE",
@@ -20307,15 +23123,26 @@
 			"FIRE",
 			"FLYING"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"FIRE",
-			"ICE",
-			"POISON",
-			"FLYING",
-			"BUG",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 0,
+			"WATER": 4.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 0.5,
+			"FIGHTING": 2.0,
+			"POISON": 0.5,
+			"GROUND": 4.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 0.5
+		}
 	},
 	"Coalossal": {
 		"name": "Coalossal",
@@ -20399,7 +23226,7 @@
 			90,
 			30
 		],
-		"value": 622,
+		"value": 599,
 		"offensiveAdvantages": [
 			"FIRE",
 			"ICE",
@@ -20410,15 +23237,26 @@
 			"GROUND",
 			"ROCK"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"FIRE",
-			"ICE",
-			"POISON",
-			"FLYING",
-			"BUG",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 0.25,
+			"WATER": 4.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 0.5,
+			"FIGHTING": 2.0,
+			"POISON": 0.5,
+			"GROUND": 4.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 0.5
+		}
 	},
 	"Sandaconda": {
 		"name": "Sandaconda",
@@ -20502,7 +23340,7 @@
 			70,
 			71
 		],
-		"value": 612,
+		"value": 604,
 		"offensiveAdvantages": [
 			"FIRE",
 			"ELECTRIC",
@@ -20514,11 +23352,26 @@
 			"PSYCHIC",
 			"DARK"
 		],
-		"defensiveAdvantages": [
-			"ELECTRIC",
-			"POISON",
-			"ROCK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 2.0,
+			"ELECTRIC": 0.125,
+			"GRASS": 2.0,
+			"ICE": 2.0,
+			"FIGHTING": 1.0,
+			"POISON": 0.5,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 0.5,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Cramorant": {
 		"name": "Cramorant",
@@ -20602,7 +23455,7 @@
 			95,
 			85
 		],
-		"value": 535,
+		"value": 526,
 		"offensiveAdvantages": [
 			"FIRE",
 			"GROUND",
@@ -20612,14 +23465,26 @@
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"FIGHTING",
-			"GROUND",
-			"BUG",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 4.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 0.125,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Barraskewda": {
 		"name": "Barraskewda",
@@ -20703,7 +23568,7 @@
 			50,
 			136
 		],
-		"value": 587,
+		"value": 610,
 		"offensiveAdvantages": [
 			"FIRE",
 			"GROUND",
@@ -20712,12 +23577,26 @@
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"ICE",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 2.0,
+			"GRASS": 2.0,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Toxtricity": {
 		"name": "Toxtricity",
@@ -20801,21 +23680,31 @@
 			70,
 			75
 		],
-		"value": 589,
+		"value": 601,
 		"offensiveAdvantages": [
 			"WATER",
 			"FLYING"
 		],
-		"defensiveAdvantages": [
-			"ELECTRIC",
-			"GRASS",
-			"FIGHTING",
-			"POISON",
-			"FLYING",
-			"BUG",
-			"STEEL",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.5,
+			"ICE": 1.0,
+			"FIGHTING": 0.5,
+			"POISON": 0.5,
+			"GROUND": 4.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 2.0,
+			"BUG": 0.5,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 0.5
+		}
 	},
 	"Centiskorch": {
 		"name": "Centiskorch",
@@ -20899,7 +23788,7 @@
 			90,
 			65
 		],
-		"value": 672,
+		"value": 665,
 		"offensiveAdvantages": [
 			"GRASS",
 			"ICE",
@@ -20908,16 +23797,29 @@
 			"FIRE",
 			"ELECTRIC",
 			"POISON",
-			"ROCK"
-		],
-		"defensiveAdvantages": [
-			"GRASS",
-			"ICE",
-			"FIGHTING",
-			"BUG",
-			"STEEL",
+			"ROCK",
 			"FAIRY"
-		]
+		],
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 2.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.25,
+			"ICE": 0.5,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 2.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 4.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 0.5
+		}
 	},
 	"Grapploct": {
 		"name": "Grapploct",
@@ -21001,7 +23903,7 @@
 			80,
 			42
 		],
-		"value": 597,
+		"value": 580,
 		"offensiveAdvantages": [
 			"PSYCHIC",
 			"GHOST",
@@ -21013,11 +23915,26 @@
 			"FIRE",
 			"GROUND"
 		],
-		"defensiveAdvantages": [
-			"BUG",
-			"ROCK",
-			"DARK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 2.0,
+			"PSYCHIC": 2.0,
+			"BUG": 0.5,
+			"ROCK": 0.5,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 0.5,
+			"STEEL": 1.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Polteageist": {
 		"name": "Polteageist",
@@ -21101,7 +24018,7 @@
 			114,
 			70
 		],
-		"value": 620,
+		"value": 634,
 		"offensiveAdvantages": [
 			"WATER",
 			"GROUND",
@@ -21111,12 +24028,26 @@
 			"FIGHTING",
 			"POISON"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"FIGHTING",
-			"POISON",
-			"BUG"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.125,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 0.125,
+			"POISON": 0.5,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 1.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Hatterene": {
 		"name": "Hatterene",
@@ -21200,7 +24131,7 @@
 			103,
 			29
 		],
-		"value": 600,
+		"value": 614,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"POISON",
@@ -21210,10 +24141,26 @@
 			"GROUND",
 			"ROCK"
 		],
-		"defensiveAdvantages": [
-			"FIGHTING",
-			"PSYCHIC"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 0.25,
+			"POISON": 2.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.5,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 2.0,
+			"DRAGON": 0.125,
+			"DARK": 1.0,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Grimmsnarl": {
 		"name": "Grimmsnarl",
@@ -21297,7 +24244,7 @@
 			75,
 			60
 		],
-		"value": 585,
+		"value": 590,
 		"offensiveAdvantages": [
 			"NORMAL",
 			"ICE",
@@ -21309,11 +24256,26 @@
 			"FIGHTING",
 			"POISON"
 		],
-		"defensiveAdvantages": [
-			"PSYCHIC",
-			"GHOST",
-			"DARK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 2.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.125,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 0.5,
+			"DRAGON": 0.125,
+			"DARK": 0.25,
+			"STEEL": 2.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Obstagoon": {
 		"name": "Obstagoon",
@@ -21397,18 +24359,33 @@
 			81,
 			95
 		],
-		"value": 646,
+		"value": 620,
 		"offensiveAdvantages": [
 			"PSYCHIC",
 			"GHOST",
 			"WATER",
 			"FLYING"
 		],
-		"defensiveAdvantages": [
-			"PSYCHIC",
-			"GHOST",
-			"DARK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 4.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.125,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 0.125,
+			"DRAGON": 1.0,
+			"DARK": 0.5,
+			"STEEL": 1.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Perrserker": {
 		"name": "Perrserker",
@@ -21492,10 +24469,11 @@
 			60,
 			50
 		],
-		"value": 547,
+		"value": 534,
 		"offensiveAdvantages": [
 			"ICE",
 			"ROCK",
+			"FAIRY",
 			"FIGHTING",
 			"POISON",
 			"PSYCHIC",
@@ -21503,21 +24481,26 @@
 			"WATER",
 			"FLYING"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"GRASS",
-			"ICE",
-			"POISON",
-			"FLYING",
-			"PSYCHIC",
-			"BUG",
-			"ROCK",
-			"GHOST",
-			"DRAGON",
-			"DARK",
-			"STEEL",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 0.5,
+			"FIGHTING": 2.0,
+			"POISON": 0.125,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 0.5,
+			"BUG": 0.5,
+			"ROCK": 0.5,
+			"GHOST": 0.5,
+			"DRAGON": 0.5,
+			"DARK": 0.5,
+			"STEEL": 0.5,
+			"FAIRY": 0.5
+		}
 	},
 	"Alcremie": {
 		"name": "Alcremie",
@@ -21601,7 +24584,7 @@
 			121,
 			64
 		],
-		"value": 602,
+		"value": 613,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"DRAGON",
@@ -21614,7 +24597,26 @@
 			"GROUND",
 			"ROCK"
 		],
-		"defensiveAdvantages": []
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 0.5,
+			"POISON": 2.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 0.125,
+			"DARK": 0.5,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Falinks": {
 		"name": "Falinks",
@@ -21705,14 +24707,30 @@
 			"DARK",
 			"ICE",
 			"ROCK",
+			"FAIRY",
 			"NORMAL",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"BUG",
-			"ROCK",
-			"DARK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 2.0,
+			"PSYCHIC": 2.0,
+			"BUG": 0.5,
+			"ROCK": 0.5,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 0.5,
+			"STEEL": 1.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Pincurchin": {
 		"name": "Pincurchin",
@@ -21796,20 +24814,36 @@
 			85,
 			15
 		],
-		"value": 517,
+		"value": 510,
 		"offensiveAdvantages": [
 			"FIRE",
 			"GROUND",
 			"ROCK",
 			"WATER",
 			"FLYING",
-			"GRASS"
+			"GRASS",
+			"FAIRY"
 		],
-		"defensiveAdvantages": [
-			"ELECTRIC",
-			"FLYING",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 0.5,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Frosmoth": {
 		"name": "Frosmoth",
@@ -21893,7 +24927,7 @@
 			90,
 			65
 		],
-		"value": 576,
+		"value": 601,
 		"offensiveAdvantages": [
 			"GRASS",
 			"FIGHTING",
@@ -21901,11 +24935,26 @@
 			"PSYCHIC",
 			"DARK"
 		],
-		"defensiveAdvantages": [
-			"GRASS",
-			"ICE",
-			"GROUND"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 4.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 0.5,
+			"FLYING": 2.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 4.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Indeedee": {
 		"name": "Indeedee",
@@ -21989,7 +25038,7 @@
 			95,
 			95
 		],
-		"value": 602,
+		"value": 608,
 		"offensiveAdvantages": [
 			"GRASS",
 			"ICE",
@@ -22000,10 +25049,26 @@
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"PSYCHIC",
-			"GHOST"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.5,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 0.125,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Morpeko": {
 		"name": "Morpeko",
@@ -22087,7 +25152,7 @@
 			58,
 			97
 		],
-		"value": 606,
+		"value": 577,
 		"offensiveAdvantages": [
 			"WATER",
 			"FLYING",
@@ -22097,14 +25162,26 @@
 			"GROUND",
 			"DRAGON"
 		],
-		"defensiveAdvantages": [
-			"ELECTRIC",
-			"FLYING",
-			"PSYCHIC",
-			"GHOST",
-			"DARK",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 0.5,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 0.125,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 0.5,
+			"DRAGON": 1.0,
+			"DARK": 0.5,
+			"STEEL": 0.5,
+			"FAIRY": 2.0
+		}
 	},
 	"Copperajah": {
 		"name": "Copperajah",
@@ -22188,29 +25265,35 @@
 			69,
 			30
 		],
-		"value": 580,
+		"value": 584,
 		"offensiveAdvantages": [
 			"ICE",
 			"ROCK",
+			"FAIRY",
 			"NORMAL",
 			"DARK",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"GRASS",
-			"ICE",
-			"POISON",
-			"FLYING",
-			"PSYCHIC",
-			"BUG",
-			"ROCK",
-			"GHOST",
-			"DRAGON",
-			"DARK",
-			"STEEL",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 0.5,
+			"FIGHTING": 2.0,
+			"POISON": 0.125,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 0.5,
+			"BUG": 0.5,
+			"ROCK": 0.5,
+			"GHOST": 0.5,
+			"DRAGON": 0.5,
+			"DARK": 0.5,
+			"STEEL": 0.5,
+			"FAIRY": 0.5
+		}
 	},
 	"Duraludon": {
 		"name": "Duraludon",
@@ -22294,28 +25377,35 @@
 			50,
 			85
 		],
-		"value": 650,
+		"value": 655,
 		"offensiveAdvantages": [
 			"DRAGON",
 			"WATER",
 			"FLYING",
 			"ICE",
-			"ROCK"
-		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"WATER",
-			"ELECTRIC",
-			"GRASS",
-			"POISON",
-			"FLYING",
-			"PSYCHIC",
-			"BUG",
 			"ROCK",
-			"GHOST",
-			"DARK",
-			"STEEL"
-		]
+			"FAIRY"
+		],
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 1.0,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.25,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 0.125,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 0.5,
+			"BUG": 0.5,
+			"ROCK": 0.5,
+			"GHOST": 0.5,
+			"DRAGON": 1.0,
+			"DARK": 0.5,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Drakloak": {
 		"name": "Drakloak",
@@ -22399,7 +25489,7 @@
 			50,
 			102
 		],
-		"value": 529,
+		"value": 497,
 		"offensiveAdvantages": [
 			"DRAGON",
 			"PSYCHIC",
@@ -22409,16 +25499,26 @@
 			"BUG",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"FIRE",
-			"WATER",
-			"ELECTRIC",
-			"GRASS",
-			"FIGHTING",
-			"POISON",
-			"BUG"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.125,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 0.125,
+			"POISON": 0.5,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 1.0,
+			"GHOST": 2.0,
+			"DRAGON": 2.0,
+			"DARK": 2.0,
+			"STEEL": 1.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Articuno": {
 		"name": "Articuno",
@@ -22502,7 +25602,7 @@
 			125,
 			85
 		],
-		"value": 698,
+		"value": 692,
 		"offensiveAdvantages": [
 			"GRASS",
 			"GROUND",
@@ -22511,11 +25611,26 @@
 			"FIGHTING",
 			"BUG"
 		],
-		"defensiveAdvantages": [
-			"GRASS",
-			"GROUND",
-			"BUG"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 2.0,
+			"GRASS": 0.5,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 0.125,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 4.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Zapdos": {
 		"name": "Zapdos",
@@ -22608,14 +25723,26 @@
 			"BUG",
 			"POISON"
 		],
-		"defensiveAdvantages": [
-			"GRASS",
-			"FIGHTING",
-			"GROUND",
-			"FLYING",
-			"BUG",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 0.125,
+			"FLYING": 0.5,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Moltres": {
 		"name": "Moltres",
@@ -22699,7 +25826,7 @@
 			85,
 			90
 		],
-		"value": 667,
+		"value": 682,
 		"offensiveAdvantages": [
 			"GRASS",
 			"ICE",
@@ -22707,15 +25834,26 @@
 			"STEEL",
 			"FIGHTING"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"GRASS",
-			"FIGHTING",
-			"GROUND",
-			"BUG",
-			"STEEL",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 2.0,
+			"ELECTRIC": 2.0,
+			"GRASS": 0.25,
+			"ICE": 1.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 0.125,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.25,
+			"ROCK": 4.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 0.5
+		}
 	},
 	"Mewtwo": {
 		"name": "Mewtwo",
@@ -22799,7 +25937,7 @@
 			90,
 			130
 		],
-		"value": 763,
+		"value": 808,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"POISON",
@@ -22808,10 +25946,26 @@
 			"FLYING",
 			"DRAGON"
 		],
-		"defensiveAdvantages": [
-			"FIGHTING",
-			"PSYCHIC"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.5,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Raikou": {
 		"name": "Raikou",
@@ -22895,16 +26049,31 @@
 			100,
 			115
 		],
-		"value": 702,
+		"value": 708,
 		"offensiveAdvantages": [
 			"WATER",
 			"FLYING"
 		],
-		"defensiveAdvantages": [
-			"ELECTRIC",
-			"FLYING",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 0.5,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Entei": {
 		"name": "Entei",
@@ -22988,7 +26157,7 @@
 			75,
 			100
 		],
-		"value": 705,
+		"value": 712,
 		"offensiveAdvantages": [
 			"GRASS",
 			"ICE",
@@ -22997,14 +26166,26 @@
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"GRASS",
-			"ICE",
-			"BUG",
-			"STEEL",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 2.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 2.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 0.5
+		}
 	},
 	"Suicune": {
 		"name": "Suicune",
@@ -23088,7 +26269,7 @@
 			115,
 			85
 		],
-		"value": 702,
+		"value": 677,
 		"offensiveAdvantages": [
 			"FIRE",
 			"GROUND",
@@ -23096,12 +26277,26 @@
 			"FIGHTING",
 			"POISON"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"ICE",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 2.0,
+			"GRASS": 2.0,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Lugia": {
 		"name": "Lugia",
@@ -23185,7 +26380,7 @@
 			154,
 			110
 		],
-		"value": 807,
+		"value": 794,
 		"offensiveAdvantages": [
 			"DRAGON",
 			"FIGHTING",
@@ -23197,12 +26392,26 @@
 			"FLYING",
 			"BUG"
 		],
-		"defensiveAdvantages": [
-			"GRASS",
-			"FIGHTING",
-			"GROUND",
-			"PSYCHIC"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 2.0,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 0.25,
+			"POISON": 1.0,
+			"GROUND": 0.125,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.5,
+			"BUG": 1.0,
+			"ROCK": 2.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Ho-Oh": {
 		"name": "Ho-Oh",
@@ -23286,7 +26495,7 @@
 			154,
 			90
 		],
-		"value": 810,
+		"value": 835,
 		"offensiveAdvantages": [
 			"GRASS",
 			"ICE",
@@ -23297,15 +26506,26 @@
 			"FIRE",
 			"FLYING"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"GRASS",
-			"FIGHTING",
-			"GROUND",
-			"BUG",
-			"STEEL",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 2.0,
+			"ELECTRIC": 2.0,
+			"GRASS": 0.25,
+			"ICE": 1.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 0.125,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.25,
+			"ROCK": 4.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 0.5
+		}
 	},
 	"Latias": {
 		"name": "Latias",
@@ -23398,14 +26618,26 @@
 			"GROUND",
 			"ROCK"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"ELECTRIC",
-			"GRASS",
-			"FIGHTING",
-			"PSYCHIC"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.5,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 2.0,
+			"DRAGON": 2.0,
+			"DARK": 2.0,
+			"STEEL": 1.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Latios": {
 		"name": "Latios",
@@ -23489,7 +26721,7 @@
 			110,
 			110
 		],
-		"value": 718,
+		"value": 740,
 		"offensiveAdvantages": [
 			"DRAGON",
 			"FIGHTING",
@@ -23500,14 +26732,26 @@
 			"DARK",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"ELECTRIC",
-			"GRASS",
-			"FIGHTING",
-			"PSYCHIC"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.5,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 2.0,
+			"DRAGON": 2.0,
+			"DARK": 2.0,
+			"STEEL": 1.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Kyogre": {
 		"name": "Kyogre",
@@ -23591,7 +26835,7 @@
 			140,
 			90
 		],
-		"value": 796,
+		"value": 837,
 		"offensiveAdvantages": [
 			"FIRE",
 			"GROUND",
@@ -23599,12 +26843,26 @@
 			"WATER",
 			"FLYING"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"ICE",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 2.0,
+			"GRASS": 2.0,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Groudon": {
 		"name": "Groudon",
@@ -23688,7 +26946,7 @@
 			90,
 			90
 		],
-		"value": 805,
+		"value": 852,
 		"offensiveAdvantages": [
 			"FIRE",
 			"ELECTRIC",
@@ -23701,11 +26959,26 @@
 			"NORMAL",
 			"DARK"
 		],
-		"defensiveAdvantages": [
-			"ELECTRIC",
-			"POISON",
-			"ROCK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 2.0,
+			"ELECTRIC": 0.125,
+			"GRASS": 2.0,
+			"ICE": 2.0,
+			"FIGHTING": 1.0,
+			"POISON": 0.5,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 0.5,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Rayquaza": {
 		"name": "Rayquaza",
@@ -23789,7 +27062,7 @@
 			90,
 			95
 		],
-		"value": 830,
+		"value": 905,
 		"offensiveAdvantages": [
 			"GRASS",
 			"FIGHTING",
@@ -23798,14 +27071,26 @@
 			"GHOST",
 			"DRAGON"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"GRASS",
-			"FIGHTING",
-			"GROUND",
-			"BUG"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.25,
+			"ICE": 4.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 0.125,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 2.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Uxie": {
 		"name": "Uxie",
@@ -23889,17 +27174,33 @@
 			130,
 			95
 		],
-		"value": 725,
+		"value": 688,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"POISON",
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"FIGHTING",
-			"PSYCHIC"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.5,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Mesprit": {
 		"name": "Mesprit",
@@ -23983,17 +27284,33 @@
 			105,
 			80
 		],
-		"value": 690,
+		"value": 695,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"POISON",
 			"DRAGON",
 			"DARK"
 		],
-		"defensiveAdvantages": [
-			"FIGHTING",
-			"PSYCHIC"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.5,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Azelf": {
 		"name": "Azelf",
@@ -24077,7 +27394,7 @@
 			70,
 			115
 		],
-		"value": 701,
+		"value": 732,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"POISON",
@@ -24086,10 +27403,26 @@
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"FIGHTING",
-			"PSYCHIC"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.5,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Dialga": {
 		"name": "Dialga",
@@ -24173,29 +27506,36 @@
 			100,
 			90
 		],
-		"value": 825,
+		"value": 875,
 		"offensiveAdvantages": [
 			"FIRE",
 			"ICE",
 			"FLYING",
 			"BUG",
 			"ROCK",
+			"FAIRY",
 			"DRAGON"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"WATER",
-			"ELECTRIC",
-			"GRASS",
-			"POISON",
-			"FLYING",
-			"PSYCHIC",
-			"BUG",
-			"ROCK",
-			"GHOST",
-			"DARK",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 1.0,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.25,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 0.125,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 0.5,
+			"BUG": 0.5,
+			"ROCK": 0.5,
+			"GHOST": 0.5,
+			"DRAGON": 1.0,
+			"DARK": 0.5,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Palkia": {
 		"name": "Palkia",
@@ -24279,7 +27619,7 @@
 			120,
 			100
 		],
-		"value": 830,
+		"value": 882,
 		"offensiveAdvantages": [
 			"FIRE",
 			"GROUND",
@@ -24289,11 +27629,26 @@
 			"BUG",
 			"DRAGON"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.25,
+			"WATER": 0.25,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 2.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 2.0
+		}
 	},
 	"Heatran": {
 		"name": "Heatran",
@@ -24377,30 +27732,37 @@
 			106,
 			77
 		],
-		"value": 720,
+		"value": 724,
 		"offensiveAdvantages": [
 			"ICE",
 			"ROCK",
+			"FAIRY",
 			"GRASS",
 			"BUG",
 			"STEEL",
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"GRASS",
-			"ICE",
-			"POISON",
-			"FLYING",
-			"PSYCHIC",
-			"BUG",
-			"GHOST",
-			"DRAGON",
-			"DARK",
-			"STEEL",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 1.0,
+			"WATER": 2.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.25,
+			"ICE": 0.25,
+			"FIGHTING": 2.0,
+			"POISON": 0.125,
+			"GROUND": 4.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 0.5,
+			"BUG": 0.25,
+			"ROCK": 1.0,
+			"GHOST": 0.5,
+			"DRAGON": 0.5,
+			"DARK": 0.5,
+			"STEEL": 0.25,
+			"FAIRY": 0.25
+		}
 	},
 	"Giratina": {
 		"name": "Giratina",
@@ -24494,16 +27856,26 @@
 			"FLYING",
 			"BUG"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"FIRE",
-			"WATER",
-			"ELECTRIC",
-			"GRASS",
-			"FIGHTING",
-			"POISON",
-			"BUG"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.125,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 0.125,
+			"POISON": 0.5,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 1.0,
+			"GHOST": 2.0,
+			"DRAGON": 2.0,
+			"DARK": 2.0,
+			"STEEL": 1.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Cresselia": {
 		"name": "Cresselia",
@@ -24587,7 +27959,7 @@
 			130,
 			85
 		],
-		"value": 748,
+		"value": 709,
 		"offensiveAdvantages": [
 			"GRASS",
 			"GROUND",
@@ -24597,10 +27969,26 @@
 			"DARK",
 			"POISON"
 		],
-		"defensiveAdvantages": [
-			"FIGHTING",
-			"PSYCHIC"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.5,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Tornadus": {
 		"name": "Tornadus",
@@ -24684,7 +28072,7 @@
 			80,
 			111
 		],
-		"value": 687,
+		"value": 714,
 		"offensiveAdvantages": [
 			"GRASS",
 			"FIGHTING",
@@ -24696,12 +28084,26 @@
 			"ICE",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"GRASS",
-			"FIGHTING",
-			"GROUND",
-			"BUG"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 2.0,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 0.125,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Thundurus": {
 		"name": "Thundurus",
@@ -24785,23 +28187,36 @@
 			80,
 			111
 		],
-		"value": 703,
+		"value": 734,
 		"offensiveAdvantages": [
 			"WATER",
 			"FLYING",
 			"FIRE",
 			"GROUND",
 			"ROCK",
-			"GRASS"
-		],
-		"defensiveAdvantages": [
 			"GRASS",
-			"FIGHTING",
-			"GROUND",
-			"FLYING",
-			"BUG",
-			"STEEL"
-		]
+			"FAIRY"
+		],
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 0.125,
+			"FLYING": 0.5,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Reshiram": {
 		"name": "Reshiram",
@@ -24885,7 +28300,7 @@
 			120,
 			90
 		],
-		"value": 812,
+		"value": 878,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"POISON",
@@ -24895,13 +28310,26 @@
 			"STEEL",
 			"DRAGON"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"ELECTRIC",
-			"GRASS",
-			"BUG",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.25,
+			"WATER": 1.0,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.25,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 2.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 2.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Zekrom": {
 		"name": "Zekrom",
@@ -24985,20 +28413,32 @@
 			100,
 			90
 		],
-		"value": 805,
+		"value": 867,
 		"offensiveAdvantages": [
 			"WATER",
 			"FLYING",
 			"DRAGON"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"ELECTRIC",
-			"GRASS",
-			"FLYING",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 0.25,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 2.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 2.0
+		}
 	},
 	"Landorus": {
 		"name": "Landorus",
@@ -25082,7 +28522,7 @@
 			80,
 			101
 		],
-		"value": 720,
+		"value": 746,
 		"offensiveAdvantages": [
 			"FIRE",
 			"ELECTRIC",
@@ -25095,13 +28535,26 @@
 			"NORMAL",
 			"DARK"
 		],
-		"defensiveAdvantages": [
-			"ELECTRIC",
-			"FIGHTING",
-			"POISON",
-			"GROUND",
-			"BUG"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 2.0,
+			"ELECTRIC": 0.125,
+			"GRASS": 1.0,
+			"ICE": 4.0,
+			"FIGHTING": 0.5,
+			"POISON": 0.5,
+			"GROUND": 0.125,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Kyurem": {
 		"name": "Kyurem",
@@ -25185,7 +28638,7 @@
 			90,
 			95
 		],
-		"value": 790,
+		"value": 829,
 		"offensiveAdvantages": [
 			"GRASS",
 			"GROUND",
@@ -25194,11 +28647,26 @@
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"WATER",
-			"ELECTRIC",
-			"GRASS"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.5,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 2.0,
+			"GHOST": 1.0,
+			"DRAGON": 2.0,
+			"DARK": 1.0,
+			"STEEL": 2.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Xerneas": {
 		"name": "Xerneas",
@@ -25282,7 +28750,7 @@
 			98,
 			99
 		],
-		"value": 805,
+		"value": 843,
 		"offensiveAdvantages": [
 			"WATER",
 			"GROUND",
@@ -25291,7 +28759,26 @@
 			"DRAGON",
 			"DARK"
 		],
-		"defensiveAdvantages": []
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 0.5,
+			"POISON": 2.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 0.125,
+			"DARK": 0.5,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Yveltal": {
 		"name": "Yveltal",
@@ -25375,7 +28862,7 @@
 			98,
 			99
 		],
-		"value": 792,
+		"value": 827,
 		"offensiveAdvantages": [
 			"PSYCHIC",
 			"GHOST",
@@ -25384,13 +28871,26 @@
 			"BUG",
 			"DRAGON"
 		],
-		"defensiveAdvantages": [
-			"GRASS",
-			"GROUND",
-			"PSYCHIC",
-			"GHOST",
-			"DARK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 2.0,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 0.125,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.125,
+			"BUG": 1.0,
+			"ROCK": 2.0,
+			"GHOST": 0.5,
+			"DRAGON": 1.0,
+			"DARK": 0.5,
+			"STEEL": 1.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Zygarde": {
 		"name": "Zygarde",
@@ -25474,7 +28974,7 @@
 			95,
 			95
 		],
-		"value": 738,
+		"value": 730,
 		"offensiveAdvantages": [
 			"FIRE",
 			"ELECTRIC",
@@ -25483,12 +28983,26 @@
 			"STEEL",
 			"DRAGON"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"ELECTRIC",
-			"POISON",
-			"ROCK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 1.0,
+			"ELECTRIC": 0.125,
+			"GRASS": 1.0,
+			"ICE": 4.0,
+			"FIGHTING": 1.0,
+			"POISON": 0.5,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 0.5,
+			"GHOST": 1.0,
+			"DRAGON": 2.0,
+			"DARK": 1.0,
+			"STEEL": 1.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Tapu Koko": {
 		"name": "Tapu Koko",
@@ -25572,7 +29086,7 @@
 			75,
 			130
 		],
-		"value": 695,
+		"value": 704,
 		"offensiveAdvantages": [
 			"WATER",
 			"FLYING",
@@ -25582,11 +29096,26 @@
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"ELECTRIC",
-			"FLYING",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 0.5,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 0.5,
+			"POISON": 2.0,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 0.125,
+			"DARK": 0.5,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Tapu Lele": {
 		"name": "Tapu Lele",
@@ -25670,17 +29199,33 @@
 			115,
 			95
 		],
-		"value": 655,
+		"value": 662,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"POISON",
 			"DRAGON",
 			"DARK"
 		],
-		"defensiveAdvantages": [
-			"FIGHTING",
-			"PSYCHIC"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 0.25,
+			"POISON": 2.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.5,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 2.0,
+			"DRAGON": 0.125,
+			"DARK": 1.0,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Tapu Bulu": {
 		"name": "Tapu Bulu",
@@ -25764,7 +29309,7 @@
 			95,
 			75
 		],
-		"value": 726,
+		"value": 772,
 		"offensiveAdvantages": [
 			"NORMAL",
 			"ICE",
@@ -25776,12 +29321,26 @@
 			"WATER",
 			"GROUND"
 		],
-		"defensiveAdvantages": [
-			"WATER",
-			"ELECTRIC",
-			"GRASS",
-			"GROUND"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 0.5,
+			"POISON": 4.0,
+			"GROUND": 0.5,
+			"FLYING": 2.0,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 0.125,
+			"DARK": 0.5,
+			"STEEL": 2.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Tapu Fini": {
 		"name": "Tapu Fini",
@@ -25865,7 +29424,7 @@
 			130,
 			85
 		],
-		"value": 701,
+		"value": 694,
 		"offensiveAdvantages": [
 			"FIRE",
 			"GROUND",
@@ -25874,12 +29433,26 @@
 			"DRAGON",
 			"DARK"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"ICE",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 2.0,
+			"GRASS": 2.0,
+			"ICE": 0.5,
+			"FIGHTING": 0.5,
+			"POISON": 2.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.5,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 0.125,
+			"DARK": 0.5,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Solgaleo": {
 		"name": "Solgaleo",
@@ -25963,7 +29536,7 @@
 			89,
 			97
 		],
-		"value": 768,
+		"value": 797,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"POISON",
@@ -25971,20 +29544,29 @@
 			"ICE",
 			"BUG",
 			"STEEL",
-			"ROCK"
-		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"GRASS",
-			"ICE",
-			"POISON",
-			"FLYING",
-			"PSYCHIC",
 			"ROCK",
-			"DRAGON",
-			"STEEL",
 			"FAIRY"
-		]
+		],
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 0.5,
+			"FIGHTING": 1.0,
+			"POISON": 0.125,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 0.25,
+			"BUG": 1.0,
+			"ROCK": 0.5,
+			"GHOST": 1.0,
+			"DRAGON": 0.5,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 0.5
+		}
 	},
 	"Lunala": {
 		"name": "Lunala",
@@ -26068,7 +29650,7 @@
 			107,
 			97
 		],
-		"value": 797,
+		"value": 841,
 		"offensiveAdvantages": [
 			"PSYCHIC",
 			"GHOST",
@@ -26077,12 +29659,26 @@
 			"DARK",
 			"POISON"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"FIGHTING",
-			"POISON",
-			"PSYCHIC"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.125,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 0.125,
+			"POISON": 0.5,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.5,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 4.0,
+			"DRAGON": 1.0,
+			"DARK": 4.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Nihilego": {
 		"name": "Nihilego",
@@ -26166,22 +29762,35 @@
 			131,
 			103
 		],
-		"value": 667,
+		"value": 671,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"POISON",
 			"GRASS",
+			"FAIRY",
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"FIRE",
-			"POISON",
-			"FLYING",
-			"BUG",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 0.5,
+			"WATER": 2.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 0.25,
+			"GROUND": 4.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 2.0,
+			"BUG": 0.5,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 2.0,
+			"FAIRY": 0.5
+		}
 	},
 	"Buzzwole": {
 		"name": "Buzzwole",
@@ -26265,7 +29874,7 @@
 			53,
 			79
 		],
-		"value": 670,
+		"value": 709,
 		"offensiveAdvantages": [
 			"NORMAL",
 			"ICE",
@@ -26276,13 +29885,26 @@
 			"GHOST",
 			"GRASS"
 		],
-		"defensiveAdvantages": [
-			"GRASS",
-			"FIGHTING",
-			"GROUND",
-			"BUG",
-			"DARK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 1.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 0.5,
+			"FLYING": 4.0,
+			"PSYCHIC": 2.0,
+			"BUG": 0.5,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 0.5,
+			"STEEL": 1.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Pheromosa": {
 		"name": "Pheromosa",
@@ -26366,7 +29988,7 @@
 			37,
 			151
 		],
-		"value": 738,
+		"value": 801,
 		"offensiveAdvantages": [
 			"NORMAL",
 			"ICE",
@@ -26377,13 +29999,26 @@
 			"GHOST",
 			"GRASS"
 		],
-		"defensiveAdvantages": [
-			"GRASS",
-			"FIGHTING",
-			"GROUND",
-			"BUG",
-			"DARK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 1.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 0.5,
+			"FLYING": 4.0,
+			"PSYCHIC": 2.0,
+			"BUG": 0.5,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 0.5,
+			"STEEL": 1.0,
+			"FAIRY": 2.0
+		}
 	},
 	"Xurkitree": {
 		"name": "Xurkitree",
@@ -26467,7 +30102,7 @@
 			71,
 			83
 		],
-		"value": 691,
+		"value": 711,
 		"offensiveAdvantages": [
 			"WATER",
 			"GROUND",
@@ -26476,11 +30111,26 @@
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"ELECTRIC",
-			"FLYING",
-			"STEEL"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 0.5,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 1.0,
+			"GROUND": 2.0,
+			"FLYING": 0.5,
+			"PSYCHIC": 1.0,
+			"BUG": 1.0,
+			"ROCK": 1.0,
+			"GHOST": 1.0,
+			"DRAGON": 1.0,
+			"DARK": 1.0,
+			"STEEL": 0.5,
+			"FAIRY": 1.0
+		}
 	},
 	"Celesteela": {
 		"name": "Celesteela",
@@ -26564,7 +30214,7 @@
 			101,
 			61
 		],
-		"value": 672,
+		"value": 673,
 		"offensiveAdvantages": [
 			"WATER",
 			"GROUND",
@@ -26573,24 +30223,31 @@
 			"ICE",
 			"FLYING",
 			"BUG",
+			"FAIRY",
 			"ELECTRIC",
 			"POISON",
 			"STEEL"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"GRASS",
-			"POISON",
-			"GROUND",
-			"FLYING",
-			"PSYCHIC",
-			"BUG",
-			"GHOST",
-			"DRAGON",
-			"DARK",
-			"STEEL",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 2.0,
+			"WATER": 1.0,
+			"ELECTRIC": 2.0,
+			"GRASS": 0.25,
+			"ICE": 1.0,
+			"FIGHTING": 1.0,
+			"POISON": 0.125,
+			"GROUND": 0.125,
+			"FLYING": 0.5,
+			"PSYCHIC": 0.5,
+			"BUG": 0.25,
+			"ROCK": 1.0,
+			"GHOST": 0.5,
+			"DRAGON": 0.5,
+			"DARK": 0.5,
+			"STEEL": 0.5,
+			"FAIRY": 0.5
+		}
 	},
 	"Kartana": {
 		"name": "Kartana",
@@ -26674,7 +30331,7 @@
 			31,
 			109
 		],
-		"value": 663,
+		"value": 680,
 		"offensiveAdvantages": [
 			"NORMAL",
 			"ICE",
@@ -26687,20 +30344,26 @@
 			"WATER",
 			"GROUND"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"WATER",
-			"ELECTRIC",
-			"GRASS",
-			"POISON",
-			"PSYCHIC",
-			"ROCK",
-			"GHOST",
-			"DRAGON",
-			"DARK",
-			"STEEL",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.5,
+			"FIRE": 4.0,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.25,
+			"ICE": 1.0,
+			"FIGHTING": 2.0,
+			"POISON": 0.125,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.5,
+			"BUG": 1.0,
+			"ROCK": 0.5,
+			"GHOST": 0.5,
+			"DRAGON": 0.5,
+			"DARK": 0.5,
+			"STEEL": 0.5,
+			"FAIRY": 0.5
+		}
 	},
 	"Guzzlord": {
 		"name": "Guzzlord",
@@ -26784,7 +30447,7 @@
 			53,
 			43
 		],
-		"value": 709,
+		"value": 710,
 		"offensiveAdvantages": [
 			"DRAGON",
 			"FIRE",
@@ -26795,15 +30458,26 @@
 			"PSYCHIC",
 			"GHOST"
 		],
-		"defensiveAdvantages": [
-			"FIRE",
-			"WATER",
-			"ELECTRIC",
-			"GRASS",
-			"PSYCHIC",
-			"GHOST",
-			"DARK"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 0.5,
+			"WATER": 0.5,
+			"ELECTRIC": 0.5,
+			"GRASS": 0.5,
+			"ICE": 2.0,
+			"FIGHTING": 2.0,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.125,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 0.5,
+			"DRAGON": 2.0,
+			"DARK": 0.5,
+			"STEEL": 1.0,
+			"FAIRY": 4.0
+		}
 	},
 	"Necrozma": {
 		"name": "Necrozma",
@@ -26887,7 +30561,7 @@
 			89,
 			79
 		],
-		"value": 703,
+		"value": 723,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"POISON",
@@ -26896,12 +30570,29 @@
 			"FIRE",
 			"ICE",
 			"BUG",
-			"ROCK"
+			"ROCK",
+			"FAIRY"
 		],
-		"defensiveAdvantages": [
-			"FIGHTING",
-			"PSYCHIC"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 1.0,
+			"FIRE": 1.0,
+			"WATER": 1.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 1.0,
+			"FIGHTING": 0.5,
+			"POISON": 1.0,
+			"GROUND": 1.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 0.5,
+			"BUG": 2.0,
+			"ROCK": 1.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 1.0,
+			"FAIRY": 1.0
+		}
 	},
 	"Stakataka": {
 		"name": "Stakataka",
@@ -26985,7 +30676,7 @@
 			101,
 			13
 		],
-		"value": 693,
+		"value": 732,
 		"offensiveAdvantages": [
 			"FIRE",
 			"ICE",
@@ -26993,21 +30684,29 @@
 			"BUG",
 			"PSYCHIC",
 			"GHOST",
-			"ROCK"
-		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"ICE",
-			"POISON",
-			"FLYING",
-			"PSYCHIC",
-			"BUG",
 			"ROCK",
-			"GHOST",
-			"DRAGON",
-			"DARK",
 			"FAIRY"
-		]
+		],
+		"defensiveMatchups": {
+			"NORMAL": 0.25,
+			"FIRE": 1.0,
+			"WATER": 2.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 1.0,
+			"ICE": 0.5,
+			"FIGHTING": 4.0,
+			"POISON": 0.125,
+			"GROUND": 4.0,
+			"FLYING": 0.25,
+			"PSYCHIC": 0.5,
+			"BUG": 0.5,
+			"ROCK": 0.5,
+			"GHOST": 0.5,
+			"DRAGON": 0.5,
+			"DARK": 0.5,
+			"STEEL": 1.0,
+			"FAIRY": 0.5
+		}
 	},
 	"Blacephalon": {
 		"name": "Blacephalon",
@@ -27091,7 +30790,7 @@
 			79,
 			107
 		],
-		"value": 687,
+		"value": 730,
 		"offensiveAdvantages": [
 			"PSYCHIC",
 			"GHOST",
@@ -27102,16 +30801,25 @@
 			"FIGHTING",
 			"POISON"
 		],
-		"defensiveAdvantages": [
-			"NORMAL",
-			"FIRE",
-			"GRASS",
-			"ICE",
-			"FIGHTING",
-			"POISON",
-			"BUG",
-			"STEEL",
-			"FAIRY"
-		]
+		"defensiveMatchups": {
+			"NORMAL": 0.125,
+			"FIRE": 0.5,
+			"WATER": 2.0,
+			"ELECTRIC": 1.0,
+			"GRASS": 0.5,
+			"ICE": 0.5,
+			"FIGHTING": 0.125,
+			"POISON": 0.5,
+			"GROUND": 2.0,
+			"FLYING": 1.0,
+			"PSYCHIC": 1.0,
+			"BUG": 0.25,
+			"ROCK": 2.0,
+			"GHOST": 2.0,
+			"DRAGON": 1.0,
+			"DARK": 2.0,
+			"STEEL": 0.5,
+			"FAIRY": 0.5
+		}
 	}
 }
