@@ -60,12 +60,18 @@ class AutoDynamaxAdventure(AutoTrainerBattle):
 				pokemon_options = []
 				pokemon_abilities = []
 				values = []
-				pokemon_options.append(" ".join(self.getText(205, -240, 620, -850, inverse=True).split()))
-				pokemon_abilities.append(" ".join(self.getText(240, -270, 620, -850, inverse=True).split()))
-				pokemon_options.append(" ".join(self.getText(395, -430, 620, -850).split()))
-				pokemon_abilities.append(" ".join(self.getText(430, -460, 620, -850).split()))
-				pokemon_options.append(" ".join(self.getText(580, -615, 620, -850).split()))
-				pokemon_abilities.append(" ".join(self.getText(615, -645, 620, -850).split()))
+				pokemon_options.append(" ".join(self.getText(205, -240, 620, 
+						-850, inverse=True).split()))
+				pokemon_abilities.append(" ".join(self.getText(240, -270, 620, 
+						-850, inverse=True).split()))
+				pokemon_options.append(" ".join(self.getText(395, -430, 620, 
+						-850).split()))
+				pokemon_abilities.append(" ".join(self.getText(430, -460, 620, 
+						-850).split()))
+				pokemon_options.append(" ".join(self.getText(580, -615, 620, 
+						-850).split()))
+				pokemon_abilities.append(" ".join(self.getText(615, -645, 620, 
+						-850).split()))
 				print(pokemon_options)
 				print(pokemon_abilities)
 				for pokemon in pokemon_options:
@@ -111,10 +117,13 @@ class AutoDynamaxAdventure(AutoTrainerBattle):
 				poke_name = " ".join(poke_name.split())
 				if poke_name not in catches:
 					catches.append(poke_name)
-					self.camera.saveCapture(suffix=" "+poke_name+" ("+str(i)+")")
+					suffix = " "+poke_name
 					if (self.isContainTemplate("shiny_mark.png")):
 						print("SHINY!!! Pokemon #" + str(i+1))
 						shinies.append(i)
+						suffix += " SHINY"
+					suffix += " ("+str(i)+")"
+					self.camera.saveCapture(suffix=suffix)
 					self.press(Direction.DOWN, wait=0.5)
 				else:
 					break
@@ -123,6 +132,9 @@ class AutoDynamaxAdventure(AutoTrainerBattle):
 			print("Options: "+str(catches))
 			if len(shinies) > 1:
 				print("wow 2+ shinies!!! Gotta stop")
+				break
+			elif len(shinies) == 1 and shinies[0] == 3 and self.catchTopPokemon:
+				print("Found desired shiny " + catches[3])
 				break
 			elif len(shinies) > 0:
 				print("found a shiny in slot " + str(shinies[0] + 1))
@@ -137,8 +149,8 @@ class AutoDynamaxAdventure(AutoTrainerBattle):
 			self.press(Button.A)
 			if self.catchTopPokemon:
 				self.press(Button.B)
-				self.pressRep(Button.A, 10, duration=0.5, interval=0.5)
-				self.pressRep(Button.B, 10, duration=0.5, interval=0.5)
+				self.pressRep(Button.A, 20, duration=0.3, interval=0.3)
+				self.pressRep(Button.B, 20, duration=0.3, interval=0.3)
 			else:
 				self.pressRep(Button.B, 30, interval=0.4)
 	
@@ -156,14 +168,23 @@ class AutoDynamaxAdventure(AutoTrainerBattle):
 			
 			# update our current HP, if possible
 			hp_text = (self.getText(664, 24, 72, -222)).strip()
-			if (re.search("^\d+\/\d+$", hp_text) is not None):
-				hp_text = hp_text.split("/")
-				new_hp = int(hp_text[0])
-				new_max_hp = int(hp_text[1])
-				if not (new_hp == self.current_hp) or not (new_max_hp == self.max_hp):
-					print("Update HP: "+str(hp_text[0]) + "/" + str(hp_text[1]))
+			result = re.search("^(\d+\/\d+)$", hp_text)
+			if result is None:
+				result = re.search("(\d+\/\d+)", small_text)
+			if (result is not None):
+				hp_text = result.group(1)
+				hp_int = hp_text.split("/")
+				new_hp = int(hp_int[0])
+				new_max_hp = int(hp_int[1])
+				if new_max_hp < 100 or new_hp > new_max_hp:
+					# don't update hp
+					new_max_hp = 0
+				elif not (new_hp == self.current_hp) or not (new_max_hp == self.max_hp):
+					print("Update HP: "+str(hp_int[0]) + "/" + str(hp_int[1]))
 					self.current_hp = new_hp
 					self.max_hp = new_max_hp
+				else:
+					text += " HP_TXT=" + str(hp_text)
 			
 			# update the game state via text
 			boss_text_regex = re.search("There’s a strong (.*)-type reaction", text)
@@ -234,12 +255,14 @@ class AutoDynamaxAdventure(AutoTrainerBattle):
 				self.pressRep(Direction.UP, (4 - best_attack["move_number"]) % 4)
 				if dynamax:
 					self.press(Direction.LEFT)
-				self.pressRep(Button.A, 5, interval=0.2)
+				self.pressRep(Button.A, 7, interval=0.1)
 				# in case we are targeting ourselves for some reason
 				self.press(Direction.UP)
-				self.pressRep(Button.A, 5, interval=0.2)
+				self.pressRep(Button.A, 6, interval=0.2)
 				self.press(Direction.RIGHT)
-				self.pressRep(Button.A, 5, interval=0.2)
+				self.pressRep(Button.A, 6, interval=0.2)
+				self.press(Direction.UP)
+				self.pressRep(Button.A, 6, interval=0.2)
 				# update our lowest pp number
 				self.lowest_pp = min(best_attack["PP"] - 1, self.lowest_pp)
 				if self.turn_num:
@@ -308,15 +331,19 @@ class AutoDynamaxAdventure(AutoTrainerBattle):
 			val = pokemon["value"]
 		if self.boss_type in pokemonTypes and pokemon:
 			typad = 0
+			suffix = ""
 			if self.boss_type in pokemon["offensiveAdvantages"]:
 				typad += 100
+				suffix += "+supereffective move"
 			dmatch = pokemon["defensiveMatchups"]
+			
 			typad += 120 / dmatch[self.boss_type]
-			print("type advantage = "+str(typad))
+			print(pokemon["name"], "type advantage = ", typad, suffix)
 			val += typad
 		if rateHP:
 			hp_modifier = (1 + (self.current_hp / max(1, self.max_hp))) / 2 + 0.06
-			print("HP modifier = "+str(hp_modifier))
+			suffix = "("+str(self.current_hp)+"/"+str(self.max_hp)+")"
+			print("HP modifier =", hp_modifier, suffix)
 			val = math.floor(hp_modifier * val)
 			if self.lowest_pp < 3:
 				val = max(val * 0.5, 420)
