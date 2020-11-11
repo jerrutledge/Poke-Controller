@@ -16,6 +16,8 @@ class AutoTrainerBattle(ImageProcPythonCommand, ResetGame):
 		self.use_swords_dance = True
 		self.times_set_up = 1
 		self.pokemonMoves = {}
+		self.current_hp = 100
+		self.max_hp = 100
 
 		try:
 			with open('moves.json') as move_data:
@@ -243,25 +245,39 @@ class AutoTrainerBattle(ImageProcPythonCommand, ResetGame):
 					# this is probably a status move
 					status = True
 			# multiply the effectiveness of the move by what we know about game state
-			if (not (dynamax or dynamaxed)) and cur_move and cur_move["oneUse"]:
+			if (not (dynamax or dynamaxed)) and cur_move and cur_move["healing"] and \
+						self.current_hp < self.max_hp / 2.1:
+				print("I need healing...")
+				effectiveness = 50000
+			elif (not (dynamax or dynamaxed)) and cur_move and cur_move["oneUse"]:
 				if turn == 1:
 					effectiveness = 50000
 				else:
 					effectiveness = 0
 			elif cur_move and effectiveness > 0:
+				effectiveness = float(effectiveness)
 				# apply STAB
 				if givenPokemon and cur_move["moveType"] in givenPokemon["types"]:
-					effectiveness = int(effectiveness * 1.5)
+					effectiveness *= 1.5
 				# put in relative value of attack stat
 				if givenPokemon and "stats" in givenPokemon:
 					if cur_move["moveCategory"] == "Physical":
-						effectiveness *= givenPokemon["stats"][1]
+						effectiveness *= int(givenPokemon["stats"][1])
 					if cur_move["moveCategory"] == "Special":
-						effectiveness *= givenPokemon["stats"][3]
+						effectiveness *= int(givenPokemon["stats"][3])
 				# Is it a max move
 				if dynamax or dynamaxed:
 					effectiveness *= int(cur_move["maxMovePower"])
-					cur_move["effectiveness"] = int(effectiveness)
+					# if you boost everyone's attack
+					max_boosts = ["FIGHTING", "POISON"]
+					if cur_move["moveType"] in max_boosts:
+						# 1.5 = avg(1,1.5,2)
+						effectiveness *= 1.5
+					# if you set beneficial weather
+					weather_set = ["WATER", "FIRE",]
+					if cur_move["moveType"] in weather_set:
+						# 1.3333 = avg(1,1.5,1.5)
+						effectiveness *= 1.3
 				else:
 					accuracy = min(cur_move["accuracy"], 100) / 100
 					accuracy = accuracy * cur_move["averageEffectiveness"]
