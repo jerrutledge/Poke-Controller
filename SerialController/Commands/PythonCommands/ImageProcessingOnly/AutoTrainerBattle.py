@@ -268,8 +268,9 @@ class AutoTrainerBattle(ImageProcPythonCommand, ResetGame):
 					effectiveness *= cur_move["power"] * accuracy / cur_move["turnsTaken"]
 				# if there are two moves of equal power, we slightly prefer the one with more pp
 				if cur_pp < 5:
-					effectiveness -= 5 - cur_pp
+					effectiveness = int(effectiveness) - (5 - cur_pp)
 			# append what we know about the move to our array
+			effectiveness = int(effectiveness)
 			if cur_move:
 				cur_move["effectiveness"] = effectiveness
 				attacks.append(cur_move)
