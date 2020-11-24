@@ -4398,7 +4398,7 @@
 			105,
 			50
 		],
-		"value": 460,
+		"value": 0,
 		"offensiveAdvantages": [
 			"FIGHTING",
 			"POISON"
@@ -21983,18 +21983,8 @@
 			130,
 			5
 		],
-		"value": 410,
-		"offensiveAdvantages": [
-			"GRASS",
-			"FAIRY",
-			"PSYCHIC",
-			"GHOST",
-			"NORMAL",
-			"ICE",
-			"ROCK",
-			"DARK",
-			"STEEL"
-		],
+		"value": 0,
+		"offensiveAdvantages": [],
 		"defensiveMatchups": {
 			"NORMAL": 1.0,
 			"FIRE": 0.5,
