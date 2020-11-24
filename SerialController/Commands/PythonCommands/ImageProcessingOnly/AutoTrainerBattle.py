@@ -191,6 +191,7 @@ class AutoTrainerBattle(ImageProcPythonCommand, ResetGame):
 			cur_pp = 0
 			name = " ".join(attack_text[i].split())
 			cur_move = None
+			suffix = ""
 			if givenPokemon and givenPokemon["moves"]:
 				cur_move = givenPokemon["moves"][i]
 			else:
@@ -224,26 +225,32 @@ class AutoTrainerBattle(ImageProcPythonCommand, ResetGame):
 			# determine through OCR whether the move is super effective or not
 			if cur_pp <= 0:
 				effectiveness = -1 # no pp - never select this move
+				suffix += "-No PP"
 			elif cur_move and cur_move["useless"]:
 				effectiveness = 0
 			elif ("Super effective" in attack_text[i] or \
 					("Super e" in attack_text[i]) or \
 					("Super" in attack_text[i] and "Max" in attack_text[i])):
-				effectiveness = 3
+				# we can't tell if the attack will be 2* or 4* effective
+				# most of the time it'll be 2*
+				effectiveness = 5
 			elif ("Not very effective" in attack_text[i]):
 				effectiveness = 1
 			elif ("Effective" in attack_text[i]):
 				effectiveness = 2
 			elif ("No effect" in attack_text[i]):
 				effectiveness = -1 # move has no effect - never select this move
+				suffix += "-No effect: "+attack_text[i]
 			else:
 				# sometimes, pokemon have less than 4 moves
 				# if the OCR doesn't see a long enough string, it's not a move
-				if len("".join(attack_text[i].strip())) <= 3:
+				if len("".join(attack_text[i].split())) <= 3:
 					effectiveness = -2
+					suffix += "-Not a move: "+attack_text[i]
 				else:
 					# this is probably a status move
 					status = True
+					suffix += "-Status move? "+attack_text[i]
 			# multiply the effectiveness of the move by what we know about game state
 			if (not (dynamax or dynamaxed)) and cur_move and cur_move["healing"] and \
 						self.current_hp < self.max_hp / 2.1:
@@ -260,7 +267,7 @@ class AutoTrainerBattle(ImageProcPythonCommand, ResetGame):
 				if givenPokemon and cur_move["moveType"] in givenPokemon["types"]:
 					effectiveness *= 1.5
 				# put in relative value of attack stat
-				if givenPokemon and "stats" in givenPokemon:
+				if givenPokemon and "stats" in givenPokemon and len(givenPokemon["stats"]) > 5:
 					if cur_move["moveCategory"] == "Physical":
 						effectiveness *= int(givenPokemon["stats"][1])
 					if cur_move["moveCategory"] == "Special":
@@ -268,9 +275,18 @@ class AutoTrainerBattle(ImageProcPythonCommand, ResetGame):
 				# Is it a max move
 				if dynamax or dynamaxed:
 					effectiveness *= int(cur_move["maxMovePower"])
-					# if you boost everyone's attack
-					max_boosts = ["FIGHTING", "POISON"]
-					if cur_move["moveType"] in max_boosts:
+					# if you boost your attack
+					if (cur_move["moveType"] == "FIGHTING" and \
+							cur_move["moveCategory"] == "Physical" or \
+							cur_move["moveType"] == "POISON" and \
+							cur_move["moveCategory"] == "Special"):
+						# 1.5 = avg(1,1.5,2)
+						effectiveness *= 1.5
+					# if you lower their defense
+					elif (cur_move["moveType"] == "GHOST" and \
+							cur_move["moveCategory"] == "Physical" or \
+							cur_move["moveType"] == "DARK" and \
+							cur_move["moveCategory"] == "Special"):
 						# 1.5 = avg(1,1.5,2)
 						effectiveness *= 1.5
 					# if you set beneficial weather
@@ -284,7 +300,7 @@ class AutoTrainerBattle(ImageProcPythonCommand, ResetGame):
 					effectiveness *= cur_move["power"] * accuracy / cur_move["turnsTaken"]
 				# if there are two moves of equal power, we slightly prefer the one with more pp
 				if cur_pp < 5:
-					effectiveness = int(effectiveness) - (5 - cur_pp)
+					effectiveness = int(effectiveness) - 25 * (5 - cur_pp)
 			# append what we know about the move to our array
 			effectiveness = int(effectiveness)
 			if cur_move:
@@ -298,7 +314,7 @@ class AutoTrainerBattle(ImageProcPythonCommand, ResetGame):
 					"status_move": status,
 					"PP": cur_pp,
 				})
-			print(name+" effectiveness: "+str(effectiveness))
+			print(name+" effectiveness: "+str(effectiveness),suffix)
 
 		attacks.sort(key=lambda attack: attack["effectiveness"], reverse=True)
 
