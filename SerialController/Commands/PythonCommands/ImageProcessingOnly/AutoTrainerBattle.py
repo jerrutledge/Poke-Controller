@@ -366,7 +366,7 @@ class AutoTrainerBattle(ImageProcPythonCommand, ResetGame):
                         "PP": cur_pp,
                     }
                 )
-            print(name + " effectiveness: " + str(effectiveness), suffix)
+            print(name, cur_pp, "effectiveness:", str(effectiveness), suffix)
 
         attacks.sort(key=lambda attack: attack["effectiveness"], reverse=True)
 

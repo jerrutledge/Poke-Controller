@@ -417,7 +417,7 @@ class AutoDynamaxAdventure(AutoTrainerBattle):
             dmatch = pokemon["defensiveMatchups"]
             defense = dmatch[self.boss_types[0]]
             if len(self.boss_types) == 2:
-                defense = min(defense, dmatch[self.boss_types[1]])
+                defense = max(defense, dmatch[self.boss_types[1]])
             typad += 100 / defense
             suffix += ""
             print(pokemon["name"], "type advantage =", typad, suffix)
