@@ -211,7 +211,9 @@ class AutoTrainerBattle(ImageProcPythonCommand, ResetGame):
                     print("Turn " + str(turn) + ": Dynamax impossible")
 
         attacks = []
-        for i in range(4):
+        i = 0
+        ocrFails = 0
+        while i < 4:
             effectiveness = 0
             status = False
             cur_pp = 0
@@ -267,9 +269,9 @@ class AutoTrainerBattle(ImageProcPythonCommand, ResetGame):
                 # we can't tell if the attack will be 2* or 4* effective
                 # most of the time it'll be 2*
                 effectiveness = 5
-            elif "Not very effective" in attack_text[i]:
+            elif "Not very effect" in attack_text[i] or "Notvery effect" in attack_text[i]:
                 effectiveness = 1
-            elif "Effective" in attack_text[i]:
+            elif "Effecti" in attack_text[i]:
                 effectiveness = 2
             elif "No effect" in attack_text[i]:
                 effectiveness = -1  # move has no effect - never select this move
@@ -278,10 +280,24 @@ class AutoTrainerBattle(ImageProcPythonCommand, ResetGame):
                 # sometimes, pokemon have less than 4 moves
                 # if the OCR doesn't see a long enough string, it's not a move
                 if len("".join(attack_text[i].split())) <= 3:
+                    # try at least once to re-read:
+                    if ocrFails < 3:
+                        print("retrying short text: "+attack_text[i])
+                        ocrFails += 1
+                        newText = self.getText(tb[i]["top"], tb[i]["bottom"], move_lr[0], move_lr[1])
+                        attack_text[i] = newText
+                        continue
                     effectiveness = -2
                     suffix += "-Not a move: " + attack_text[i]
                 else:
                     # this is probably a status move
+                    # but if we know it's not, try again
+                    if cur_move and ("status" in cur_move) and (cur_move["status"] == False) and ocrFails < 3:
+                        print("retrying move known not to be status: "+attack_text[i])
+                        ocrFails += 1
+                        newText = self.getText(tb[i]["top"], tb[i]["bottom"], move_lr[0], move_lr[1])
+                        attack_text[i] = newText
+                        continue
                     status = True
                     suffix += "-Status move? " + attack_text[i]
             # multiply the effectiveness of the move by what we know about game state
@@ -375,6 +391,7 @@ class AutoTrainerBattle(ImageProcPythonCommand, ResetGame):
                     }
                 )
             print(name, cur_pp, "effectiveness:", str(effectiveness), suffix)
+            i += 1
 
         attacks.sort(key=lambda attack: attack["effectiveness"], reverse=True)
 
