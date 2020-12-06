@@ -200,9 +200,9 @@ class AutoDynamaxAdventure(AutoTrainerBattle):
 
             # update our current HP, if possible
             hp_text = (self.getText(664, 24, 72, -222)).strip()
-            result = re.search("^(\d+\/\d+)$", hp_text)
+            result = re.search(r"^(\d+\/\d+)$", hp_text)
             if result is None:
-                result = re.search("(\d+\/\d+)", small_text)
+                result = re.search(r"(\d+\/\d+)", small_text)
             if result is not None:
                 hp_text = result.group(1)
                 hp_int = hp_text.split("/")
@@ -221,7 +221,7 @@ class AutoDynamaxAdventure(AutoTrainerBattle):
             # update the game state via text
             boss_text_regex = re.search("There’s a strong (.*)-type reaction", text)
             next_pokemon_regex = re.search(
-                "^([A-Za-z \-.]*) is weak! Throw a Pok", text
+                r"^([A-Za-z \-.]*) is weak! Throw a Pok", text
             )
             cur_pokemon_regex = re.search("Go! (.*)!", text)
             if boss_text_regex is not None:
@@ -322,7 +322,7 @@ class AutoDynamaxAdventure(AutoTrainerBattle):
                 if self.turn_num:
                     self.turn_num += 1
                 self.wait(1)
-            elif "hold one item" in text:
+            elif "hold one item" in text or "You encountered a backpacker!" in text:
                 print("Item offered! Choosing item")
                 self.pressRep(Button.A, 10, interval=0.5)
             elif "Which path would you like to take" in text:
@@ -333,7 +333,6 @@ class AutoDynamaxAdventure(AutoTrainerBattle):
                 or "One Trainer can choose to put the Pokémon" in text
             ):
                 print("New Pokémon offer! TEXT:" + text)
-                change_pokemon = False
                 temp_old_val = 100
                 temp_new_val = 100
                 if self.next_pokemon is None or self.currentPokemon is None:
@@ -416,7 +415,7 @@ class AutoDynamaxAdventure(AutoTrainerBattle):
                 suffix += "+supermove2"
             dmatch = pokemon["defensiveMatchups"]
             defense = dmatch[self.boss_types[0]]
-            if len(self.boss_types) == 2:
+            if len(self.boss_types) == 2 and self.boss_types[1] != "None":
                 defense = max(defense, dmatch[self.boss_types[1]])
             typad += 100 / defense
             suffix += ""
