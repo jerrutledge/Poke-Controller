@@ -335,13 +335,21 @@ class AutoTrainerBattle(ImageProcPythonCommand, ResetGame):
                         # 1.5 = avg(1,1.5,2)
                         effectiveness *= 1.5
                     # if you set beneficial weather
-                    weather_set = [
+                    beneficial_weather_set = [
                         "WATER",
                         "FIRE",
                     ]
-                    if cur_move["moveType"] in weather_set:
+                    if cur_move["moveType"] in beneficial_weather_set:
                         # 1.3333 = avg(1,1.5,1.5)
                         effectiveness *= 1.3
+                    # if you set harmful weather
+                    harmful_weather_set = [
+                        "ROCK",
+                        "ICE",
+                    ]
+                    if cur_move["moveType"] in harmful_weather_set:
+                        # we just want to de-prioritize setting this
+                        effectiveness *= 0.95
                 else:
                     accuracy = min(cur_move["accuracy"], 100) / 100
                     accuracy = accuracy * cur_move["averageEffectiveness"]
