@@ -223,7 +223,8 @@ class AutoDynamaxAdventure(AutoTrainerBattle):
             next_pokemon_regex = re.search(
                 r"^([A-Za-z \-.]*) is weak! Throw a Pok", text
             )
-            cur_pokemon_regex = re.search("Go! (.*)!", text)
+            # The OCR sometimes reads "Gol! Pokemon!" instead of "Go! Pokemon!"
+            cur_pokemon_regex = re.search("Gol?! (.*)!", text)
             if boss_text_regex is not None:
                 if boss_text_regex.group(1).upper() in pokemonTypes:
                     bossType = boss_text_regex.group(1).upper()
