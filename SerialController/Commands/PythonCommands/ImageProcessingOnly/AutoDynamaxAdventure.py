@@ -171,7 +171,7 @@ class AutoDynamaxAdventure(AutoTrainerBattle):
                 print("found a shiny in slot " + str(shinies[0] + 1))
                 self.press(Direction.UP, duration=2, wait=0.2)
                 self.pressRep(Direction.DOWN, shinies[0], interval=0.2)
-                self.pressRep(Button.A, 3, interval=0.3)
+                self.pressRep(Button.A, 5, interval=0.3)
             else:
                 print("Not selecting any Pokemon...")
                 self.press(Button.B, duration=0.9, wait=0.5)
